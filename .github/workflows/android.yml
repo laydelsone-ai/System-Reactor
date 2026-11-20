@@ -30,13 +30,14 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      # Usa v4 para evitar el paquete Android SDK "tools" obsoleto.
+      # setup-android v4 installs current command-line tools and sdkmanager.
+      # Boolean inputs must be YAML booleans, not quoted strings such as 'yes'.
       - name: Install Android SDK command-line tools
         uses: android-actions/setup-android@v4
         with:
           packages: ''
-          accept-android-sdk-licenses: 'yes'
-          log-accepted-android-sdk-licenses: 'false'
+          accept-android-sdk-licenses: true
+          log-accepted-android-sdk-licenses: false
 
       - name: Install Android export packages
         run: |
