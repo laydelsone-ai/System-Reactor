@@ -12,7 +12,6 @@ jobs:
   android-debug:
     runs-on: ubuntu-latest
     timeout-minutes: 45
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -30,8 +29,6 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      # setup-android v4 installs current command-line tools and sdkmanager.
-      # Boolean inputs must be YAML booleans, not quoted strings such as 'yes'.
       - name: Install Android SDK command-line tools
         uses: android-actions/setup-android@v4
         with:
@@ -48,17 +45,16 @@ jobs:
             "cmake;3.10.2.4988404" \
             "ndk;28.1.13356709"
 
-      - name: Verify Godot and import project
-        run: |
-          godot --version
-          mkdir -p build
-          godot --headless --editor --path . --quit
+      - name: Import Godot project
+        run: godot --headless --editor --path . --quit
 
-      - name: Run contract tests
-        run: godot --headless --path . -s tests/test_contracts.gd
+      - name: Static scene checks
+        run: python3 tests/test_presence.py
 
       - name: Export Android Debug APK
-        run: godot --headless --path . --export-debug "Android Debug" build/WorldLaboratory-debug.apk
+        run: |
+          mkdir -p build
+          godot --headless --path . --export-debug "Android Debug" build/WorldLaboratory-debug.apk
 
       - name: Verify APK output
         run: test -s build/WorldLaboratory-debug.apk
