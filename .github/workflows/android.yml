@@ -12,6 +12,7 @@ jobs:
   android-debug:
     runs-on: ubuntu-latest
     timeout-minutes: 45
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,13 +30,22 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Install Android SDK
-        uses: android-actions/setup-android@v3
+      # Usa v4 para evitar el paquete Android SDK "tools" obsoleto.
+      - name: Install Android SDK command-line tools
+        uses: android-actions/setup-android@v4
+        with:
+          packages: ''
+          accept-android-sdk-licenses: 'yes'
+          log-accepted-android-sdk-licenses: 'false'
 
       - name: Install Android export packages
         run: |
-          yes | sdkmanager --licenses >/dev/null || true
-          sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.1" "cmdline-tools;latest" "cmake;3.10.2.4988404" "ndk;28.1.13356709"
+          sdkmanager --install \
+            "platform-tools" \
+            "platforms;android-35" \
+            "build-tools;35.0.1" \
+            "cmake;3.10.2.4988404" \
+            "ndk;28.1.13356709"
 
       - name: Verify Godot and import project
         run: |
@@ -48,6 +58,9 @@ jobs:
 
       - name: Export Android Debug APK
         run: godot --headless --path . --export-debug "Android Debug" build/WorldLaboratory-debug.apk
+
+      - name: Verify APK output
+        run: test -s build/WorldLaboratory-debug.apk
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
