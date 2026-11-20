@@ -1,10 +1,10 @@
-; World Laboratory Android — visual boot diagnostic 0.1.1
+; World Laboratory — Master Map Blockout 0.2.0
 config_version=5
 
 [application]
-config/name="World Laboratory Android"
-config/description="Laboratorio offline: escena 2.5D diagnóstica y agentes de prueba."
-config/version="0.1.1"
+config/name="World Laboratory — Master Map Blockout"
+config/description="Blockout continuo del reino, bosque fronterizo, Torre y primer piso de la Mazmorra."
+config/version="0.2.0"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 run/main_scene="res://scenes/main.tscn"
 
@@ -19,8 +19,8 @@ window/stretch/mode="canvas_items"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
-textures/default_filters/use_nearest_mipmap_filter=false
-environment/defaults/default_clear_color=Color(0.055, 0.075, 0.11, 1)
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.035, 0.045, 0.065, 1.0)
 
 [physics]
 3d/default_gravity=9.8

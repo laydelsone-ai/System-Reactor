@@ -1,47 +1,10 @@
-[
-  {
-    "path": "README_ES.md",
-    "size_bytes": 2304,
-    "sha256": "d9ebeaecdcd40cc2d595848ecabf017b8c26138913f554450a9a857145a14933"
-  },
-  {
-    "path": "project/.github/workflows/android.yml",
-    "size_bytes": 1806,
-    "sha256": "dd6b890c4398a59f6ea88c7e4b61bf126dc2cdecca933ff3b0c3a14b99514adb"
-  },
-  {
-    "path": "project/.gitignore",
-    "size_bytes": 36,
-    "sha256": "0747e7ba6812d4117cfa3b874448e97a96d8e3e96de5afbb887e4978a7bc3426"
-  },
-  {
-    "path": "project/STATUS.md",
-    "size_bytes": 756,
-    "sha256": "81e5652d6add476ef871c7e534d3b481741b7cc80263ad545fc652b9def31b2d"
-  },
-  {
-    "path": "project/export_presets.cfg",
-    "size_bytes": 708,
-    "sha256": "75600eb8e398e12c4adc5ff3c87115de8c8b733ed1caa3b1b2737b9b9d70e1fd"
-  },
-  {
-    "path": "project/project.godot",
-    "size_bytes": 850,
-    "sha256": "7c024c7596ba0f5a7f5288d55f947d4b82d59ec873e56d75485b0ebbb7d7a487"
-  },
-  {
-    "path": "project/scenes/main.tscn",
-    "size_bytes": 2750,
-    "sha256": "f41dbc271e8662c83bc07185a518b4936cfc1021e66d489c140e734ebecb26dc"
-  },
-  {
-    "path": "project/scripts/app/main.gd",
-    "size_bytes": 6163,
-    "sha256": "bcdfba72cb051ece6ca177ddf55226b24b3681d58721f586c6a742f92efa3ca4"
-  },
-  {
-    "path": "project/tests/test_presence.py",
-    "size_bytes": 614,
-    "sha256": "025851b39346f01cc0ff8646c83fa6d72fb86b29f443131de883887732c8c906"
-  }
-]
+{
+  "project.godot": "4cd43bc718cd161a7bcc8242d251d30593be7bc98a8675a0f3b3351645026512",
+  "scenes/main.tscn": "0f8d8a308ed6635bb3e1689e6b06b834d8bbf7b14d355075ce036dc1a9c7a5fd",
+  "scripts/map/blockout_world.gd": "1c53cb548cec7e1ac41d7dd1cb60860fca54dd6f345171729b600492a32b92b9",
+  "docs/MASTER_MAP_BLOCKOUT_0.2.0_ES.md": "f15ab6fc46e96a01766aa3f549f799d6d75055e868ddf4e574ed59acf5adcc04",
+  "README_ES.md": "6759d4e657854ca148a8007dc3eedec2202a2eb3c551822d37955babeae9f86d",
+  ".github/workflows/android.yml": "6b223d661d1bf24e1546e2d511619c74346a0e0ac5747f0490c7594dc0cf805e",
+  "export_presets.cfg": "4302dbe268d06c97a1033eaa0022d0f80a66bf7b3ae8947e7b7310bad69d553d",
+  ".gitignore": "8cd87f28aff04d3e00fea4299b2f104996851e1e454e495ad839380e1ca1b7da"
+}
