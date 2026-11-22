@@ -379,16 +379,16 @@ func _draw_map_props() -> void:
 		var rail_support_pos := _grid_to_iso(Vector2(gx, 2.05))
 		draw_rect(Rect2(rail_support_pos.x - 1, rail_support_pos.y - 3, 2, 8), Color("#b58b53"))
 	var tool_pos := _grid_to_iso(Vector2(20.0, 3.2))
-	draw_texture_rect(SPRITE_PICKAXE, Rect2(tool_pos.x - 7, tool_pos.y - 11, 14, 14))
+	draw_texture_rect(SPRITE_PICKAXE, Rect2(tool_pos.x - 7, tool_pos.y - 11, 14, 14), false)
 	# Mineral spikes in R06.
 	for spot in [Vector2(17.4,8.1), Vector2(19.4,8.7), Vector2(18.2,9.6), Vector2(20.0,10.0)]:
 		var crystal_pos := _grid_to_iso(spot)
 		var size := 18.0 if spot.x < 19.0 else 15.0
-		draw_texture_rect(SPRITE_CRYSTAL, Rect2(crystal_pos.x - size * 0.5, crystal_pos.y - size + 2, size, size))
+		draw_texture_rect(SPRITE_CRYSTAL, Rect2(crystal_pos.x - size * 0.5, crystal_pos.y - size + 2, size, size), false)
 	# Lamps and timber support hints.
 	for spot in [Vector2(5.0,1.0), Vector2(12.0,1.0), Vector2(24.8,1.0), Vector2(3.0,8.0), Vector2(12.0,8.0), Vector2(21.5,15.0)]:
 		var lamp_pos := _grid_to_iso(spot)
-		draw_texture_rect(SPRITE_LAMP, Rect2(lamp_pos.x - 7, lamp_pos.y - 15, 14, 14))
+		draw_texture_rect(SPRITE_LAMP, Rect2(lamp_pos.x - 7, lamp_pos.y - 15, 14, 14), false)
 	# A dim fungus cluster in the support chamber, no agent behavior implied.
 	var fungus_pos := _grid_to_iso(Vector2(13.0, 15.8))
 	draw_texture_rect(SPRITE_FUNGUS, Rect2(fungus_pos.x - 13, fungus_pos.y - 21, 26, 26), false, Color(0.72, 1.0, 0.86, 0.9))
@@ -466,7 +466,7 @@ func _draw_bestiary(rect: Rect2) -> void:
 	var sprite := _sprite_for_species(String(item.get("id", "")))
 	var sprite_rect := Rect2(rect.position.x + 18, rect.position.y + 72, 86, 86)
 	_panel(sprite_rect, COLORS.panel_dark, COLORS.line_soft)
-	draw_texture_rect(sprite, Rect2(sprite_rect.position + Vector2(8, 8), Vector2(70, 70)))
+	draw_texture_rect(sprite, Rect2(sprite_rect.position + Vector2(8, 8), Vector2(70, 70)), false)
 	var title_x := rect.position.x + 118
 	_text(String(item.get("id", "")), Vector2(title_x, rect.position.y + 91), 0.8, COLORS.muted)
 	var name_lines := _wrap(String(item.get("name", "SIN NOMBRE")), 20)
@@ -588,7 +588,7 @@ func _draw_events(rect: Rect2) -> void:
 func _draw_autonomy_panel(rect: Rect2) -> void:
 	_panel(rect, COLORS.panel, COLORS.line)
 	var compact := rect.size.x < 650.0
-	var report := _autonomy.get_report() if _autonomy != null and _autonomy.is_ready() else {}
+	var report: Dictionary = _autonomy.get_report() if _autonomy != null and _autonomy.is_ready() else {}
 	var metrics: Dictionary = report.get("metrics", {})
 	_text("WLA-0B / LABORATORIO DE AUTONOMIA", rect.position + Vector2(18, 24), 0.86 if compact else 1.25, COLORS.text)
 	_text("AGENTES SIN ORDEN DEL JUGADOR / CICLOS AUTONOMOS", rect.position + Vector2(18, 43), 0.57 if compact else 0.72, COLORS.muted)
@@ -692,10 +692,10 @@ func _draw_autonomy_subjects(detail_rect: Rect2, compact: bool) -> void:
 	_panel(detail_rect, COLORS.panel_dark, COLORS.line_soft)
 	_text("INSPECTOR / ESTADO DEL MUNDO", detail_rect.position + Vector2(12, 19), 0.72 if compact else 0.9, COLORS.gold)
 	_text("CRIATURAS DE PRUEBA / UBICACION EXPERIMENTAL", detail_rect.position + Vector2(12, 35), 0.50 if compact else 0.58, COLORS.muted)
-	var report := _autonomy.get_report() if _autonomy != null else {}
+	var report: Dictionary = _autonomy.get_report() if _autonomy != null else {}
 	var presence_note := "NPC SIN COORD. %d / COG %d" % [int(report.get("npc_without_validated_presence", 0)), int(report.get("npc_with_cognitive_profile", 0))]
 	_text(presence_note, detail_rect.position + Vector2(12, 48), 0.48 if compact else 0.56, COLORS.muted_dark)
-	var state := _autonomy.get_state_copy() if _autonomy != null else {}
+	var state: Dictionary = _autonomy.get_state_copy() if _autonomy != null else {}
 	var creatures: Dictionary = state.get("trial_creatures", {})
 	var creature_y := detail_rect.position.y + (61.0 if compact else 77.0)
 	var row_step := 22.0 if compact else 38.0
@@ -705,7 +705,7 @@ func _draw_autonomy_subjects(detail_rect: Rect2, compact: bool) -> void:
 			continue
 		var creature: Dictionary = creatures[creature_id]
 		var sprite: Texture2D = _sprite_for_species(String(creature.get("species_id", "")))
-		draw_texture_rect(sprite, Rect2(detail_rect.position.x + 10, creature_y - (14.0 if compact else 8.0), sprite_size, sprite_size))
+		draw_texture_rect(sprite, Rect2(detail_rect.position.x + 10, creature_y - (14.0 if compact else 8.0), sprite_size, sprite_size), false)
 		var name_size := 0.58 if compact else 0.7
 		var detail_size := 0.50 if compact else 0.58
 		var text_x := detail_rect.position.x + (34.0 if compact else 49.0)
