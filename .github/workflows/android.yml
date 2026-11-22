@@ -84,9 +84,26 @@ jobs:
 
       - name: Import project and verify engine
         run: |
+          set -euo pipefail
           godot --version
           mkdir -p build
-          godot --headless --editor --path . --quit
+          RUNTIME="scripts/simulation/autonomy_runtime.gd"
+          grep -F 'var _core: Variant' "$RUNTIME"
+          if grep -Fq 'class_name AutonomyRuntime' "$RUNTIME"; then
+            echo "ERROR: stale global AutonomyRuntime class declaration remains."
+            exit 1
+          fi
+          sha256sum "$RUNTIME" | tee build/autonomy-runtime.sha256
+          godot --headless --editor --path . --quit --verbose 2>&1 | tee build/godot-import-verbose.log
+          if grep -E 'SCRIPT ERROR: Parse Error|ERROR: Failed to load script' build/godot-import-verbose.log; then
+            echo "ERROR: GDScript parse/import errors detected; see log above."
+            exit 1
+          fi
+
+      - name: Preload core, autonomy runtime and application scripts
+        run: |
+          set -o pipefail
+          godot --headless --verbose --path . -s tests/test_script_preloads.gd 2>&1 | tee build/godot-preload-verbose.log
 
       - name: Run core contracts and persistence tests
         run: godot --headless --path . -s tests/test_contracts.gd
@@ -95,7 +112,9 @@ jobs:
         run: godot --headless --path . -s tests/test_content_data.gd
 
       - name: Run WLA-0B autonomous simulation tests
-        run: godot --headless --path . -s tests/test_autonomy.gd
+        run: |
+          set -o pipefail
+          godot --headless --verbose --path . -s tests/test_autonomy.gd 2>&1 | tee build/godot-autonomy-verbose.log
 
       - name: Run application boot smoke test
         run: godot --headless --path . --quit-after 8

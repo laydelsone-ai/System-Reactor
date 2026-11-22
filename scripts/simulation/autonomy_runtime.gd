@@ -1,4 +1,3 @@
-class_name AutonomyRuntime
 extends RefCounted
 
 ## WLA-0B — runtime autónomo offline.
@@ -35,7 +34,7 @@ const TRAIT_BIASES := {
 	"sociable_extrovertido": {"social": 0.22, "communication": 0.08}
 }
 
-var _core: SystemCore
+var _core: Variant
 var _state: Dictionary = {}
 var _social_source: Dictionary = {}
 var _bestiary_source: Dictionary = {}
@@ -44,7 +43,7 @@ var _last_error := ""
 var _last_decision_batch: Array = []
 var _memory_writes_this_step := 0
 
-func open(core: SystemCore, social_data: Dictionary, bestiary_data: Dictionary) -> Dictionary:
+func open(core: Variant, social_data: Dictionary, bestiary_data: Dictionary) -> Dictionary:
 	if core == null or not core.ready:
 		return {"ok": false, "message": "El núcleo del mundo no está disponible."}
 	_core = core

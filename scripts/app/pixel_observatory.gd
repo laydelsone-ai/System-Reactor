@@ -1,7 +1,6 @@
 extends Control
 
 const SystemCoreScript = preload("res://scripts/core/system_core.gd")
-const AutonomyRuntimeScript = preload("res://scripts/simulation/autonomy_runtime.gd")
 const FONT_ATLAS: Texture2D = preload("res://assets/ui/font_5x7.png")
 const FONT_CHARS := "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;-/+%#?!()[]<>"
 const TILE_STONE: Texture2D = preload("res://assets/tiles/stone.png")
@@ -64,7 +63,8 @@ const CORRIDORS: Array[Array] = [
 	[[25,11],[25,12],[25,13]]
 ]
 var _core: SystemCore
-var _autonomy: AutonomyRuntime
+var _autonomy: Variant
+var _autonomy_runtime_script: Script
 var _autonomy_auto_run := true
 var _autonomy_was_running_before_os_pause := true
 var _autonomy_accumulator := 0.0
@@ -159,7 +159,13 @@ func _open_autonomy() -> void:
 	if _core == null or not _core.ready:
 		_autonomy_status = "NUCLEO NO DISPONIBLE"
 		return
-	_autonomy = AutonomyRuntimeScript.new()
+	if _autonomy_runtime_script == null:
+		_autonomy_runtime_script = load("res://scripts/simulation/autonomy_runtime.gd") as Script
+	if _autonomy_runtime_script == null:
+		_autonomy_status = "NO SE PUDO CARGAR EL SCRIPT DE AUTONOMIA"
+		push_error("WLA: no se pudo cargar res://scripts/simulation/autonomy_runtime.gd; revisar el error de parser anterior.")
+		return
+	_autonomy = _autonomy_runtime_script.new()
 	var result: Dictionary = _autonomy.open(_core, _social, _bestiary_data)
 	if result.get("ok", false):
 		_autonomy_status = "WLA-0B LISTO / %d NPC / %d CRIATURAS DE PRUEBA" % [int(result.get("agents", 0)), int(result.get("trial_creatures", 0))]

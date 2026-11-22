@@ -1,17 +1,22 @@
 extends SceneTree
 
 const SystemCoreScript = preload("res://scripts/core/system_core.gd")
-const AutonomyRuntimeScript = preload("res://scripts/simulation/autonomy_runtime.gd")
 
 var _passes := 0
 var _failures := 0
 var _test_root := ""
+var _autonomy_runtime_script: Script
 
 func _initialize() -> void:
 	_test_root = "user://wla0b_autonomy_tests_%d" % Time.get_ticks_usec()
 	call_deferred("_run")
 
 func _run() -> void:
+	_autonomy_runtime_script = load("res://scripts/simulation/autonomy_runtime.gd") as Script
+	if _autonomy_runtime_script == null:
+		push_error("WLA-0B: runtime no cargable: res://scripts/simulation/autonomy_runtime.gd. El mensaje previo de Godot debe indicar el error interno del parser.")
+		quit(1)
+		return
 	var social := _load_json("res://data/social/social_registry_v0.2.json")
 	var bestiary := _load_json("res://data/bestiary/floor01_species.json")
 	_test_agent_and_ecology_initialization(social, bestiary)
@@ -25,7 +30,7 @@ func _run() -> void:
 	quit(1 if _failures > 0 else 0)
 
 func _test_agent_and_ecology_initialization(social: Dictionary, bestiary: Dictionary) -> void:
-	var runtime = AutonomyRuntimeScript.new()
+	var runtime: Variant = _autonomy_runtime_script.new()
 	var initialized: Dictionary = runtime.initialize_experiment(social, bestiary, 20261120)
 	_check(initialized.get("ok", false), "autonomy runtime initializes without a player")
 	var state: Dictionary = runtime.get_state_copy()
@@ -73,7 +78,7 @@ func _test_agent_and_ecology_initialization(social: Dictionary, bestiary: Dictio
 	_check(String(authored.get("validated_current_location_id", "")).is_empty(), "unvalidated presence remains unknown")
 
 func _test_sensory_limits(social: Dictionary, bestiary: Dictionary) -> void:
-	var runtime = AutonomyRuntimeScript.new()
+	var runtime: Variant = _autonomy_runtime_script.new()
 	runtime.initialize_experiment(social, bestiary, 1337)
 	var state: Dictionary = runtime.get_state_copy()
 	var creatures: Dictionary = state.get("trial_creatures", {})
@@ -100,7 +105,7 @@ func _test_sensory_limits(social: Dictionary, bestiary: Dictionary) -> void:
 	_check(not bool(detectable.get("omniscient_world_access", true)), "creature perception explicitly excludes omniscient world access")
 
 func _test_conditioned_environmental_response(social: Dictionary, bestiary: Dictionary) -> void:
-	var runtime = AutonomyRuntimeScript.new()
+	var runtime: Variant = _autonomy_runtime_script.new()
 	runtime.initialize_experiment(social, bestiary, 9871)
 	var state: Dictionary = runtime.get_state_copy()
 	var creatures: Dictionary = state.get("trial_creatures", {})
@@ -122,7 +127,7 @@ func _test_conditioned_environmental_response(social: Dictionary, bestiary: Dict
 	_check(String(decision.get("reason", "")).contains("vibración intensa"), "rat decision records the actual detected cause rather than a scripted enemy target")
 
 func _test_memory_and_individual_cognition(social: Dictionary, bestiary: Dictionary) -> void:
-	var runtime = AutonomyRuntimeScript.new()
+	var runtime: Variant = _autonomy_runtime_script.new()
 	runtime.initialize_experiment(social, bestiary, 481516)
 	var strong_reasoner := {"cognitive_profile":{"reasoning":90}}
 	var weak_reasoner := {"cognitive_profile":{"reasoning":10}}
@@ -162,7 +167,7 @@ func _candidate_score(decision: Dictionary, action: String) -> float:
 	return -999.0
 
 func _test_autonomous_decisions_and_species_behavior(social: Dictionary, bestiary: Dictionary) -> void:
-	var runtime = AutonomyRuntimeScript.new()
+	var runtime: Variant = _autonomy_runtime_script.new()
 	runtime.initialize_experiment(social, bestiary, 20261120)
 	var first_step: Dictionary = runtime.step()
 	_check(first_step.get("ok", false), "world advances without player input")
@@ -216,8 +221,8 @@ func _test_autonomous_decisions_and_species_behavior(social: Dictionary, bestiar
 	_check(evaluated == 180, "round-robin scheduler evaluates the complete population over successive ticks")
 
 func _test_reproducibility(social: Dictionary, bestiary: Dictionary) -> void:
-	var left = AutonomyRuntimeScript.new()
-	var right = AutonomyRuntimeScript.new()
+	var left: Variant = _autonomy_runtime_script.new()
+	var right: Variant = _autonomy_runtime_script.new()
 	left.initialize_experiment(social, bestiary, 73119)
 	right.initialize_experiment(social, bestiary, 73119)
 	for tick in range(10):
@@ -228,10 +233,10 @@ func _test_reproducibility(social: Dictionary, bestiary: Dictionary) -> void:
 	_check(left.get_recent_events(80) == right.get_recent_events(80), "fixed seed reproduces the same decision and consequence trace")
 
 func _test_durable_checkpoint_and_replay(social: Dictionary, bestiary: Dictionary) -> void:
-	var core = SystemCoreScript.new(_test_root)
+	var core: Variant = SystemCoreScript.new(_test_root)
 	var opened: Dictionary = core.open_last_or_create()
 	_check(opened.get("ok", false), "test world opens for autonomous persistence")
-	var runtime = AutonomyRuntimeScript.new()
+	var runtime: Variant = _autonomy_runtime_script.new()
 	var runtime_open: Dictionary = runtime.open(core, social, bestiary)
 	_check(runtime_open.get("ok", false), "autonomy binds to the event-sourced world core")
 	var step_result: Dictionary = runtime.step()
@@ -241,10 +246,10 @@ func _test_durable_checkpoint_and_replay(social: Dictionary, bestiary: Dictionar
 	var post_snapshot_step: Dictionary = runtime.step()
 	_check(post_snapshot_step.get("ok", false), "a later autonomous tick is appended after the saved snapshot")
 	var expected_tick: int = int(runtime.current_tick())
-	var restored_core = SystemCoreScript.new(_test_root)
+	var restored_core: Variant = SystemCoreScript.new(_test_root)
 	var restored_open: Dictionary = restored_core.open_last_or_create()
 	_check(restored_open.get("ok", false), "world core recovers after autonomous checkpoint")
-	var restored_runtime = AutonomyRuntimeScript.new()
+	var restored_runtime: Variant = _autonomy_runtime_script.new()
 	var restored_runtime_open: Dictionary = restored_runtime.open(restored_core, social, bestiary)
 	_check(restored_runtime_open.get("ok", false), "autonomous domain restores its snapshot")
 	_check(restored_runtime.current_tick() == expected_tick, "autonomous snapshot and post-snapshot journal replay restore the latest tick")
