@@ -1,0 +1,70 @@
+{
+  "catalog_version": "0.1.0",
+  "status": "provisional_references_only",
+  "sponsors": [
+    {
+      "id": "community_aid_fund",
+      "display_label": "Fondo de ayuda comunitaria",
+      "record_type": "placeholder_sponsor_or_ledger_reference",
+      "status": "MUST_BE_RESOLVED_TO_REAL_ENTITY_AND_FUNDS_BEFORE_PUBLICATION",
+      "funding_rule": "No payment or material reward may be issued unless the authoritative economy domain verifies an existing balance, goods, credit or explicit non-monetary obligation.",
+      "notes": "This identifier is a content placeholder, not proof that an organization, account, budget or currency amount has already been created."
+    },
+    {
+      "id": "guild_ecology_or_survey_fund",
+      "display_label": "Partida de seguridad, ecología o cartografía del gremio",
+      "record_type": "placeholder_sponsor_or_ledger_reference",
+      "status": "MUST_BE_RESOLVED_TO_REAL_ENTITY_AND_FUNDS_BEFORE_PUBLICATION",
+      "funding_rule": "No payment or material reward may be issued unless the authoritative economy domain verifies an existing balance, goods, credit or explicit non-monetary obligation.",
+      "notes": "This identifier is a content placeholder, not proof that an organization, account, budget or currency amount has already been created."
+    },
+    {
+      "id": "guild_medical_ledger",
+      "display_label": "Partida de suministros médicos del gremio",
+      "record_type": "placeholder_sponsor_or_ledger_reference",
+      "status": "MUST_BE_RESOLVED_TO_REAL_ENTITY_AND_FUNDS_BEFORE_PUBLICATION",
+      "funding_rule": "No payment or material reward may be issued unless the authoritative economy domain verifies an existing balance, goods, credit or explicit non-monetary obligation.",
+      "notes": "This identifier is a content placeholder, not proof that an organization, account, budget or currency amount has already been created."
+    },
+    {
+      "id": "guild_supply_ledger",
+      "display_label": "Cuenta o partida de suministros del gremio",
+      "record_type": "placeholder_sponsor_or_ledger_reference",
+      "status": "MUST_BE_RESOLVED_TO_REAL_ENTITY_AND_FUNDS_BEFORE_PUBLICATION",
+      "funding_rule": "No payment or material reward may be issued unless the authoritative economy domain verifies an existing balance, goods, credit or explicit non-monetary obligation.",
+      "notes": "This identifier is a content placeholder, not proof that an organization, account, budget or currency amount has already been created."
+    },
+    {
+      "id": "institution_adventurers_guild",
+      "display_label": "Gremio de aventureros (institución prevista por SR-10/SR-11/SR-13)",
+      "record_type": "placeholder_sponsor_or_ledger_reference",
+      "status": "MUST_BE_RESOLVED_TO_REAL_ENTITY_AND_FUNDS_BEFORE_PUBLICATION",
+      "funding_rule": "No payment or material reward may be issued unless the authoritative economy domain verifies an existing balance, goods, credit or explicit non-monetary obligation.",
+      "notes": "This identifier is a content placeholder, not proof that an organization, account, budget or currency amount has already been created."
+    },
+    {
+      "id": "institution_research_house",
+      "display_label": "Institución de investigación (denominación oficial reservada)",
+      "record_type": "placeholder_sponsor_or_ledger_reference",
+      "status": "MUST_BE_RESOLVED_TO_REAL_ENTITY_AND_FUNDS_BEFORE_PUBLICATION",
+      "funding_rule": "No payment or material reward may be issued unless the authoritative economy domain verifies an existing balance, goods, credit or explicit non-monetary obligation.",
+      "notes": "This identifier is a content placeholder, not proof that an organization, account, budget or currency amount has already been created."
+    },
+    {
+      "id": "merchant_supply_contract",
+      "display_label": "Comerciante patrocinador mediante contrato específico",
+      "record_type": "placeholder_sponsor_or_ledger_reference",
+      "status": "MUST_BE_RESOLVED_TO_REAL_ENTITY_AND_FUNDS_BEFORE_PUBLICATION",
+      "funding_rule": "No payment or material reward may be issued unless the authoritative economy domain verifies an existing balance, goods, credit or explicit non-monetary obligation.",
+      "notes": "This identifier is a content placeholder, not proof that an organization, account, budget or currency amount has already been created."
+    },
+    {
+      "id": "sender_institution",
+      "display_label": "Institución emisora concreta, por resolver al crear el contrato",
+      "record_type": "placeholder_sponsor_or_ledger_reference",
+      "status": "MUST_BE_RESOLVED_TO_REAL_ENTITY_AND_FUNDS_BEFORE_PUBLICATION",
+      "funding_rule": "No payment or material reward may be issued unless the authoritative economy domain verifies an existing balance, goods, credit or explicit non-monetary obligation.",
+      "notes": "This identifier is a content placeholder, not proof that an organization, account, budget or currency amount has already been created."
+    }
+  ]
+}

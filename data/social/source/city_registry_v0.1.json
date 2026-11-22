@@ -1,0 +1,4481 @@
+{
+  "metadata": {
+    "package_id": "WLA-CITY-REGISTRY-001",
+    "version": "0.1.0",
+    "title": "Registro de Ciudad, Instituciones, Edificios y Lugares de Trabajo",
+    "project": "World Laboratory / Sistema Reactor",
+    "language": "es",
+    "created_date": "2026-11-20",
+    "content_status": "proposal_for_author_review_not_new_SR_or_canon_until_approval",
+    "normative_basis": [
+      "SR-01",
+      "SR-02",
+      "SR-03",
+      "SR-04",
+      "SR-05",
+      "SR-06",
+      "SR-07",
+      "SR-10",
+      "SR-11",
+      "SR-12",
+      "SR-13",
+      "SR-14",
+      "SR-15"
+    ],
+    "scope": "initial_city_and_services_supporting_first_playable_region; no exact map, coordinates, final proper names, local laws or budgets are fixed",
+    "source_npc_cast": "five named roles already described in NPC population concept v0.1; remaining cast must be imported from its authoritative data package before assignment",
+    "numeric_status": "all suggested workplace capacities and housing ranges are calibration proposals, not actual staffing or occupancy"
+  },
+  "districts": [
+    {
+      "id": "DST-CENTRAL",
+      "label": "Centro cívico y plaza de la torre",
+      "label_status": "descriptive_provisional",
+      "purpose": "Hito de orientación, acceso a la torre, registro de expediciones y servicios de coordinación. No presupone sede de un gobierno monárquico ni una constitución local concreta.",
+      "adjacent_districts": [
+        "DST-GUILD",
+        "DST-MARKET",
+        "DST-SECURITY",
+        "DST-HEALTH"
+      ],
+      "spatial_status": "relative_adjacency_proposal_only"
+    },
+    {
+      "id": "DST-GUILD",
+      "label": "Sector gremial y de expediciones",
+      "label_status": "descriptive_provisional",
+      "purpose": "Concentra los servicios del gremio, archivo de expediciones, cartografía y coordinación de exploradores.",
+      "adjacent_districts": [
+        "DST-CENTRAL",
+        "DST-MARKET",
+        "DST-CRAFT",
+        "DST-HEALTH"
+      ],
+      "spatial_status": "relative_adjacency_proposal_only"
+    },
+    {
+      "id": "DST-MARKET",
+      "label": "Sector comercial y de abastecimiento",
+      "label_status": "descriptive_provisional",
+      "purpose": "Intercambio físico, puestos, tiendas, almacenes, alimentos y alojamiento temporal.",
+      "adjacent_districts": [
+        "DST-CENTRAL",
+        "DST-GUILD",
+        "DST-CRAFT",
+        "DST-RESIDENTIAL",
+        "DST-COMMUNITY"
+      ],
+      "spatial_status": "relative_adjacency_proposal_only"
+    },
+    {
+      "id": "DST-CRAFT",
+      "label": "Sector de talleres y producción",
+      "label_status": "descriptive_provisional",
+      "purpose": "Oficios de transformación, reparación, fabricación y suministro de herramientas.",
+      "adjacent_districts": [
+        "DST-GUILD",
+        "DST-MARKET",
+        "DST-RESIDENTIAL",
+        "DST-SECURITY"
+      ],
+      "spatial_status": "relative_adjacency_proposal_only"
+    },
+    {
+      "id": "DST-HEALTH",
+      "label": "Sector de salud, estudio y formación",
+      "label_status": "descriptive_provisional",
+      "purpose": "Atención de lesiones, medicamentos, aprendizaje, lectura e investigación.",
+      "adjacent_districts": [
+        "DST-GUILD",
+        "DST-RESIDENTIAL",
+        "DST-CENTRAL",
+        "DST-COMMUNITY"
+      ],
+      "spatial_status": "relative_adjacency_proposal_only"
+    },
+    {
+      "id": "DST-RESIDENTIAL",
+      "label": "Sector residencial",
+      "label_status": "descriptive_provisional",
+      "purpose": "Hogares persistentes, habitaciones, viviendas de alquiler, alojamiento de aprendices y casas de distintas capacidades.",
+      "adjacent_districts": [
+        "DST-MARKET",
+        "DST-CRAFT",
+        "DST-HEALTH",
+        "DST-COMMUNITY"
+      ],
+      "spatial_status": "relative_adjacency_proposal_only"
+    },
+    {
+      "id": "DST-SECURITY",
+      "label": "Sector de seguridad, puerta y logística",
+      "label_status": "descriptive_provisional",
+      "purpose": "Vigilancia, control de accesos, establos, almacenamiento operativo, agua, saneamiento y mantenimiento.",
+      "adjacent_districts": [
+        "DST-CENTRAL",
+        "DST-CRAFT"
+      ],
+      "spatial_status": "relative_adjacency_proposal_only"
+    },
+    {
+      "id": "DST-COMMUNITY",
+      "label": "Sector comunitario y espacios compartidos",
+      "label_status": "descriptive_provisional",
+      "purpose": "Reunión vecinal, apoyo mutuo, memoria colectiva y espacios de uso común. No presupone una religión oficial.",
+      "adjacent_districts": [
+        "DST-MARKET",
+        "DST-HEALTH",
+        "DST-RESIDENTIAL"
+      ],
+      "spatial_status": "relative_adjacency_proposal_only"
+    }
+  ],
+  "institutions": [
+    {
+      "id": "ORG-ADVENTURERS-GUILD",
+      "display_name": "Gremio de Aventureros",
+      "name_status": "generic_canonical_function_proper_name_reserved",
+      "institution_type": "membership_association",
+      "purpose": "Registrar aventureros y expediciones; canalizar contratos; conservar informes; facilitar tasación, coordinación, estándares y apoyo mutuo.",
+      "authority_scope": "members, registered expeditions and services voluntarily requested; no universal control over adventurers, trade or city law",
+      "founding": "reserved_not_defined",
+      "governance": "internal rules and succession must be defined; Ilyen Arveth is proposed as current master in NPC catalogue v0.1",
+      "funding_sources": "must be grounded in actual dues, service fees, sponsorships, donations or funded contracts; no automatic treasury",
+      "limitations": [
+        "No monopoly over all adventurers or employment.",
+        "Registration does not grant abilities or guarantee competence.",
+        "Cannot pay a reward without actual funds, credit or committed goods.",
+        "Cannot determine legal guilt or override domain authorities."
+      ],
+      "facility_ids": [
+        "BLD-EXPEDITION-CHECK",
+        "BLD-GUILD-HQ",
+        "BLD-GUILD-ARCHIVE",
+        "BLD-CARTOGRAPHY-OFFICE"
+      ],
+      "subunits": [
+        "UNIT-EXPEDITION-ARCHIVE",
+        "UNIT-CARTOGRAPHY-DESK"
+      ],
+      "status": "content_proposal"
+    },
+    {
+      "id": "ORG-CIVIC-REGISTRY",
+      "display_name": "Servicio de Registro y Atención Cívica",
+      "name_status": "functional_placeholder_not_government_model",
+      "institution_type": "civic_service",
+      "purpose": "Tramitar registros locales, solicitudes, avisos y derivaciones entre servicios; conservar documentación administrativa.",
+      "authority_scope": "administrative services only; jurisdiction and public-law authority reserved",
+      "founding": "reserved_not_defined",
+      "governance": "reserved; do not assume mayor, council, monarchy or legal code",
+      "funding_sources": "public allocation or other legally valid funding to be defined; no initial balance assigned",
+      "limitations": [
+        "Does not define the political system.",
+        "Does not create legal permissions or penalties until local law is specified."
+      ],
+      "facility_ids": [
+        "BLD-TOWER-ENTRY",
+        "BLD-CIVIC-REGISTRY",
+        "BLD-GATEHOUSE"
+      ],
+      "status": "content_proposal"
+    },
+    {
+      "id": "ORG-CITY-WATCH",
+      "display_name": "Servicio de Guardia y Vigilancia",
+      "name_status": "functional_placeholder_jurisdiction_reserved",
+      "institution_type": "public_safety_service",
+      "purpose": "Patrullar, observar riesgos, auxiliar en emergencias, registrar incidentes y vigilar pasos asignados.",
+      "authority_scope": "operational public-safety functions only; legal powers and command hierarchy reserved",
+      "founding": "reserved_not_defined",
+      "governance": "chain of command, rules of arrest, detention and jurisdiction not fixed",
+      "funding_sources": "must be assigned by the eventual civic authority; no budget assumed",
+      "limitations": [
+        "Do not invent arrest powers, legal procedures or jurisdiction.",
+        "A guard report is testimony, not automatic proof.",
+        "Cannot declare a person guilty."
+      ],
+      "facility_ids": [
+        "BLD-TOWER-ENTRY",
+        "BLD-EXPEDITION-CHECK",
+        "BLD-WATCH-STATION",
+        "BLD-WATCH-BARRACKS",
+        "BLD-GATEHOUSE",
+        "BLD-FIRE-POST"
+      ],
+      "status": "content_proposal"
+    },
+    {
+      "id": "ORG-HEALTH-PRACTICE",
+      "display_name": "Servicio Clínico y de Atención Sanitaria",
+      "name_status": "functional_placeholder_operator_and_financing_reserved",
+      "institution_type": "medical_service_or_independent_practice",
+      "purpose": "Atender heridas y enfermedades, estabilizar pacientes, conservar suministros y derivar casos que superen la capacidad disponible.",
+      "authority_scope": "care delivered by qualified individuals and available resources",
+      "founding": "reserved_not_defined",
+      "governance": "professional responsibility and scope of practice; no guaranteed free treatment",
+      "funding_sources": "patient payment, patronage, institutional funding or charity only when actually established",
+      "limitations": [
+        "No instant full healing.",
+        "Treatment consumes time, supplies and qualified labour.",
+        "Capacity can be exhausted; triage and waiting are possible."
+      ],
+      "facility_ids": [
+        "BLD-CLINIC",
+        "BLD-APOTHECARY",
+        "BLD-RECOVERY-HOUSE"
+      ],
+      "status": "content_proposal"
+    },
+    {
+      "id": "ORG-ARCANE-RESEARCH",
+      "display_name": "Círculo de Investigación Arcana",
+      "name_status": "descriptive_proposal_not_formal_academy",
+      "institution_type": "research_group",
+      "purpose": "Registrar observaciones, comparar hipótesis y estudiar fenómenos de Trama, flujo y Resonancias mediante fuentes, dispositivos, costes y procedimientos válidos.",
+      "authority_scope": "its members, equipment, research records and sponsored work",
+      "founding": "reserved_not_defined",
+      "governance": "informal or formal structure to be determined by participants",
+      "funding_sources": "research grants, patronage, fees or member resources only when recorded",
+      "limitations": [
+        "No omniscience or guaranteed explanation of the Triple Echo.",
+        "Hypotheses remain provisional until evidence supports them.",
+        "Arcana requires valid sources, mechanisms, materials, operators and maintenance."
+      ],
+      "facility_ids": [
+        "BLD-ARCANE-OBSERVATORY",
+        "BLD-READING-ROOM"
+      ],
+      "status": "content_proposal"
+    },
+    {
+      "id": "ORG-TRADE-ASSOCIATION",
+      "display_name": "Asociación Voluntaria de Comerciantes",
+      "name_status": "generic_optional_association",
+      "institution_type": "voluntary_trade_association",
+      "purpose": "Coordinar información de mercado, transporte, acuerdos conjuntos y apoyo entre negocios participantes.",
+      "authority_scope": "members and voluntary agreements only",
+      "founding": "optional_not_confirmed",
+      "governance": "membership and rules to be created only if the association is actually founded",
+      "funding_sources": "member contributions and recorded services",
+      "limitations": [
+        "No monopoly over shops or prices.",
+        "Non-members may trade independently.",
+        "No control of stock owned by individual merchants."
+      ],
+      "facility_ids": [
+        "BLD-COVERED-MARKET",
+        "BLD-COURIER-POST"
+      ],
+      "status": "optional_content_proposal"
+    },
+    {
+      "id": "ORG-CRAFT-ASSOCIATION",
+      "display_name": "Asociación Voluntaria de Oficios",
+      "name_status": "generic_optional_association",
+      "institution_type": "voluntary_craft_association",
+      "purpose": "Facilitar aprendizaje, estándares compartidos, compras conjuntas y solución interna de disputas entre talleres participantes.",
+      "authority_scope": "members and voluntary agreements only",
+      "founding": "optional_not_confirmed",
+      "governance": "membership and rules to be established only if founded",
+      "funding_sources": "contributions, classes and shared services if recorded",
+      "limitations": [
+        "No mandatory guild membership for every artisan.",
+        "Certification does not create skill.",
+        "Independent and family workshops remain possible."
+      ],
+      "facility_ids": [
+        "BLD-SMITHY",
+        "BLD-ARMOURER",
+        "BLD-CARPENTER",
+        "BLD-LEATHERWORK",
+        "BLD-TAILOR",
+        "BLD-TOOL-REPAIR",
+        "BLD-CRAFT-HALL",
+        "BLD-CRAFT-STORE"
+      ],
+      "status": "optional_content_proposal"
+    },
+    {
+      "id": "ORG-LEARNING-NETWORK",
+      "display_name": "Red de Aprendizaje y Oficios",
+      "name_status": "functional_placeholder_formal_structure_reserved",
+      "institution_type": "education_and_apprenticeship_network",
+      "purpose": "Ofrecer enseñanza básica, tutorías, aprendizaje de oficios y transmisión de conocimientos cuando existan docentes, materiales y capacidad.",
+      "authority_scope": "courses, mentors and enrolled learners",
+      "founding": "reserved_not_defined",
+      "governance": "formal school status not assumed; may be a network of instructors",
+      "funding_sources": "tuition, patronage, public support or unpaid mentorship, each explicitly recorded",
+      "limitations": [
+        "Enrolment does not grant mastery.",
+        "Not everyone has equal access or aptitude.",
+        "Training takes time, practice and feedback."
+      ],
+      "facility_ids": [
+        "BLD-CRAFT-HALL",
+        "BLD-LEARNING-HALL",
+        "BLD-READING-ROOM"
+      ],
+      "status": "content_proposal"
+    },
+    {
+      "id": "ORG-PUBLIC-WORKS",
+      "display_name": "Servicio de Obras y Mantenimiento",
+      "name_status": "functional_placeholder_departmental_attachment_reserved",
+      "institution_type": "utility_and_maintenance_service",
+      "purpose": "Mantener agua, saneamiento, calles, edificios y almacenes públicos mediante personal, herramientas, materiales y órdenes de trabajo.",
+      "authority_scope": "infrastructure explicitly assigned to the service",
+      "founding": "reserved_not_defined",
+      "governance": "reporting line and property ownership reserved",
+      "funding_sources": "recorded civic allocation, contracts or donations; no free resources",
+      "limitations": [
+        "Maintenance consumes materials and working time.",
+        "Infrastructure failure can interrupt services.",
+        "Private buildings remain the responsibility of their owner/operator unless contracted."
+      ],
+      "facility_ids": [
+        "BLD-BATHHOUSE",
+        "BLD-PUBLIC-STOREHOUSE",
+        "BLD-WATER-CISTERN",
+        "BLD-SANITATION-YARD",
+        "BLD-PUBLIC-WORKS-DEPOT",
+        "BLD-FIRE-POST",
+        "PLC-OLD-WELL"
+      ],
+      "status": "content_proposal"
+    },
+    {
+      "id": "ORG-COMMUNITY-AID",
+      "display_name": "Red de Apoyo Comunitario",
+      "name_status": "optional_voluntary_network",
+      "institution_type": "community_support_network",
+      "purpose": "Coordinar ayuda voluntaria, alojamiento temporal, alimentos, cuidados y apoyo tras incidentes.",
+      "authority_scope": "voluntary members, donations and explicitly accepted cases",
+      "founding": "optional_not_confirmed",
+      "governance": "informal coordination; no mandatory membership",
+      "funding_sources": "donated goods, volunteer time and recorded sponsorships",
+      "limitations": [
+        "No infinite supplies.",
+        "Cannot compel care or labour.",
+        "Aid is constrained by stock, time and volunteers."
+      ],
+      "facility_ids": [
+        "BLD-COMMUNITY-KITCHEN",
+        "BLD-LOWCOST-HOSTEL",
+        "BLD-RECOVERY-HOUSE",
+        "BLD-COMMUNITY-HALL"
+      ],
+      "status": "optional_content_proposal"
+    }
+  ],
+  "job_roles": [
+    {
+      "id": "JOB-GUILD-MASTER",
+      "label": "Maestro o maestra del gremio",
+      "category": "governance",
+      "description": "Coordina la asociación, responde por decisiones internas y representa al gremio.",
+      "competency_requirements": "leadership, administration, domain knowledge",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-ADMIN-CLERK",
+      "label": "Agente de registro",
+      "category": "administration",
+      "description": "Tramita y archiva solicitudes dentro del alcance autorizado.",
+      "competency_requirements": "literacy, records, local procedure",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-ACCESS-CLERK",
+      "label": "Recepcionista de acceso",
+      "category": "administration",
+      "description": "Registra entradas o solicitudes y comunica condiciones conocidas.",
+      "competency_requirements": "communication, record keeping",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-EXPEDITION-REGISTRAR",
+      "label": "Registrador de expediciones",
+      "category": "guild",
+      "description": "Registra integrantes, acuerdos, rutas declaradas y documentación.",
+      "competency_requirements": "records, contract literacy",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-CONTRACT-CLERK",
+      "label": "Gestor de contratos",
+      "category": "guild",
+      "description": "Comprueba emisor, condiciones, evidencia y financiación declarada.",
+      "competency_requirements": "records, negotiation, accounting basics",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-ARCHIVIST",
+      "label": "Archivista",
+      "category": "knowledge",
+      "description": "Custodia fondos documentales, índices, préstamos y procedencia.",
+      "competency_requirements": "reading, cataloguing, preservation",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-CARTOGRAPHER",
+      "label": "Cartógrafo o cartógrafa",
+      "category": "knowledge",
+      "description": "Actualiza representaciones de rutas separando recorrido, testimonio e hipótesis.",
+      "competency_requirements": "surveying, navigation, records",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-ARCANE-RESEARCHER",
+      "label": "Investigador arcano",
+      "category": "research",
+      "description": "Formula hipótesis y lleva a cabo estudios con medios válidos.",
+      "competency_requirements": "relevant theory, safety, method",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-ARCANE-TECHNICIAN",
+      "label": "Técnico de instrumentos arcanos",
+      "category": "research",
+      "description": "Calibra, revisa y mantiene dispositivos dentro de su competencia.",
+      "competency_requirements": "instrument maintenance, arcane safety",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-GUARD",
+      "label": "Agente de vigilancia",
+      "category": "security",
+      "description": "Patrulla, observa, informa y auxilia según atribuciones reales.",
+      "competency_requirements": "observation, fitness, procedures",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-GATE-WARDEN",
+      "label": "Encargado de puerta",
+      "category": "security",
+      "description": "Controla el flujo por un acceso según las reglas vigentes.",
+      "competency_requirements": "record keeping, risk awareness",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-CLINICIAN",
+      "label": "Sanador o profesional clínico",
+      "category": "health",
+      "description": "Evalúa, trata y documenta pacientes dentro de su formación y recursos.",
+      "competency_requirements": "anatomy, diagnosis, treatment",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-CARE-ASSISTANT",
+      "label": "Auxiliar de cuidados",
+      "category": "health",
+      "description": "Ayuda en traslado, limpieza, preparación y vigilancia de pacientes.",
+      "competency_requirements": "basic care, hygiene",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-APOTHECARY",
+      "label": "Preparador o vendedor de remedios",
+      "category": "trade_health",
+      "description": "Prepara o dispensa productos conocidos con control de existencias.",
+      "competency_requirements": "materia médica, preparation, stock control",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-HERBALIST",
+      "label": "Recolector o especialista vegetal",
+      "category": "production",
+      "description": "Identifica y procesa plantas con procedencia y seguridad.",
+      "competency_requirements": "botany, field safety, identification",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-TEACHER",
+      "label": "Docente o mentor",
+      "category": "education",
+      "description": "Enseña mediante explicación, demostración, práctica y corrección.",
+      "competency_requirements": "subject mastery, pedagogy",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-LIBRARIAN",
+      "label": "Bibliotecario o encargado de lectura",
+      "category": "knowledge",
+      "description": "Organiza materiales y controla acceso, préstamos y conservación.",
+      "competency_requirements": "cataloguing, literacy",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-MERCHANT",
+      "label": "Comerciante",
+      "category": "trade",
+      "description": "Compra y vende bienes propios o autorizados, manteniendo inventario real.",
+      "competency_requirements": "appraisal, negotiation, accounting",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-STALLHOLDER",
+      "label": "Vendedor de puesto",
+      "category": "trade",
+      "description": "Ofrece mercancía disponible en un puesto físico.",
+      "competency_requirements": "sales, product knowledge",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-STOCKKEEPER",
+      "label": "Almacenero",
+      "category": "logistics",
+      "description": "Recibe, cuenta, conserva y entrega bienes con trazabilidad.",
+      "competency_requirements": "inventory, handling",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-MILLER",
+      "label": "Molinero",
+      "category": "production",
+      "description": "Transforma grano mediante equipos, energía, mantenimiento y trabajo.",
+      "competency_requirements": "mill operation, maintenance",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-BAKER",
+      "label": "Panadero",
+      "category": "production",
+      "description": "Elabora alimentos usando ingredientes, combustible, tiempo e instalaciones.",
+      "competency_requirements": "food preparation, hygiene",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-COOK",
+      "label": "Cocinero",
+      "category": "hospitality",
+      "description": "Prepara comidas usando existencias reales y capacidad de cocina.",
+      "competency_requirements": "food preparation, hygiene",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-SERVER",
+      "label": "Personal de servicio",
+      "category": "hospitality",
+      "description": "Atiende comensales y huéspedes y registra pedidos.",
+      "competency_requirements": "service, communication",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-INNKEEPER",
+      "label": "Encargado de alojamiento",
+      "category": "hospitality",
+      "description": "Gestiona habitaciones disponibles, pagos, mantenimiento y atención.",
+      "competency_requirements": "hospitality, records",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-HOUSEKEEPER",
+      "label": "Personal de limpieza y habitaciones",
+      "category": "hospitality",
+      "description": "Mantiene espacios de alojamiento y uso común.",
+      "competency_requirements": "cleaning, care",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-COURIER",
+      "label": "Mensajero o correo",
+      "category": "logistics",
+      "description": "Transporta documentos o bienes por rutas físicamente disponibles.",
+      "competency_requirements": "navigation, reliability",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-SMITH",
+      "label": "Herrero",
+      "category": "craft",
+      "description": "Trabaja metales con herramientas, combustible, conocimientos y seguridad.",
+      "competency_requirements": "metalworking, heat safety",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-ARMOURER",
+      "label": "Armero",
+      "category": "craft",
+      "description": "Fabrica, ajusta o repara protecciones con materiales y técnicas válidas.",
+      "competency_requirements": "armour construction, fitting",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-CARPENTER",
+      "label": "Carpintero",
+      "category": "craft",
+      "description": "Construye o repara estructuras y objetos de madera.",
+      "competency_requirements": "woodworking, measurement",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-LEATHERWORKER",
+      "label": "Curtidor o artesano del cuero",
+      "category": "craft",
+      "description": "Procesa pieles y fabrica bienes de cuero.",
+      "competency_requirements": "hide processing, leathercraft",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-TAILOR",
+      "label": "Sastre",
+      "category": "craft",
+      "description": "Corta, ajusta, cose y repara prendas.",
+      "competency_requirements": "textiles, tailoring",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-REPAIRER",
+      "label": "Reparador de herramientas",
+      "category": "craft",
+      "description": "Inspecciona y repara herramientas según material y daño.",
+      "competency_requirements": "tool repair, material knowledge",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-MATERIAL-SORTER",
+      "label": "Clasificador de minerales y materiales",
+      "category": "craft_logistics",
+      "description": "Clasifica lotes, elimina contaminación y registra procedencia.",
+      "competency_requirements": "material identification, safety",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-CRAFT-INSTRUCTOR",
+      "label": "Instructor de oficio",
+      "category": "education_craft",
+      "description": "Supervisa aprendices y valida trabajos prácticos.",
+      "competency_requirements": "craft mastery, teaching",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-STABLEHAND",
+      "label": "Mozo de establo",
+      "category": "animal_care",
+      "description": "Cuida monturas y animales de carga, forraje, descanso y limpieza.",
+      "competency_requirements": "animal handling, husbandry",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-PORTER",
+      "label": "Mozo de carga",
+      "category": "logistics",
+      "description": "Mueve bienes con límites físicos y registros de transferencia.",
+      "competency_requirements": "lifting safety, handling",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-WATERWORKER",
+      "label": "Operario de agua",
+      "category": "public_works",
+      "description": "Inspecciona depósitos, conducciones y distribución de agua.",
+      "competency_requirements": "water systems, maintenance",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-SANITATION",
+      "label": "Operario de saneamiento",
+      "category": "public_works",
+      "description": "Retira residuos y mantiene instalaciones sanitarias.",
+      "competency_requirements": "sanitation, protective practice",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-MAINTENANCE",
+      "label": "Técnico de mantenimiento",
+      "category": "public_works",
+      "description": "Inspecciona y repara edificios, calles y equipos asignados.",
+      "competency_requirements": "repair, construction, safety",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-FIRE-WATCH",
+      "label": "Vigilante de incendios",
+      "category": "security",
+      "description": "Detecta humo y coordina primera respuesta con medios disponibles.",
+      "competency_requirements": "fire awareness, emergency response",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-COMMUNITY-COORD",
+      "label": "Coordinador comunitario",
+      "category": "community",
+      "description": "Organiza solicitudes y ayudas voluntarias con recursos registrados.",
+      "competency_requirements": "coordination, records",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-CAREGIVER",
+      "label": "Cuidador",
+      "category": "community",
+      "description": "Presta ayuda personal o doméstica consentida.",
+      "competency_requirements": "care, trust, practical support",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-GARDENER",
+      "label": "Jardinero o cuidador de espacios verdes",
+      "category": "maintenance",
+      "description": "Mantiene espacios vegetales y comunitarios.",
+      "competency_requirements": "plant care, maintenance",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    },
+    {
+      "id": "JOB-BUILDING-STEWARD",
+      "label": "Encargado de edificio",
+      "category": "property",
+      "description": "Abre, cierra, limpia y comunica incidencias del inmueble.",
+      "competency_requirements": "keys, maintenance, record keeping",
+      "competency_status": "requirements_are_qualitative_not_automatic_skill_grants",
+      "wage": "not_set",
+      "employment_contract_required": true
+    }
+  ],
+  "services": [
+    {
+      "id": "SVC-EXPEDITION-REGISTRATION",
+      "label": "Registro de aventureros y expediciones",
+      "facility_ids": [
+        "BLD-EXPEDITION-CHECK",
+        "BLD-GUILD-HQ"
+      ],
+      "responsible_org_id": "ORG-ADVENTURERS-GUILD",
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    },
+    {
+      "id": "SVC-MISSION-CONTRACTS",
+      "label": "Publicación y gestión de contratos",
+      "facility_ids": [
+        "BLD-GUILD-HQ"
+      ],
+      "responsible_org_id": "ORG-ADVENTURERS-GUILD",
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    },
+    {
+      "id": "SVC-EXPEDITION-ARCHIVE",
+      "label": "Consulta y custodia de informes de expedición",
+      "facility_ids": [
+        "BLD-GUILD-ARCHIVE"
+      ],
+      "responsible_org_id": "ORG-ADVENTURERS-GUILD",
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    },
+    {
+      "id": "SVC-CARTOGRAPHY",
+      "label": "Consulta y actualización cartográfica",
+      "facility_ids": [
+        "BLD-CARTOGRAPHY-OFFICE"
+      ],
+      "responsible_org_id": "ORG-ADVENTURERS-GUILD",
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    },
+    {
+      "id": "SVC-ARCANE-OBSERVATION",
+      "label": "Registro y consulta de observaciones arcanas",
+      "facility_ids": [
+        "BLD-ARCANE-OBSERVATORY",
+        "BLD-READING-ROOM"
+      ],
+      "responsible_org_id": "ORG-ARCANE-RESEARCH",
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    },
+    {
+      "id": "SVC-CIVIC-REGISTRY",
+      "label": "Atención y registro cívico",
+      "facility_ids": [
+        "BLD-TOWER-ENTRY",
+        "BLD-CIVIC-REGISTRY",
+        "BLD-GATEHOUSE"
+      ],
+      "responsible_org_id": "ORG-CIVIC-REGISTRY",
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    },
+    {
+      "id": "SVC-SECURITY-REPORT",
+      "label": "Recepción de avisos de seguridad",
+      "facility_ids": [
+        "BLD-TOWER-ENTRY",
+        "BLD-EXPEDITION-CHECK",
+        "BLD-WATCH-STATION",
+        "BLD-WATCH-BARRACKS",
+        "BLD-GATEHOUSE",
+        "BLD-FIRE-POST"
+      ],
+      "responsible_org_id": "ORG-CITY-WATCH",
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    },
+    {
+      "id": "SVC-MEDICAL-CARE",
+      "label": "Atención sanitaria",
+      "facility_ids": [
+        "BLD-CLINIC",
+        "BLD-RECOVERY-HOUSE"
+      ],
+      "responsible_org_id": "ORG-HEALTH-PRACTICE",
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    },
+    {
+      "id": "SVC-MEDICINE-SUPPLY",
+      "label": "Suministro de medicamentos",
+      "facility_ids": [
+        "BLD-CLINIC",
+        "BLD-APOTHECARY",
+        "BLD-HERB-COUNTER"
+      ],
+      "responsible_org_id": "ORG-HEALTH-PRACTICE",
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    },
+    {
+      "id": "SVC-FOOD-SUPPLY",
+      "label": "Abastecimiento alimentario",
+      "facility_ids": [
+        "BLD-COVERED-MARKET",
+        "BLD-GENERAL-STORE",
+        "BLD-PROVISIONS",
+        "BLD-GRAIN-STORE",
+        "BLD-MILL",
+        "BLD-BAKERY",
+        "BLD-COMMUNITY-KITCHEN",
+        "BLD-TAVERN",
+        "BLD-INN"
+      ],
+      "responsible_org_id": null,
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    },
+    {
+      "id": "SVC-LODGING",
+      "label": "Alojamiento temporal",
+      "facility_ids": [
+        "BLD-INN",
+        "BLD-LOWCOST-HOSTEL"
+      ],
+      "responsible_org_id": null,
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    },
+    {
+      "id": "SVC-TRADE",
+      "label": "Compraventa de bienes",
+      "facility_ids": [
+        "PLC-CENTRAL-PLAZA",
+        "PLC-MARKET-SQUARE",
+        "BLD-COVERED-MARKET",
+        "BLD-GENERAL-STORE",
+        "BLD-PROVISIONS",
+        "BLD-BAKERY",
+        "BLD-TRADE-WAREHOUSE",
+        "BLD-MINERAL-SORTING",
+        "BLD-CRAFT-STORE",
+        "BLD-DELIVERY-COURT",
+        "BLD-APOTHECARY",
+        "BLD-HERB-COUNTER"
+      ],
+      "responsible_org_id": null,
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    },
+    {
+      "id": "SVC-CRAFT-REPAIR",
+      "label": "Fabricación y reparación de equipo",
+      "facility_ids": [
+        "BLD-SMITHY",
+        "BLD-ARMOURER",
+        "BLD-CARPENTER",
+        "BLD-LEATHERWORK",
+        "BLD-TAILOR",
+        "BLD-TOOL-REPAIR"
+      ],
+      "responsible_org_id": null,
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    },
+    {
+      "id": "SVC-CRAFT-TRAINING",
+      "label": "Aprendizaje de oficios",
+      "facility_ids": [
+        "BLD-CRAFT-HALL",
+        "BLD-LEARNING-HALL"
+      ],
+      "responsible_org_id": "ORG-LEARNING-NETWORK",
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    },
+    {
+      "id": "SVC-EDUCATION",
+      "label": "Enseñanza y mentoría",
+      "facility_ids": [
+        "BLD-CRAFT-HALL",
+        "BLD-LEARNING-HALL",
+        "BLD-READING-ROOM"
+      ],
+      "responsible_org_id": "ORG-LEARNING-NETWORK",
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    },
+    {
+      "id": "SVC-COURIER",
+      "label": "Mensajería y transporte ligero",
+      "facility_ids": [
+        "BLD-COURIER-POST"
+      ],
+      "responsible_org_id": null,
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    },
+    {
+      "id": "SVC-STABLE",
+      "label": "Cuidado y alojamiento de monturas",
+      "facility_ids": [
+        "BLD-STABLES"
+      ],
+      "responsible_org_id": null,
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    },
+    {
+      "id": "SVC-WATER",
+      "label": "Acceso a agua",
+      "facility_ids": [
+        "BLD-BATHHOUSE",
+        "BLD-WATER-CISTERN",
+        "PLC-OLD-WELL"
+      ],
+      "responsible_org_id": "ORG-PUBLIC-WORKS",
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    },
+    {
+      "id": "SVC-SANITATION",
+      "label": "Saneamiento y retirada de residuos",
+      "facility_ids": [
+        "BLD-SANITATION-YARD"
+      ],
+      "responsible_org_id": "ORG-PUBLIC-WORKS",
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    },
+    {
+      "id": "SVC-MAINTENANCE",
+      "label": "Mantenimiento de infraestructura",
+      "facility_ids": [
+        "BLD-PUBLIC-STOREHOUSE",
+        "BLD-PUBLIC-WORKS-DEPOT",
+        "BLD-FIRE-POST"
+      ],
+      "responsible_org_id": "ORG-PUBLIC-WORKS",
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    },
+    {
+      "id": "SVC-COMMUNITY-AID",
+      "label": "Apoyo comunitario y ayuda temporal",
+      "facility_ids": [
+        "BLD-COMMUNITY-KITCHEN",
+        "BLD-LOWCOST-HOSTEL",
+        "BLD-RECOVERY-HOUSE",
+        "BLD-COMMUNITY-HALL",
+        "BLD-SHARED-COURT",
+        "BLD-MEMORIAL-GARDEN",
+        "PLC-COMMUNITY-GREEN"
+      ],
+      "responsible_org_id": "ORG-COMMUNITY-AID",
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    },
+    {
+      "id": "SVC-RESIDENTIAL",
+      "label": "Vivienda y habitaciones",
+      "facility_ids": [
+        "BLD-COURTYARD-HOUSING",
+        "BLD-WORKERS-HOUSING",
+        "BLD-FAMILY-ROW",
+        "BLD-RENTAL-ROOMS",
+        "BLD-APPRENTICE-HOUSE",
+        "BLD-SMALL-HOMES",
+        "BLD-MIXED-RENTALS",
+        "BLD-ADVENTURER-LODGING"
+      ],
+      "responsible_org_id": null,
+      "availability": "conditional_on_staff_stock_access_and_operational_state",
+      "service_status": "proposed_service_catalogue"
+    }
+  ],
+  "facilities": [
+    {
+      "id": "PLC-CENTRAL-PLAZA",
+      "display_label": "Plaza pública junto a la torre",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-CENTRAL",
+      "facility_kind": "public_space",
+      "purpose": "Punto de orientación, encuentro, anuncios públicos y circulación entre distritos.",
+      "public_access": "public",
+      "operating_model": "public_space_no_single_operator",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "open_ground",
+        "notice_area",
+        "approach_routes"
+      ],
+      "workplace_roles": [],
+      "service_ids": [
+        "SVC-TRADE"
+      ],
+      "operational_dependencies": [],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "Los tablones deben indicar emisor y procedencia; no convierten rumores en hechos."
+    },
+    {
+      "id": "BLD-TOWER-ENTRY",
+      "display_label": "Vestíbulo de acceso a la torre",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-CENTRAL",
+      "facility_kind": "monumental_access_structure",
+      "purpose": "Acceso físico monumental a la Mazmorra, con áreas de espera, circulación y control compatible con el sistema vigente.",
+      "public_access": "controlled_public_access",
+      "operating_model": "operator_to_be_assigned",
+      "institution_ids": [
+        "ORG-CIVIC-REGISTRY",
+        "ORG-CITY-WATCH"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "entry_hall",
+        "waiting_area",
+        "access_control_point",
+        "service_corridor"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-ACCESS-CLERK",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-GATE-WARDEN",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-BUILDING-STEWARD",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-CIVIC-REGISTRY",
+        "SVC-SECURITY-REPORT"
+      ],
+      "operational_dependencies": [
+        "power_or_arcane_mechanisms_if_present_must_be_specified",
+        "staffing_and_access_rules"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "No fija la geometría interior ni el mecanismo espacial definitivo de la Mazmorra."
+    },
+    {
+      "id": "BLD-EXPEDITION-CHECK",
+      "display_label": "Puesto de información y control de expediciones",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-CENTRAL",
+      "facility_kind": "service_building",
+      "purpose": "Punto de consulta de avisos, registro de salidas y recepción de información de expediciones.",
+      "public_access": "public_counter",
+      "operating_model": "ORG-ADVENTURERS-GUILD",
+      "institution_ids": [
+        "ORG-ADVENTURERS-GUILD",
+        "ORG-CITY-WATCH"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "public_counter",
+        "record_room",
+        "waiting_space"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-ACCESS-CLERK",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-EXPEDITION-REGISTRAR",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-EXPEDITION-REGISTRATION",
+        "SVC-SECURITY-REPORT"
+      ],
+      "operational_dependencies": [
+        "verified_records",
+        "staff_and_opening_state"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [
+        "MIS-TEMP-03",
+        "MIS-TEMP-06",
+        "MIS-TEMP-10"
+      ],
+      "npc_appointments": [],
+      "operating_notes": ""
+    },
+    {
+      "id": "BLD-GUILD-HQ",
+      "display_label": "Casa principal del Gremio de Aventureros",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-GUILD",
+      "facility_kind": "institutional_headquarters",
+      "purpose": "Coordinar membresía, contratos, expediciones, reuniones, evaluación documental y apoyo a aventureros.",
+      "public_access": "public_reception_and_member_areas",
+      "operating_model": "ORG-ADVENTURERS-GUILD",
+      "institution_ids": [
+        "ORG-ADVENTURERS-GUILD"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "reception",
+        "contract_hall",
+        "meeting_room",
+        "records_office",
+        "staff_room"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-GUILD-MASTER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-CONTRACT-CLERK",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-EXPEDITION-REGISTRAR",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-EXPEDITION-REGISTRATION",
+        "SVC-MISSION-CONTRACTS"
+      ],
+      "operational_dependencies": [
+        "funded_contracts",
+        "member_records",
+        "staffing"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [
+        "MIS-TEMP-01",
+        "MIS-TEMP-04",
+        "MIS-TEMP-06",
+        "MIS-TEMP-11"
+      ],
+      "npc_appointments": [
+        "NPC-ILYEN-ARVETH"
+      ],
+      "operating_notes": "No es dueño de todos los aventureros, del mercado ni de todas las expediciones."
+    },
+    {
+      "id": "BLD-GUILD-ARCHIVE",
+      "display_label": "Archivo de expediciones del gremio",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-GUILD",
+      "facility_kind": "archive",
+      "purpose": "Custodiar diarios, mapas entregados, informes, testimonios y pruebas con procedencia y niveles de acceso.",
+      "public_access": "controlled_reading_access",
+      "operating_model": "ORG-ADVENTURERS-GUILD",
+      "institution_ids": [
+        "ORG-ADVENTURERS-GUILD"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "catalogue_room",
+        "document_store",
+        "reading_room"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-ARCHIVIST",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-ADMIN-CLERK",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-EXPEDITION-ARCHIVE"
+      ],
+      "operational_dependencies": [
+        "preservation_materials",
+        "catalogue_and_access_rules"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [
+        "MIS-TEMP-02",
+        "MIS-TEMP-10",
+        "MIS-TEMP-12"
+      ],
+      "npc_appointments": [
+        "NPC-MIRA-DENETH"
+      ],
+      "operating_notes": "Un informe puede ser falso, incompleto o estar equivocado; custodiarlo no lo vuelve verdadero."
+    },
+    {
+      "id": "BLD-CARTOGRAPHY-OFFICE",
+      "display_label": "Oficina de cartografía y rutas",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-GUILD",
+      "facility_kind": "mapping_office",
+      "purpose": "Reunir trazados, registrar recorridos verificados y diferenciar cartografía observada, testimonial e hipotética.",
+      "public_access": "public_consultation_with_restricted_records",
+      "operating_model": "ORG-ADVENTURERS-GUILD",
+      "institution_ids": [
+        "ORG-ADVENTURERS-GUILD"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "map_room",
+        "survey_equipment_store",
+        "consultation_desk"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-CARTOGRAPHER",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-ADMIN-CLERK",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-CARTOGRAPHY"
+      ],
+      "operational_dependencies": [
+        "field_reports",
+        "measurement_tools",
+        "route_verification"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [
+        "MIS-TEMP-03",
+        "MIS-TEMP-12"
+      ],
+      "npc_appointments": [
+        "NPC-VEYA-TALREN"
+      ],
+      "operating_notes": "No contiene un plano definitivo antes de que la cartografía y los recorridos sean validados."
+    },
+    {
+      "id": "BLD-ARCANE-OBSERVATORY",
+      "display_label": "Sala de observación e investigación arcana",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-CENTRAL",
+      "facility_kind": "research_facility",
+      "purpose": "Registrar pulsos y observaciones; mantener instrumentos y comparar hipótesis mediante procedimientos válidos.",
+      "public_access": "restricted_work_area_with_supervised_consultation",
+      "operating_model": "ORG-ARCANE-RESEARCH",
+      "institution_ids": [
+        "ORG-ARCANE-RESEARCH"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "instrument_chamber",
+        "analysis_room",
+        "secure_storage",
+        "consultation_desk"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-ARCANE-RESEARCHER",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-ARCANE-TECHNICIAN",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-ADMIN-CLERK",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-ARCANE-OBSERVATION"
+      ],
+      "operational_dependencies": [
+        "instrument_source_and_mechanism_documented",
+        "maintenance_materials",
+        "research_funding"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [
+        "MIS-TEMP-01",
+        "MIS-TEMP-05",
+        "MIS-TEMP-11",
+        "MIS-TEMP-12"
+      ],
+      "npc_appointments": [
+        "NPC-ORYN-VALE"
+      ],
+      "operating_notes": "El Triple Eco es una observación registrada; esta sala no garantiza su interpretación ni la verdad de las hipótesis."
+    },
+    {
+      "id": "BLD-CIVIC-REGISTRY",
+      "display_label": "Oficina de atención y registro cívico",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-CENTRAL",
+      "facility_kind": "civic_service_office",
+      "purpose": "Atender registros y solicitudes administrativas locales sin definir el modelo político ni el alcance de la ley.",
+      "public_access": "public_counter_and_staff_only_archive",
+      "operating_model": "ORG-CIVIC-REGISTRY",
+      "institution_ids": [
+        "ORG-CIVIC-REGISTRY"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "public_counter",
+        "records_office",
+        "waiting_area"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-ADMIN-CLERK",
+          "suggested_positions": 3,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-CIVIC-REGISTRY"
+      ],
+      "operational_dependencies": [
+        "valid_local_procedures",
+        "staff_and_record_storage"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [
+        "MIS-TEMP-10"
+      ],
+      "npc_appointments": [],
+      "operating_notes": "La jurisdicción, leyes y autoridad superior permanecen reservadas."
+    },
+    {
+      "id": "PLC-MARKET-SQUARE",
+      "display_label": "Plaza de mercado y carga",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-MARKET",
+      "facility_kind": "public_space",
+      "purpose": "Espacio de intercambio temporal, descarga y circulación de compradores y comerciantes.",
+      "public_access": "public",
+      "operating_model": "public_space_no_single_operator",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "open_stalls_area",
+        "loading_edge",
+        "pedestrian_routes"
+      ],
+      "workplace_roles": [],
+      "service_ids": [
+        "SVC-TRADE"
+      ],
+      "operational_dependencies": [],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "Puestos temporales requieren vendedor, bienes existentes y permiso o derecho de uso válido."
+    },
+    {
+      "id": "BLD-COVERED-MARKET",
+      "display_label": "Mercado cubierto",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-MARKET",
+      "facility_kind": "market_hall",
+      "purpose": "Alojar puestos de comerciantes independientes y espacios de venta protegidos.",
+      "public_access": "public_during_operating_hours",
+      "operating_model": "independent_stallholders_or_market_operator",
+      "institution_ids": [
+        "ORG-TRADE-ASSOCIATION"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "stall_rows",
+        "loading_area",
+        "storage_cells",
+        "public_aisles"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-STALLHOLDER",
+          "suggested_positions": 8,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-STOCKKEEPER",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-BUILDING-STEWARD",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-TRADE",
+        "SVC-FOOD-SUPPLY"
+      ],
+      "operational_dependencies": [
+        "individual_vendor_stock",
+        "stall_access_agreements",
+        "maintenance"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "La asociación comercial es opcional y no posee automáticamente los puestos ni mercancías."
+    },
+    {
+      "id": "BLD-GENERAL-STORE",
+      "display_label": "Tienda de bienes generales",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-MARKET",
+      "facility_kind": "shop",
+      "purpose": "Vender herramientas comunes y bienes cotidianos realmente disponibles.",
+      "public_access": "public_during_operating_hours",
+      "operating_model": "independent_business",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "sales_floor",
+        "stockroom"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-MERCHANT",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-STOCKKEEPER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-TRADE",
+        "SVC-FOOD-SUPPLY"
+      ],
+      "operational_dependencies": [
+        "supplier_deliveries",
+        "working_capital",
+        "real_stock"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [
+        "MIS-TEMP-04",
+        "MIS-TEMP-08"
+      ],
+      "npc_appointments": [],
+      "operating_notes": "No inventario infinito; puede quedarse sin existencias, cerrar o quebrar."
+    },
+    {
+      "id": "BLD-PROVISIONS",
+      "display_label": "Almacén y tienda de provisiones",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-MARKET",
+      "facility_kind": "food_shop",
+      "purpose": "Vender alimentos secos, raciones y suministros de viaje según existencias.",
+      "public_access": "public_during_operating_hours",
+      "operating_model": "independent_business",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "sales_counter",
+        "food_store",
+        "loading_area"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-MERCHANT",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-STOCKKEEPER",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-FOOD-SUPPLY",
+        "SVC-TRADE"
+      ],
+      "operational_dependencies": [
+        "farms_or_suppliers_to_be_defined",
+        "storage_conditions",
+        "transport"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": ""
+    },
+    {
+      "id": "BLD-GRAIN-STORE",
+      "display_label": "Granero comercial",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-MARKET",
+      "facility_kind": "storage_and_trade",
+      "purpose": "Almacenar grano y otros productos secos con control de calidad, plagas, humedad y propiedad.",
+      "public_access": "restricted_staff_and_contract_access",
+      "operating_model": "independent_business_or_communal_operator",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "dry_storage",
+        "inspection_area",
+        "loading_bay"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-STOCKKEEPER",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-PORTER",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-FOOD-SUPPLY"
+      ],
+      "operational_dependencies": [
+        "grain_sources",
+        "dry_storage",
+        "transport"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "Las cantidades almacenadas deben proceder de cosecha, compra o entrega real."
+    },
+    {
+      "id": "BLD-MILL",
+      "display_label": "Molino",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-MARKET",
+      "facility_kind": "production_facility",
+      "purpose": "Transformar grano en harina mediante energía, maquinaria, mantenimiento y operadores.",
+      "public_access": "operator_and_customer_access",
+      "operating_model": "independent_business_or_contract_operator",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "mill_floor",
+        "grain_intake",
+        "flour_storage"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-MILLER",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-MAINTENANCE",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-FOOD-SUPPLY"
+      ],
+      "operational_dependencies": [
+        "grain_stock",
+        "mill_power_source",
+        "maintenance",
+        "bags_and_containers"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "No genera grano ni harina por sí solo; las mermas y tiempos de proceso deben registrarse."
+    },
+    {
+      "id": "BLD-BAKERY",
+      "display_label": "Panadería",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-MARKET",
+      "facility_kind": "food_workshop",
+      "purpose": "Elaborar y vender pan y productos horneados con ingredientes, energía y turnos reales.",
+      "public_access": "public_counter_and_staff_workshop",
+      "operating_model": "independent_business",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "oven_room",
+        "preparation_area",
+        "ingredient_store",
+        "sales_counter"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-BAKER",
+          "suggested_positions": 3,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-SERVER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-FOOD-SUPPLY",
+        "SVC-TRADE"
+      ],
+      "operational_dependencies": [
+        "flour_and_other_ingredients",
+        "fuel_or_energy",
+        "water",
+        "oven_maintenance"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": ""
+    },
+    {
+      "id": "BLD-COMMUNITY-KITCHEN",
+      "display_label": "Cocina común y comedor",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-MARKET",
+      "facility_kind": "food_service",
+      "purpose": "Preparar comidas para venta o ayuda comunitaria según el operador, financiación y suministros disponibles.",
+      "public_access": "public_dining_with_staff_only_kitchen",
+      "operating_model": "independent_business_or_community_operator",
+      "institution_ids": [
+        "ORG-COMMUNITY-AID"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "kitchen",
+        "dining_hall",
+        "pantry"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-COOK",
+          "suggested_positions": 3,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-SERVER",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-STOCKKEEPER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-FOOD-SUPPLY",
+        "SVC-COMMUNITY-AID"
+      ],
+      "operational_dependencies": [
+        "food_stock",
+        "fuel_or_energy",
+        "water",
+        "paid_or_voluntary_staff"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [
+        "MIS-TEMP-09",
+        "MIS-TEMP-08"
+      ],
+      "npc_appointments": [],
+      "operating_notes": "No se presupone que toda comida sea gratuita."
+    },
+    {
+      "id": "BLD-TAVERN",
+      "display_label": "Taberna",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-MARKET",
+      "facility_kind": "hospitality_business",
+      "purpose": "Ofrecer comida, bebida, conversación y espacio social; conservar cuentas y suministros.",
+      "public_access": "public_during_operating_hours",
+      "operating_model": "independent_business",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "common_room",
+        "kitchen",
+        "store_room",
+        "private_corner"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-INNKEEPER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-COOK",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-SERVER",
+          "suggested_positions": 3,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-FOOD-SUPPLY"
+      ],
+      "operational_dependencies": [
+        "food_and_drink_stock",
+        "fuel",
+        "staff",
+        "building_maintenance"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "El establecimiento no es fuente omnisciente de información; los rumores conservan su procedencia."
+    },
+    {
+      "id": "BLD-INN",
+      "display_label": "Posada",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-MARKET",
+      "facility_kind": "lodging_business",
+      "purpose": "Alquilar habitaciones temporales con camas, limpieza, agua y condiciones declaradas.",
+      "public_access": "public_reception_and_paid_guest_rooms",
+      "operating_model": "independent_business",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "reception",
+        "guest_rooms",
+        "wash_area",
+        "linen_store"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-INNKEEPER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-HOUSEKEEPER",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-COOK",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-LODGING",
+        "SVC-FOOD-SUPPLY"
+      ],
+      "operational_dependencies": [
+        "available_rooms",
+        "bedding",
+        "water",
+        "staff",
+        "maintenance"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "Una habitación ocupada no puede alquilarse de nuevo al mismo tiempo."
+    },
+    {
+      "id": "BLD-LOWCOST-HOSTEL",
+      "display_label": "Casa de alojamiento económico",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-MARKET",
+      "facility_kind": "lodging_business",
+      "purpose": "Ofrecer camas compartidas o habitaciones sencillas a menor coste, sujeto a capacidad y seguridad.",
+      "public_access": "public_reception_and_shared_sleeping_rooms",
+      "operating_model": "independent_business_or_charity_operator",
+      "institution_ids": [
+        "ORG-COMMUNITY-AID"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "reception",
+        "shared_rooms",
+        "wash_area"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-INNKEEPER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-HOUSEKEEPER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-LODGING",
+        "SVC-COMMUNITY-AID"
+      ],
+      "operational_dependencies": [
+        "available_beds",
+        "bedding",
+        "water",
+        "cleaning"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "La caridad o subvención debe tener un patrocinador real; no es gratuita automáticamente."
+    },
+    {
+      "id": "BLD-TRADE-WAREHOUSE",
+      "display_label": "Almacén comercial y de tránsito",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-MARKET",
+      "facility_kind": "warehouse",
+      "purpose": "Almacenar bienes de comerciantes, expediciones o transportistas con custodios y contratos identificables.",
+      "public_access": "restricted_to_owner_custodian_or_authorized_workers",
+      "operating_model": "independent_operator_or_contract_storage",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "bulk_storage",
+        "secure_storage",
+        "loading_court",
+        "records_desk"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-STOCKKEEPER",
+          "suggested_positions": 3,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-PORTER",
+          "suggested_positions": 3,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-ADMIN-CLERK",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-TRADE"
+      ],
+      "operational_dependencies": [
+        "storage_contracts",
+        "inventory_register",
+        "access_controls"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "Propietario, poseedor y custodio deben permanecer diferenciados."
+    },
+    {
+      "id": "BLD-COURIER-POST",
+      "display_label": "Puesto de mensajería y correo",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-MARKET",
+      "facility_kind": "logistics_service",
+      "purpose": "Recibir, clasificar y transportar mensajes y paquetes mediante rutas y mensajeros disponibles.",
+      "public_access": "public_counter_and_staff_only_sorting",
+      "operating_model": "independent_business_or_association",
+      "institution_ids": [
+        "ORG-TRADE-ASSOCIATION"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "public_counter",
+        "sorting_room",
+        "secure_parcel_store"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-COURIER",
+          "suggested_positions": 4,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-ADMIN-CLERK",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-COURIER"
+      ],
+      "operational_dependencies": [
+        "routes",
+        "couriers",
+        "parcel_records",
+        "transport_capacity"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "La entrega a distancia no es instantánea; requiere tiempo y trayecto."
+    },
+    {
+      "id": "BLD-SMITHY",
+      "display_label": "Herrería",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-CRAFT",
+      "facility_kind": "craft_workshop",
+      "purpose": "Forjar, ajustar y reparar piezas metálicas con mineral procesado, combustible, herramientas y pericia.",
+      "public_access": "customer_counter_and_restricted_hot_work_area",
+      "operating_model": "independent_workshop",
+      "institution_ids": [
+        "ORG-CRAFT-ASSOCIATION"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "forge_floor",
+        "quench_area",
+        "metal_store",
+        "customer_counter"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-SMITH",
+          "suggested_positions": 3,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-REPAIRER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-CRAFT-REPAIR"
+      ],
+      "operational_dependencies": [
+        "metal_stock",
+        "fuel",
+        "water",
+        "tools",
+        "worker_skill"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "No fabrica objetos sin materiales ni horas de trabajo."
+    },
+    {
+      "id": "BLD-ARMOURER",
+      "display_label": "Taller de armaduras y protecciones",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-CRAFT",
+      "facility_kind": "craft_workshop",
+      "purpose": "Fabricar, ajustar y reparar protecciones corporales y sus cierres.",
+      "public_access": "customer_counter_and_workshop",
+      "operating_model": "independent_workshop",
+      "institution_ids": [
+        "ORG-CRAFT-ASSOCIATION"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "fitting_area",
+        "workshop",
+        "material_store",
+        "customer_counter"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-ARMOURER",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-REPAIRER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-CRAFT-REPAIR"
+      ],
+      "operational_dependencies": [
+        "metal_or_leather_stock",
+        "fittings",
+        "tools",
+        "measurements"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": ""
+    },
+    {
+      "id": "BLD-CARPENTER",
+      "display_label": "Carpintería",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-CRAFT",
+      "facility_kind": "craft_workshop",
+      "purpose": "Construir y reparar muebles, cajas, estructuras, puertas y piezas de madera.",
+      "public_access": "customer_counter_and_workshop",
+      "operating_model": "independent_workshop",
+      "institution_ids": [
+        "ORG-CRAFT-ASSOCIATION"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "woodworking_floor",
+        "lumber_store",
+        "finishing_area"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-CARPENTER",
+          "suggested_positions": 3,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-CRAFT-INSTRUCTOR",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-CRAFT-REPAIR"
+      ],
+      "operational_dependencies": [
+        "timber",
+        "fasteners",
+        "tools",
+        "dry_storage"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": ""
+    },
+    {
+      "id": "BLD-LEATHERWORK",
+      "display_label": "Taller de cuero",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-CRAFT",
+      "facility_kind": "craft_workshop",
+      "purpose": "Procesar pieles y fabricar correas, bolsas, protecciones y accesorios.",
+      "public_access": "customer_counter_and_workshop",
+      "operating_model": "independent_workshop",
+      "institution_ids": [
+        "ORG-CRAFT-ASSOCIATION"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "processing_area",
+        "cutting_tables",
+        "material_store"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-LEATHERWORKER",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-REPAIRER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-CRAFT-REPAIR"
+      ],
+      "operational_dependencies": [
+        "tanned_hides",
+        "thread_and_fasteners",
+        "tools",
+        "ventilation"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": ""
+    },
+    {
+      "id": "BLD-TAILOR",
+      "display_label": "Sastrería",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-CRAFT",
+      "facility_kind": "craft_workshop",
+      "purpose": "Confeccionar, ajustar y reparar prendas y equipamiento textil.",
+      "public_access": "customer_counter_and_workroom",
+      "operating_model": "independent_workshop",
+      "institution_ids": [
+        "ORG-CRAFT-ASSOCIATION"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "fitting_room",
+        "sewing_floor",
+        "fabric_store"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-TAILOR",
+          "suggested_positions": 3,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-CRAFT-INSTRUCTOR",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-CRAFT-REPAIR"
+      ],
+      "operational_dependencies": [
+        "fabric",
+        "thread",
+        "dyes_if_used",
+        "tools"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": ""
+    },
+    {
+      "id": "BLD-TOOL-REPAIR",
+      "display_label": "Taller de reparación de herramientas",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-CRAFT",
+      "facility_kind": "repair_workshop",
+      "purpose": "Inspeccionar, reparar y mantener herramientas de minería, expedición y oficios.",
+      "public_access": "customer_counter_and_workshop",
+      "operating_model": "independent_workshop",
+      "institution_ids": [
+        "ORG-CRAFT-ASSOCIATION"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "inspection_bench",
+        "repair_bench",
+        "parts_store"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-REPAIRER",
+          "suggested_positions": 3,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-CRAFT-REPAIR"
+      ],
+      "operational_dependencies": [
+        "replacement_parts",
+        "materials",
+        "tools",
+        "diagnosis"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [
+        "MIS-TEMP-04"
+      ],
+      "npc_appointments": [],
+      "operating_notes": ""
+    },
+    {
+      "id": "BLD-MINERAL-SORTING",
+      "display_label": "Patio de clasificación de minerales y materiales",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-CRAFT",
+      "facility_kind": "materials_processing",
+      "purpose": "Identificar, separar, pesar y registrar minerales y materiales recuperados.",
+      "public_access": "controlled_customer_dropoff_and_staff_processing",
+      "operating_model": "independent_operator_or_contract_service",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "receiving_bay",
+        "sorting_tables",
+        "secure_material_store",
+        "records_desk"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-MATERIAL-SORTER",
+          "suggested_positions": 3,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-STOCKKEEPER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-TRADE"
+      ],
+      "operational_dependencies": [
+        "sample_provenance",
+        "scales_and_tools",
+        "protective_equipment"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "No refina ni transmuta materiales sin una receta y un proceso aprobados."
+    },
+    {
+      "id": "BLD-CRAFT-HALL",
+      "display_label": "Casa de oficios y talleres compartidos",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-CRAFT",
+      "facility_kind": "shared_workshop_and_training",
+      "purpose": "Ofrecer espacios de aprendizaje o herramientas compartidas a miembros y alumnos autorizados.",
+      "public_access": "scheduled_member_or_student_access",
+      "operating_model": "ORG-CRAFT-ASSOCIATION",
+      "institution_ids": [
+        "ORG-CRAFT-ASSOCIATION",
+        "ORG-LEARNING-NETWORK"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "shared_bench_room",
+        "classroom",
+        "tool_store",
+        "work_sample_area"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-CRAFT-INSTRUCTOR",
+          "suggested_positions": 3,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-BUILDING-STEWARD",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-CRAFT-TRAINING",
+        "SVC-EDUCATION"
+      ],
+      "operational_dependencies": [
+        "instructors",
+        "tools",
+        "materials",
+        "safe_workspaces"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "La asociación de oficios es una posibilidad organizativa, no un gremio obligatorio."
+    },
+    {
+      "id": "BLD-CRAFT-STORE",
+      "display_label": "Depósito de materiales y combustible de talleres",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-CRAFT",
+      "facility_kind": "supply_store",
+      "purpose": "Almacenar y vender materiales de oficio y combustible con origen y cantidades verificables.",
+      "public_access": "staff_and_customer_counter",
+      "operating_model": "independent_business_or_association",
+      "institution_ids": [
+        "ORG-CRAFT-ASSOCIATION"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "sales_counter",
+        "dry_store",
+        "fuel_store",
+        "secure_store"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-MERCHANT",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-STOCKKEEPER",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-TRADE"
+      ],
+      "operational_dependencies": [
+        "suppliers",
+        "safe_storage",
+        "transport"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "Las existencias pertenecen a un propietario identificable."
+    },
+    {
+      "id": "BLD-DELIVERY-COURT",
+      "display_label": "Patio de carga de talleres",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-CRAFT",
+      "facility_kind": "logistics_space",
+      "purpose": "Permitir la recepción y entrega de materiales pesados evitando bloquear calles y accesos.",
+      "public_access": "authorized_delivery_access",
+      "operating_model": "shared_or_private_operator",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "loading_court",
+        "temporary_staging",
+        "cart_turning_area"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-PORTER",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-BUILDING-STEWARD",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-TRADE"
+      ],
+      "operational_dependencies": [
+        "delivery_schedule",
+        "clear_access",
+        "load_records"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "No es un almacén permanente; las mercancías deben tener destino y custodio."
+    },
+    {
+      "id": "BLD-CLINIC",
+      "display_label": "Clínica de atención y primeros auxilios",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-HEALTH",
+      "facility_kind": "medical_facility",
+      "purpose": "Evaluar heridas y enfermedades, estabilizar pacientes y aplicar tratamientos dentro de la competencia y el inventario disponible.",
+      "public_access": "public_reception_and_patient_only_areas",
+      "operating_model": "ORG-HEALTH-PRACTICE",
+      "institution_ids": [
+        "ORG-HEALTH-PRACTICE"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "triage_room",
+        "treatment_room",
+        "recovery_beds",
+        "clean_store",
+        "records_desk"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-CLINICIAN",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-CARE-ASSISTANT",
+          "suggested_positions": 3,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-ADMIN-CLERK",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-MEDICAL-CARE",
+        "SVC-MEDICINE-SUPPLY"
+      ],
+      "operational_dependencies": [
+        "medical_supplies",
+        "clean_water",
+        "trained_staff",
+        "beds_and_tools"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [
+        "MIS-TEMP-07",
+        "MIS-TEMP-08"
+      ],
+      "npc_appointments": [
+        "NPC-MAELIS-ORDAN"
+      ],
+      "operating_notes": "Puede saturarse. La gravedad, anatomía, tiempo y medios disponibles determinan el tratamiento."
+    },
+    {
+      "id": "BLD-APOTHECARY",
+      "display_label": "Botica y dispensario",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-HEALTH",
+      "facility_kind": "medical_shop",
+      "purpose": "Preparar o dispensar remedios y compuestos conocidos, manteniendo trazabilidad, dosis y stock.",
+      "public_access": "public_counter_and_restricted_preparation_area",
+      "operating_model": "independent_practice_or_health_service",
+      "institution_ids": [
+        "ORG-HEALTH-PRACTICE"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "dispensary",
+        "preparation_bench",
+        "secure_storage",
+        "records_shelf"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-APOTHECARY",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-STOCKKEEPER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-MEDICINE-SUPPLY",
+        "SVC-TRADE"
+      ],
+      "operational_dependencies": [
+        "known_recipes",
+        "ingredients",
+        "containers",
+        "qualified_staff"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [
+        "MIS-TEMP-08"
+      ],
+      "npc_appointments": [],
+      "operating_notes": "No todo preparado es curativo ni seguro; los efectos requieren receta, evidencia y dominio."
+    },
+    {
+      "id": "BLD-HERB-COUNTER",
+      "display_label": "Puesto de compra y clasificación de plantas medicinales",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-HEALTH",
+      "facility_kind": "materials_market",
+      "purpose": "Recibir, identificar y comerciar plantas y materias vegetales con origen declarado.",
+      "public_access": "public_counter_and_staff_only_sorting",
+      "operating_model": "independent_business",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "receiving_counter",
+        "drying_racks",
+        "identification_bench"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-HERBALIST",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-MERCHANT",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-MEDICINE-SUPPLY",
+        "SVC-TRADE"
+      ],
+      "operational_dependencies": [
+        "lawful_harvest_or_supplier",
+        "drying_and_storage",
+        "identification"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "La procedencia silvestre no debe inventar rutas ni disponibilidad del bosque profundo."
+    },
+    {
+      "id": "BLD-LEARNING-HALL",
+      "display_label": "Casa de aprendizaje y tutoría",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-HEALTH",
+      "facility_kind": "education_facility",
+      "purpose": "Ofrecer formación básica o profesional cuando existan docentes, horarios, espacio y materiales.",
+      "public_access": "public_enrolment_and_scheduled_classes",
+      "operating_model": "ORG-LEARNING-NETWORK",
+      "institution_ids": [
+        "ORG-LEARNING-NETWORK"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "classrooms",
+        "practice_room",
+        "materials_store"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-TEACHER",
+          "suggested_positions": 3,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-BUILDING-STEWARD",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-EDUCATION",
+        "SVC-CRAFT-TRAINING"
+      ],
+      "operational_dependencies": [
+        "qualified_teachers",
+        "learning_materials",
+        "time_and_student_access"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "Asistir no confiere dominio: la práctica, corrección y evaluación siguen siendo necesarias."
+    },
+    {
+      "id": "BLD-READING-ROOM",
+      "display_label": "Sala de lectura y consulta",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-HEALTH",
+      "facility_kind": "knowledge_facility",
+      "purpose": "Proporcionar lectura supervisada, consulta de materiales y estudio.",
+      "public_access": "public_reading_with_restricted_collections",
+      "operating_model": "ORG-LEARNING-NETWORK",
+      "institution_ids": [
+        "ORG-LEARNING-NETWORK",
+        "ORG-ARCANE-RESEARCH"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "reading_room",
+        "catalogue",
+        "restricted_shelves"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-LIBRARIAN",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-ARCHIVIST",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-EDUCATION",
+        "SVC-ARCANE-OBSERVATION"
+      ],
+      "operational_dependencies": [
+        "books_and_records",
+        "preservation",
+        "staff"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "El acceso a secretos o textos restringidos depende de derechos y reglas reales."
+    },
+    {
+      "id": "BLD-BATHHOUSE",
+      "display_label": "Baños públicos y lavadero",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-HEALTH",
+      "facility_kind": "public_utility",
+      "purpose": "Ofrecer higiene y lavado sujetos a agua, combustible, limpieza y mantenimiento.",
+      "public_access": "public_paid_or_sponsored_access_to_be_defined",
+      "operating_model": "independent_operator_or_public_service",
+      "institution_ids": [
+        "ORG-PUBLIC-WORKS"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "washing_area",
+        "bathing_area",
+        "boiler_or_heating_area",
+        "linen_store"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-BUILDING-STEWARD",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-MAINTENANCE",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-WATER"
+      ],
+      "operational_dependencies": [
+        "clean_water",
+        "heating_source",
+        "drainage",
+        "maintenance"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "No se fija gratuidad, precio ni tecnología de calefacción."
+    },
+    {
+      "id": "BLD-RECOVERY-HOUSE",
+      "display_label": "Casa de reposo y recuperación temporal",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-HEALTH",
+      "facility_kind": "care_facility",
+      "purpose": "Alojar temporalmente a personas que no requieren hospitalización continua pero no pueden volver a su hogar.",
+      "public_access": "admission_by_capacity_and_care_assessment",
+      "operating_model": "ORG-HEALTH-PRACTICE_or_community_operator",
+      "institution_ids": [
+        "ORG-HEALTH-PRACTICE",
+        "ORG-COMMUNITY-AID"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "rest_rooms",
+        "common_area",
+        "care_station",
+        "linen_store"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-CARE-ASSISTANT",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-CAREGIVER",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-ADMIN-CLERK",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-MEDICAL-CARE",
+        "SVC-COMMUNITY-AID"
+      ],
+      "operational_dependencies": [
+        "beds",
+        "food",
+        "cleaning",
+        "care_staff",
+        "sponsorship_or_payment"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "La estancia es temporal y no garantiza alojamiento indefinido."
+    },
+    {
+      "id": "BLD-COURTYARD-HOUSING",
+      "display_label": "Viviendas de patio compartido",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-RESIDENTIAL",
+      "facility_kind": "residential_building",
+      "purpose": "Edificio o conjunto de unidades alrededor de un patio; admite varios hogares independientes.",
+      "public_access": "residents_and_authorized_visitors",
+      "operating_model": "multi_household",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "shared_courtyard",
+        "private_rooms",
+        "water_access"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-BUILDING-STEWARD",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-HOUSEKEEPER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-RESIDENTIAL"
+      ],
+      "operational_dependencies": [
+        "owner_or_landlord",
+        "valid_occupancy_agreements",
+        "maintenance",
+        "utilities"
+      ],
+      "residential_capacity_estimate": {
+        "estimate": "3-8 households (calibration)",
+        "status": "calibration_not_fixed_occupancy"
+      },
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "Ocupantes, parentesco, titularidad, alquiler y capacidad efectiva deben registrarse por unidad; no asignar familias ficticias por compartir edificio."
+    },
+    {
+      "id": "BLD-WORKERS-HOUSING",
+      "display_label": "Vivienda de trabajadores",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-RESIDENTIAL",
+      "facility_kind": "residential_building",
+      "purpose": "Alojamiento modesto para trabajadores individuales o pequeños hogares, sujeto a contratos y disponibilidad.",
+      "public_access": "residents_and_authorized_visitors",
+      "operating_model": "rental_or_employer_provided",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "small_units",
+        "shared_wash_area",
+        "common_entry"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-BUILDING-STEWARD",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-HOUSEKEEPER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-RESIDENTIAL"
+      ],
+      "operational_dependencies": [
+        "owner_or_landlord",
+        "valid_occupancy_agreements",
+        "maintenance",
+        "utilities"
+      ],
+      "residential_capacity_estimate": {
+        "estimate": "4-10 households (calibration)",
+        "status": "calibration_not_fixed_occupancy"
+      },
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "Ocupantes, parentesco, titularidad, alquiler y capacidad efectiva deben registrarse por unidad; no asignar familias ficticias por compartir edificio."
+    },
+    {
+      "id": "BLD-FAMILY-ROW",
+      "display_label": "Conjunto de casas familiares",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-RESIDENTIAL",
+      "facility_kind": "residential_building",
+      "purpose": "Viviendas contiguas o agrupadas con accesos propios y espacios familiares.",
+      "public_access": "residents_and_authorized_visitors",
+      "operating_model": "private_or_rented_households",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "separate_entries",
+        "family_rooms",
+        "small_courtyards"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-BUILDING-STEWARD",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-HOUSEKEEPER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-RESIDENTIAL"
+      ],
+      "operational_dependencies": [
+        "owner_or_landlord",
+        "valid_occupancy_agreements",
+        "maintenance",
+        "utilities"
+      ],
+      "residential_capacity_estimate": {
+        "estimate": "3-6 households (calibration)",
+        "status": "calibration_not_fixed_occupancy"
+      },
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "Ocupantes, parentesco, titularidad, alquiler y capacidad efectiva deben registrarse por unidad; no asignar familias ficticias por compartir edificio."
+    },
+    {
+      "id": "BLD-RENTAL-ROOMS",
+      "display_label": "Casa de habitaciones de alquiler",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-RESIDENTIAL",
+      "facility_kind": "residential_building",
+      "purpose": "Habitaciones privadas con áreas comunes; contratos, pagos y ocupación persistentes.",
+      "public_access": "residents_and_authorized_visitors",
+      "operating_model": "room_rental",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "private_rooms",
+        "shared_kitchen",
+        "shared_wash_area"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-BUILDING-STEWARD",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-HOUSEKEEPER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-RESIDENTIAL"
+      ],
+      "operational_dependencies": [
+        "owner_or_landlord",
+        "valid_occupancy_agreements",
+        "maintenance",
+        "utilities"
+      ],
+      "residential_capacity_estimate": {
+        "estimate": "6-14 rooms (calibration)",
+        "status": "calibration_not_fixed_occupancy"
+      },
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "Ocupantes, parentesco, titularidad, alquiler y capacidad efectiva deben registrarse por unidad; no asignar familias ficticias por compartir edificio."
+    },
+    {
+      "id": "BLD-APPRENTICE-HOUSE",
+      "display_label": "Alojamiento de aprendices",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-RESIDENTIAL",
+      "facility_kind": "residential_building",
+      "purpose": "Vivienda temporal para aprendices con acuerdo de manutención o alquiler.",
+      "public_access": "residents_and_authorized_visitors",
+      "operating_model": "apprentice_lodging",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "shared_rooms",
+        "study_area",
+        "common_kitchen"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-BUILDING-STEWARD",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-HOUSEKEEPER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-RESIDENTIAL"
+      ],
+      "operational_dependencies": [
+        "owner_or_landlord",
+        "valid_occupancy_agreements",
+        "maintenance",
+        "utilities"
+      ],
+      "residential_capacity_estimate": {
+        "estimate": "4-10 residents (calibration)",
+        "status": "calibration_not_fixed_occupancy"
+      },
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "Ocupantes, parentesco, titularidad, alquiler y capacidad efectiva deben registrarse por unidad; no asignar familias ficticias por compartir edificio."
+    },
+    {
+      "id": "BLD-SMALL-HOMES",
+      "display_label": "Casas pequeñas independientes",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-RESIDENTIAL",
+      "facility_kind": "residential_building",
+      "purpose": "Unidades residenciales de menor tamaño para individuos o pequeños hogares.",
+      "public_access": "residents_and_authorized_visitors",
+      "operating_model": "private_or_rented_households",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "private_entry",
+        "living_room",
+        "sleeping_rooms"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-BUILDING-STEWARD",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-HOUSEKEEPER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-RESIDENTIAL"
+      ],
+      "operational_dependencies": [
+        "owner_or_landlord",
+        "valid_occupancy_agreements",
+        "maintenance",
+        "utilities"
+      ],
+      "residential_capacity_estimate": {
+        "estimate": "2-5 households (calibration)",
+        "status": "calibration_not_fixed_occupancy"
+      },
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "Ocupantes, parentesco, titularidad, alquiler y capacidad efectiva deben registrarse por unidad; no asignar familias ficticias por compartir edificio."
+    },
+    {
+      "id": "BLD-MIXED-RENTALS",
+      "display_label": "Edificio de uso mixto y alquiler",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-RESIDENTIAL",
+      "facility_kind": "residential_building",
+      "purpose": "Planta baja de actividad menor y unidades residenciales arriba, si la estructura lo permite.",
+      "public_access": "residents_and_authorized_visitors",
+      "operating_model": "mixed_use_property",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "street_level_unit",
+        "private_stairs",
+        "residential_units"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-BUILDING-STEWARD",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-HOUSEKEEPER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-RESIDENTIAL"
+      ],
+      "operational_dependencies": [
+        "owner_or_landlord",
+        "valid_occupancy_agreements",
+        "maintenance",
+        "utilities"
+      ],
+      "residential_capacity_estimate": {
+        "estimate": "3-8 households (calibration)",
+        "status": "calibration_not_fixed_occupancy"
+      },
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "Ocupantes, parentesco, titularidad, alquiler y capacidad efectiva deben registrarse por unidad; no asignar familias ficticias por compartir edificio."
+    },
+    {
+      "id": "BLD-ADVENTURER-LODGING",
+      "display_label": "Casa de habitaciones para aventureros",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-RESIDENTIAL",
+      "facility_kind": "residential_building",
+      "purpose": "Habitaciones con espacio para equipamiento; no sustituye al hogar propio ni permite almacenamiento ilimitado.",
+      "public_access": "residents_and_authorized_visitors",
+      "operating_model": "private_lodging_business_or_association",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "private_rooms",
+        "equipment_corner",
+        "common_room"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-BUILDING-STEWARD",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-HOUSEKEEPER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-RESIDENTIAL"
+      ],
+      "operational_dependencies": [
+        "owner_or_landlord",
+        "valid_occupancy_agreements",
+        "maintenance",
+        "utilities"
+      ],
+      "residential_capacity_estimate": {
+        "estimate": "4-12 rooms (calibration)",
+        "status": "calibration_not_fixed_occupancy"
+      },
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "Ocupantes, parentesco, titularidad, alquiler y capacidad efectiva deben registrarse por unidad; no asignar familias ficticias por compartir edificio."
+    },
+    {
+      "id": "BLD-WATCH-STATION",
+      "display_label": "Puesto de guardia y recepción de incidentes",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-SECURITY",
+      "facility_kind": "security_facility",
+      "purpose": "Recibir avisos, coordinar patrullas y conservar informes operativos.",
+      "public_access": "public_counter_and_staff_only_room",
+      "operating_model": "ORG-CITY-WATCH",
+      "institution_ids": [
+        "ORG-CITY-WATCH"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "public_counter",
+        "patrol_room",
+        "incident_records",
+        "equipment_store"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-GUARD",
+          "suggested_positions": 4,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-ADMIN-CLERK",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-SECURITY-REPORT"
+      ],
+      "operational_dependencies": [
+        "defined_command",
+        "staff",
+        "communications",
+        "equipment"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": ""
+    },
+    {
+      "id": "BLD-WATCH-BARRACKS",
+      "display_label": "Alojamiento y preparación de la guardia",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-SECURITY",
+      "facility_kind": "staff_accommodation",
+      "purpose": "Alojar personal de guardia y preparar turnos, equipo y descanso.",
+      "public_access": "authorized_staff_only",
+      "operating_model": "ORG-CITY-WATCH",
+      "institution_ids": [
+        "ORG-CITY-WATCH"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "sleeping_room",
+        "equipment_room",
+        "common_room",
+        "wash_area"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-GUARD",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-BUILDING-STEWARD",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-SECURITY-REPORT"
+      ],
+      "operational_dependencies": [
+        "staff_roster",
+        "equipment",
+        "water",
+        "maintenance"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": ""
+    },
+    {
+      "id": "BLD-GATEHOUSE",
+      "display_label": "Caseta y paso de muralla",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-SECURITY",
+      "facility_kind": "gate_and_checkpoint",
+      "purpose": "Controlar el paso por una puerta física de la muralla según horarios, estado y reglas que se definan.",
+      "public_access": "controlled_access",
+      "operating_model": "ORG-CITY-WATCH",
+      "institution_ids": [
+        "ORG-CITY-WATCH",
+        "ORG-CIVIC-REGISTRY"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "gate_passage",
+        "guard_post",
+        "records_point",
+        "equipment_store"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-GATE-WARDEN",
+          "suggested_positions": 3,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-GUARD",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-ADMIN-CLERK",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-SECURITY-REPORT",
+        "SVC-CIVIC-REGISTRY"
+      ],
+      "operational_dependencies": [
+        "physical_gate_state",
+        "watch_roster",
+        "local_access_rules"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "No se fijan licencias, impuestos, horario o legislación fronteriza en este documento."
+    },
+    {
+      "id": "BLD-STABLES",
+      "display_label": "Establos y patio de monturas",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-SECURITY",
+      "facility_kind": "animal_facility",
+      "purpose": "Alojar, alimentar, cuidar y preparar animales de monta o carga.",
+      "public_access": "public_customer_area_and_staff_only_stalls",
+      "operating_model": "independent_stable_operator",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "stalls",
+        "feed_store",
+        "tack_room",
+        "exercise_yard"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-STABLEHAND",
+          "suggested_positions": 3,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-CARE-ASSISTANT",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-STABLE"
+      ],
+      "operational_dependencies": [
+        "animals",
+        "forage",
+        "water",
+        "veterinary_knowledge",
+        "cleaning"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "La capacidad depende de especie, tamaño, ventilación, espacio y cuidados."
+    },
+    {
+      "id": "BLD-PUBLIC-STOREHOUSE",
+      "display_label": "Almacén de suministros comunes",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-SECURITY",
+      "facility_kind": "public_warehouse",
+      "purpose": "Guardar materiales y reservas de obras o servicios que tengan propietario y presupuesto registrados.",
+      "public_access": "authorized_staff_and_audited_access",
+      "operating_model": "ORG-PUBLIC-WORKS",
+      "institution_ids": [
+        "ORG-PUBLIC-WORKS"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "general_store",
+        "secure_store",
+        "issue_counter",
+        "records_room"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-STOCKKEEPER",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-PORTER",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-ADMIN-CLERK",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-MAINTENANCE"
+      ],
+      "operational_dependencies": [
+        "funded_purchases_or_donations",
+        "inventory_records",
+        "access_control"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "No es una reserva infinita de recursos del jugador."
+    },
+    {
+      "id": "BLD-WATER-CISTERN",
+      "display_label": "Cisterna y punto de distribución de agua",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-SECURITY",
+      "facility_kind": "water_infrastructure",
+      "purpose": "Almacenar y distribuir agua mediante fuentes, conducciones o transporte documentados.",
+      "public_access": "public_draw_point_and_maintained_service_area",
+      "operating_model": "ORG-PUBLIC-WORKS",
+      "institution_ids": [
+        "ORG-PUBLIC-WORKS"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "cistern_chamber",
+        "draw_point",
+        "inspection_access"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-WATERWORKER",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-MAINTENANCE",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-WATER"
+      ],
+      "operational_dependencies": [
+        "water_source",
+        "conveyance_or_delivery",
+        "cleaning",
+        "maintenance"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "La fuente, calidad, volumen, propiedad y coste del agua requieren datos del sistema hídrico."
+    },
+    {
+      "id": "BLD-SANITATION-YARD",
+      "display_label": "Patio de saneamiento y residuos",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-SECURITY",
+      "facility_kind": "sanitation_infrastructure",
+      "purpose": "Recoger, clasificar y retirar residuos mediante procedimientos compatibles con salud y entorno.",
+      "public_access": "restricted_work_area",
+      "operating_model": "ORG-PUBLIC-WORKS",
+      "institution_ids": [
+        "ORG-PUBLIC-WORKS"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "collection_bay",
+        "sorting_area",
+        "tool_store",
+        "wash_point"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-SANITATION",
+          "suggested_positions": 3,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-MAINTENANCE",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-SANITATION"
+      ],
+      "operational_dependencies": [
+        "collection_routes",
+        "protective_equipment",
+        "disposal_or_processing_destination"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "No asumir que los residuos desaparecen sin transporte o tratamiento."
+    },
+    {
+      "id": "BLD-PUBLIC-WORKS-DEPOT",
+      "display_label": "Depósito de obras y mantenimiento",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-SECURITY",
+      "facility_kind": "maintenance_depot",
+      "purpose": "Guardar herramientas y materiales asignados a reparar calles, edificios e instalaciones públicas.",
+      "public_access": "staff_and_contract_workers",
+      "operating_model": "ORG-PUBLIC-WORKS",
+      "institution_ids": [
+        "ORG-PUBLIC-WORKS"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "tool_store",
+        "materials_store",
+        "work_order_desk",
+        "repair_bench"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-MAINTENANCE",
+          "suggested_positions": 3,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-STOCKKEEPER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-MAINTENANCE"
+      ],
+      "operational_dependencies": [
+        "recorded_budget",
+        "materials",
+        "staff",
+        "work_orders"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": ""
+    },
+    {
+      "id": "BLD-FIRE-POST",
+      "display_label": "Puesto de vigilancia y respuesta a incendios",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-SECURITY",
+      "facility_kind": "emergency_post",
+      "purpose": "Detectar incendios y coordinar la respuesta inicial con equipos y rutas disponibles.",
+      "public_access": "staffed_post_with_public_emergency_contact",
+      "operating_model": "ORG-CITY-WATCH",
+      "institution_ids": [
+        "ORG-CITY-WATCH",
+        "ORG-PUBLIC-WORKS"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "watch_point",
+        "equipment_store",
+        "water_access",
+        "alarm_point"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-FIRE-WATCH",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-MAINTENANCE",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-MAINTENANCE",
+        "SVC-SECURITY-REPORT"
+      ],
+      "operational_dependencies": [
+        "alarm_method",
+        "water_or_suppressant",
+        "response_team",
+        "access_routes"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "El método de alarma y la subordinación institucional deben decidirse en el diseño de servicios públicos."
+    },
+    {
+      "id": "BLD-COMMUNITY-HALL",
+      "display_label": "Sala comunitaria",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-COMMUNITY",
+      "facility_kind": "community_facility",
+      "purpose": "Reuniones vecinales, distribución de ayuda, avisos y actividades abiertas.",
+      "public_access": "public_or_reserved_by_activity",
+      "operating_model": "ORG-COMMUNITY-AID",
+      "institution_ids": [
+        "ORG-COMMUNITY-AID"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "meeting_room",
+        "storage_room",
+        "shared_kitchen_access"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-COMMUNITY-COORD",
+          "suggested_positions": 2,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-BUILDING-STEWARD",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-COMMUNITY-AID"
+      ],
+      "operational_dependencies": [
+        "volunteers",
+        "donations_or_budget",
+        "booking_and_access_rules"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [
+        "MIS-TEMP-09"
+      ],
+      "npc_appointments": [],
+      "operating_notes": "No se presume que todas las comunidades estén representadas por una sola asociación."
+    },
+    {
+      "id": "BLD-SHARED-COURT",
+      "display_label": "Patio de convivencia vecinal",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-COMMUNITY",
+      "facility_kind": "public_or_shared_space",
+      "purpose": "Espacio abierto de convivencia, juego y apoyo cotidiano entre hogares cercanos.",
+      "public_access": "public_or_resident_access_by_local_custom",
+      "operating_model": "community_or_residential_shared_use",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "open_courtyard",
+        "seating",
+        "shared_water_point"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-GARDENER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        },
+        {
+          "job_id": "JOB-BUILDING-STEWARD",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-COMMUNITY-AID"
+      ],
+      "operational_dependencies": [
+        "maintenance",
+        "local_access_custom"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "La convivencia en un patio no prueba parentesco ni propiedad común de las viviendas."
+    },
+    {
+      "id": "BLD-MEMORIAL-GARDEN",
+      "display_label": "Jardín memorial",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-COMMUNITY",
+      "facility_kind": "memorial_space",
+      "purpose": "Lugar de memoria para fallecidos, expediciones y acontecimientos locales; admite prácticas distintas.",
+      "public_access": "public_respectful_access",
+      "operating_model": "community_maintained",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "memorial_path",
+        "planting_area",
+        "quiet_space"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-GARDENER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-COMMUNITY-AID"
+      ],
+      "operational_dependencies": [
+        "maintenance",
+        "community_decisions"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "No fija religión, rito funerario único ni destino sobrenatural."
+    },
+    {
+      "id": "BLD-OPEN-SHRINE",
+      "display_label": "Espacio abierto de oración y reflexión",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-COMMUNITY",
+      "facility_kind": "multi_belief_space",
+      "purpose": "Permitir que habitantes con creencias diversas se reúnan o realicen prácticas personales sin imponer una doctrina.",
+      "public_access": "public_access_subject_to_local_custom",
+      "operating_model": "community_managed_or_unassigned",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "open_sanctuary",
+        "quiet_corner",
+        "offering_shelf"
+      ],
+      "workplace_roles": [],
+      "service_ids": [],
+      "operational_dependencies": [
+        "community_care_and_maintenance"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "No está dedicado a una deidad determinada. Oración y culto no conceden bendiciones o poderes automáticos."
+    },
+    {
+      "id": "PLC-COMMUNITY-GREEN",
+      "display_label": "Jardín público",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-COMMUNITY",
+      "facility_kind": "public_space",
+      "purpose": "Espacio vegetal de descanso, tránsito y actividades vecinales.",
+      "public_access": "public",
+      "operating_model": "public_space_no_single_operator",
+      "institution_ids": [],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "paths",
+        "planting_beds",
+        "seating"
+      ],
+      "workplace_roles": [],
+      "service_ids": [
+        "SVC-COMMUNITY-AID"
+      ],
+      "operational_dependencies": [],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "La vegetación y los recursos del jardín requieren mantenimiento y reposición causal."
+    },
+    {
+      "id": "PLC-OLD-WELL",
+      "display_label": "Pozo antiguo de uso comunitario",
+      "label_status": "descriptive_provisional_not_canonical_proper_name",
+      "district_id": "DST-COMMUNITY",
+      "facility_kind": "water_point",
+      "purpose": "Punto de agua de referencia cuya disponibilidad y potabilidad deben comprobarse.",
+      "public_access": "public_access_if_operational",
+      "operating_model": "ORG-PUBLIC-WORKS",
+      "institution_ids": [
+        "ORG-PUBLIC-WORKS"
+      ],
+      "owner_id": null,
+      "ownership_status": "unresolved_reserved_by_SR11_SR13",
+      "spatial_anchor": {
+        "coordinate": null,
+        "exact_address": null,
+        "placement_note": "relative placement only; final map and coordinates reserved",
+        "spatial_status": "not_mapped"
+      },
+      "interior_spaces": [
+        "well_head",
+        "inspection_access"
+      ],
+      "workplace_roles": [
+        {
+          "job_id": "JOB-WATERWORKER",
+          "suggested_positions": 1,
+          "count_status": "provisional_capacity_not_actual_staff"
+        }
+      ],
+      "service_ids": [
+        "SVC-WATER"
+      ],
+      "operational_dependencies": [
+        "aquifer_or_source",
+        "well_integrity",
+        "water_quality_checks"
+      ],
+      "residential_capacity_estimate": null,
+      "mission_hooks": [],
+      "npc_appointments": [],
+      "operating_notes": "Su antigüedad no garantiza agua limpia, abundante ni inagotable."
+    }
+  ],
+  "npc_work_appointments": [
+    {
+      "npc_id": "NPC-ILYEN-ARVETH",
+      "display_name": "Ilyen Arveth",
+      "job_id": "JOB-GUILD-MASTER",
+      "facility_id": "BLD-GUILD-HQ",
+      "institution_id": "ORG-ADVENTURERS-GUILD",
+      "appointment_status": "proposed_from_NPC_catalogue_v0.1_not_employment_contract",
+      "authority_note": "Su autoridad se limita al gremio; no implica autoridad política sobre la ciudad."
+    },
+    {
+      "npc_id": "NPC-MIRA-DENETH",
+      "display_name": "Mira Deneth",
+      "job_id": "JOB-ARCHIVIST",
+      "facility_id": "BLD-GUILD-ARCHIVE",
+      "institution_id": "ORG-ADVENTURERS-GUILD",
+      "appointment_status": "proposed_from_NPC_catalogue_v0.1_not_employment_contract",
+      "authority_note": "Custodia registros; no conoce automáticamente documentos que no ha consultado."
+    },
+    {
+      "npc_id": "NPC-VEYA-TALREN",
+      "display_name": "Veya Talren",
+      "job_id": "JOB-CARTOGRAPHER",
+      "facility_id": "BLD-CARTOGRAPHY-OFFICE",
+      "institution_id": "ORG-ADVENTURERS-GUILD",
+      "appointment_status": "proposed_from_NPC_catalogue_v0.1_not_employment_contract",
+      "authority_note": "Debe distinguir rutas recorridas, informes ajenos e hipótesis."
+    },
+    {
+      "npc_id": "NPC-ORYN-VALE",
+      "display_name": "Oryn Vale",
+      "job_id": "JOB-ARCANE-RESEARCHER",
+      "facility_id": "BLD-ARCANE-OBSERVATORY",
+      "institution_id": "ORG-ARCANE-RESEARCH",
+      "appointment_status": "proposed_from_NPC_catalogue_v0.1_not_employment_contract",
+      "authority_note": "Es investigador; sus teorías no son automáticamente hechos objetivos."
+    },
+    {
+      "npc_id": "NPC-MAELIS-ORDAN",
+      "display_name": "Maelis Ordan",
+      "job_id": "JOB-CLINICIAN",
+      "facility_id": "BLD-CLINIC",
+      "institution_id": "ORG-HEALTH-PRACTICE",
+      "appointment_status": "proposed_from_NPC_catalogue_v0.1_not_employment_contract",
+      "authority_note": "Puede tratar pacientes dentro de conocimientos, capacidad y suministros reales."
+    }
+  ],
+  "mission_hooks": [
+    {
+      "id": "MIS-TEMP-01",
+      "label": "Investigar el registro del Triple Eco",
+      "mission_status": "template_hook_not_active_contract",
+      "facility_ids": [
+        "BLD-ARCANE-OBSERVATORY",
+        "BLD-GUILD-HQ"
+      ],
+      "responsible_org_ids": [
+        "ORG-ARCANE-RESEARCH",
+        "ORG-ADVENTURERS-GUILD"
+      ],
+      "preconditions": "available evidence, researcher interest, time and funded scope",
+      "reward_rule": "only from a confirmed sponsor ledger or committed goods; no automatic reward"
+    },
+    {
+      "id": "MIS-TEMP-02",
+      "label": "Recuperar o verificar un registro de expedición",
+      "mission_status": "template_hook_not_active_contract",
+      "facility_ids": [
+        "BLD-GUILD-ARCHIVE"
+      ],
+      "responsible_org_ids": [
+        "ORG-ADVENTURERS-GUILD"
+      ],
+      "preconditions": "a specific missing or disputed record actually exists",
+      "reward_rule": "must identify who benefits and funds the work"
+    },
+    {
+      "id": "MIS-TEMP-03",
+      "label": "Actualizar una ruta del piso 1",
+      "mission_status": "template_hook_not_active_contract",
+      "facility_ids": [
+        "BLD-CARTOGRAPHY-OFFICE",
+        "BLD-EXPEDITION-CHECK"
+      ],
+      "responsible_org_ids": [
+        "ORG-ADVENTURERS-GUILD"
+      ],
+      "preconditions": "route changed or needs independent verification",
+      "reward_rule": "must have sponsor, payment or agreed service exchange"
+    },
+    {
+      "id": "MIS-TEMP-04",
+      "label": "Localizar herramientas extraviadas",
+      "mission_status": "template_hook_not_active_contract",
+      "facility_ids": [
+        "BLD-TOOL-REPAIR",
+        "BLD-GENERAL-STORE"
+      ],
+      "responsible_org_ids": [],
+      "preconditions": "owner report, identifiable tools and credible loss location",
+      "reward_rule": "owner-funded or contract-funded only"
+    },
+    {
+      "id": "MIS-TEMP-05",
+      "label": "Obtener una muestra de una galería húmeda",
+      "mission_status": "template_hook_not_active_contract",
+      "facility_ids": [
+        "BLD-ARCANE-OBSERVATORY",
+        "BLD-CLINIC"
+      ],
+      "responsible_org_ids": [
+        "ORG-ARCANE-RESEARCH",
+        "ORG-HEALTH-PRACTICE"
+      ],
+      "preconditions": "research question, lawful access, safe handling and sample custody",
+      "reward_rule": "materials and payment must be committed before posting"
+    },
+    {
+      "id": "MIS-TEMP-06",
+      "label": "Escoltar una caravana",
+      "mission_status": "template_hook_not_active_contract",
+      "facility_ids": [
+        "BLD-TRADE-WAREHOUSE",
+        "BLD-GUILD-HQ",
+        "BLD-COURIER-POST"
+      ],
+      "responsible_org_ids": [
+        "ORG-ADVENTURERS-GUILD",
+        "ORG-TRADE-ASSOCIATION"
+      ],
+      "preconditions": "a real caravan, route, cargo owner and departure window",
+      "reward_rule": "cargo owner or sponsor must fund the contract"
+    },
+    {
+      "id": "MIS-TEMP-07",
+      "label": "Acompañar a una persona herida a la clínica",
+      "mission_status": "template_hook_not_active_contract",
+      "facility_ids": [
+        "BLD-CLINIC",
+        "BLD-RECOVERY-HOUSE"
+      ],
+      "responsible_org_ids": [
+        "ORG-HEALTH-PRACTICE",
+        "ORG-COMMUNITY-AID"
+      ],
+      "preconditions": "an actual injured person requests or needs assistance",
+      "reward_rule": "help may be voluntary; any payment requires a source"
+    },
+    {
+      "id": "MIS-TEMP-08",
+      "label": "Reponer suministros médicos",
+      "mission_status": "template_hook_not_active_contract",
+      "facility_ids": [
+        "BLD-CLINIC",
+        "BLD-APOTHECARY",
+        "BLD-HERB-COUNTER"
+      ],
+      "responsible_org_ids": [
+        "ORG-HEALTH-PRACTICE"
+      ],
+      "preconditions": "a real shortage and a valid supplier or collection source",
+      "reward_rule": "clinic budget, sponsor or goods exchange must exist"
+    },
+    {
+      "id": "MIS-TEMP-09",
+      "label": "Ayudar a un hogar afectado por una expedición",
+      "mission_status": "template_hook_not_active_contract",
+      "facility_ids": [
+        "BLD-COMMUNITY-HALL",
+        "BLD-COMMUNITY-KITCHEN",
+        "BLD-SHARED-COURT"
+      ],
+      "responsible_org_ids": [
+        "ORG-COMMUNITY-AID"
+      ],
+      "preconditions": "household needs, consent and available community resources",
+      "reward_rule": "no reward assumed; voluntary aid remains possible"
+    },
+    {
+      "id": "MIS-TEMP-10",
+      "label": "Entregar un informe institucional",
+      "mission_status": "template_hook_not_active_contract",
+      "facility_ids": [
+        "BLD-CIVIC-REGISTRY",
+        "BLD-GUILD-ARCHIVE",
+        "BLD-EXPEDITION-CHECK"
+      ],
+      "responsible_org_ids": [
+        "ORG-CIVIC-REGISTRY",
+        "ORG-ADVENTURERS-GUILD"
+      ],
+      "preconditions": "recipient, report format and delivery deadline are known",
+      "reward_rule": "only if a funded contract exists"
+    },
+    {
+      "id": "MIS-TEMP-11",
+      "label": "Investigar indicios de depredación",
+      "mission_status": "template_hook_not_active_contract",
+      "facility_ids": [
+        "BLD-ARCANE-OBSERVATORY",
+        "BLD-GUILD-HQ",
+        "BLD-CLINIC"
+      ],
+      "responsible_org_ids": [
+        "ORG-ARCANE-RESEARCH",
+        "ORG-ADVENTURERS-GUILD"
+      ],
+      "preconditions": "evidence of predation, ecological context and safe investigation plan",
+      "reward_rule": "sponsor and costs must be recorded"
+    },
+    {
+      "id": "MIS-TEMP-12",
+      "label": "Documentar una estructura antigua",
+      "mission_status": "template_hook_not_active_contract",
+      "facility_ids": [
+        "BLD-GUILD-ARCHIVE",
+        "BLD-CARTOGRAPHY-OFFICE",
+        "BLD-ARCANE-OBSERVATORY"
+      ],
+      "responsible_org_ids": [
+        "ORG-ADVENTURERS-GUILD",
+        "ORG-ARCANE-RESEARCH"
+      ],
+      "preconditions": "a real site or report exists and documentation method is valid",
+      "reward_rule": "sponsor, deliverables and payment must be explicit"
+    }
+  ],
+  "district_links_status": "proposed_neighbourhood_adjacency_only_not_physical_route_graph",
+  "reserved_fields": [
+    "city_name",
+    "district_proper_names",
+    "street_names",
+    "building_proper_names",
+    "coordinates",
+    "exact_dimensions",
+    "street_graph",
+    "building_ownership",
+    "rent_and_prices",
+    "wages",
+    "budgets_and_treasuries",
+    "population_occupancy",
+    "local_government_and_laws",
+    "institutional_foundation_dates",
+    "opening_hours",
+    "final_staff_appointments"
+  ]
+}

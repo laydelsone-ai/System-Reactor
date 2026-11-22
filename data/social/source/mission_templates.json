@@ -1,0 +1,458 @@
+{
+  "catalog_version": "0.1.0",
+  "status": "content_templates_not_runtime_active_contracts",
+  "missions": [
+    {
+      "id": "MIS-001",
+      "version": 1,
+      "title": "Verificar el origen del Triple Eco",
+      "type": "investigation",
+      "issuer_npc_id": "npc_0002",
+      "sponsor_id": "institution_research_house",
+      "reason": "La ciudad recibió tres pulsos registrados y distintas instituciones poseen observaciones parciales.",
+      "participants": "Un investigador o grupo pequeño con instrumentos apropiados.",
+      "objectives": [
+        "reunir al menos dos registros independientes",
+        "comparar hora, dirección y condiciones de observación",
+        "entregar resultados separados de las hipótesis"
+      ],
+      "success_conditions": [
+        "registros con procedencia verificable",
+        "informe que distinga medición e interpretación"
+      ],
+      "failure_conditions": [
+        "instrumentos dañados sin posibilidad de reparación",
+        "plazo vencido si la medición era temporal"
+      ],
+      "evidence": [
+        "lecturas originales",
+        "testimonios firmados",
+        "registro de instrumento y condiciones"
+      ],
+      "reward_source": "presupuesto de investigación o bienes comprometidos; no publicar sin comprobar saldo real",
+      "location": "Ciudad principal / puestos de observación habilitados",
+      "known_risks": [
+        "datos contradictorios",
+        "instrumentos no calibrados"
+      ],
+      "exclusivity": "Puede dividirse por tareas; no duplicar recompensa por el mismo conjunto de datos",
+      "initial_state": "eligible_if_funded_and_triggered",
+      "narrative_guard": "No revelar ni inventar la causa objetiva del Triple Eco."
+    },
+    {
+      "id": "MIS-002",
+      "version": 1,
+      "title": "Recuperar y cotejar el último registro de expedición",
+      "type": "archive_recovery",
+      "issuer_npc_id": "npc_0004",
+      "sponsor_id": "institution_adventurers_guild",
+      "reason": "El archivo conserva referencias incompletas sobre la expedición desaparecida.",
+      "participants": "Archivista, mensajero o grupo autorizado para consultar y recuperar documentos.",
+      "objectives": [
+        "localizar el registro original o una copia identificable",
+        "comprobar autenticidad y estado",
+        "compararlo con testimonios separados"
+      ],
+      "success_conditions": [
+        "procedencia y cadena de custodia registradas",
+        "diferencias documentadas sin rellenar vacíos"
+      ],
+      "failure_conditions": [
+        "documento inexistente o destruido",
+        "copia no autenticable"
+      ],
+      "evidence": [
+        "documento original",
+        "copias con origen",
+        "declaraciones con fecha y fuente"
+      ],
+      "reward_source": "presupuesto del gremio; requiere saldo y autorización",
+      "location": "Archivo del Gremio y ubicaciones que aparezcan en el documento",
+      "known_risks": [
+        "documentos incompletos",
+        "información privada o disputada"
+      ],
+      "exclusivity": "Consulta compartida; recuperación de original único con control de acceso",
+      "initial_state": "eligible_if_funded_and_access_authorized",
+      "narrative_guard": "No definir si la expedición está viva, muerta, rescatada o localizada."
+    },
+    {
+      "id": "MIS-003",
+      "version": 1,
+      "title": "Actualizar una ruta segura del primer piso",
+      "type": "exploration_mapping",
+      "issuer_npc_id": "npc_0008",
+      "sponsor_id": "institution_adventurers_guild",
+      "reason": "Los mapas deben reflejar cambios de terreno y condiciones observadas.",
+      "participants": "Exploradores con equipo de medición y capacidad de retirada.",
+      "objectives": [
+        "recorrer una ruta transitable",
+        "registrar anchos, obstáculos y peligros",
+        "indicar fecha y nivel de certeza de cada observación"
+      ],
+      "success_conditions": [
+        "trazado reproducible y referencias espaciales",
+        "zonas no observadas marcadas como desconocidas"
+      ],
+      "failure_conditions": [
+        "ruta bloqueada",
+        "pérdida de equipo crítico o retirada justificada"
+      ],
+      "evidence": [
+        "croquis medido",
+        "marcas de ruta",
+        "testimonio de participantes"
+      ],
+      "reward_source": "fondo de cartografía del gremio; requiere financiación vigente",
+      "location": "Mazmorra, piso 1; sector concreto no fijado de antemano",
+      "known_risks": [
+        "derrumbes",
+        "fauna territorial",
+        "errores de mapas anteriores"
+      ],
+      "exclusivity": "Varios grupos pueden aportar sectores distintos; una misma ruta no genera pagos duplicados sin contrato",
+      "initial_state": "eligible_if_funded_and_route_accessible",
+      "narrative_guard": "No crear coordenadas o salas definitivas antes del mapa espacial."
+    },
+    {
+      "id": "MIS-004",
+      "version": 1,
+      "title": "Localizar un lote de herramientas extraviado",
+      "type": "recovery",
+      "issuer_npc_id": "npc_0005",
+      "sponsor_id": "guild_supply_ledger",
+      "reason": "El almacén registra una salida de herramientas que aún no tiene devolución confirmada.",
+      "participants": "Mensajero, porteador o expedición con acceso al último punto conocido.",
+      "objectives": [
+        "reconstruir la última transferencia registrada",
+        "localizar los bienes si siguen existiendo",
+        "devolverlos al propietario o registrar la pérdida"
+      ],
+      "success_conditions": [
+        "propiedad y estado comprobados",
+        "transferencia válida o informe de pérdida"
+      ],
+      "failure_conditions": [
+        "bienes destruidos o inaccesibles",
+        "plazo operativo superado"
+      ],
+      "evidence": [
+        "registro de almacén",
+        "marcas de propiedad",
+        "acuse de entrega"
+      ],
+      "reward_source": "reembolso del seguro/contrato o pago del propietario tras validar fondos; no automático",
+      "location": "Almacén, mercado o ruta de transporte",
+      "known_risks": [
+        "registro incorrecto",
+        "mercancía transferida a tercero"
+      ],
+      "exclusivity": "Bienes individuales con propietario único",
+      "initial_state": "eligible_if_discrepancy_confirmed",
+      "narrative_guard": "No asumir robo: puede haber error de registro, daño, retraso o pérdida."
+    },
+    {
+      "id": "MIS-005",
+      "version": 1,
+      "title": "Obtener una muestra de la galería húmeda",
+      "type": "field_sampling",
+      "issuer_npc_id": "npc_0047",
+      "sponsor_id": "institution_research_house",
+      "reason": "Se necesita una muestra trazable para comprobar una hipótesis sobre agua y depósitos minerales.",
+      "participants": "Recolectores con recipientes adecuados y guía de seguridad.",
+      "objectives": [
+        "identificar un punto de muestreo existente",
+        "tomar cantidad compatible con el protocolo",
+        "conservar muestra, lugar, hora y método"
+      ],
+      "success_conditions": [
+        "muestra íntegra y etiquetada",
+        "cadena de custodia registrada"
+      ],
+      "failure_conditions": [
+        "contaminación",
+        "envase roto",
+        "riesgo que obligue a retirarse"
+      ],
+      "evidence": [
+        "muestra física",
+        "ficha de recolección",
+        "registro de ubicación"
+      ],
+      "reward_source": "materiales y presupuesto de laboratorio previamente asignados",
+      "location": "Piso 2, zona húmeda; ubicación exacta por confirmar en mapa",
+      "known_risks": [
+        "agua profunda",
+        "superficies resbaladizas",
+        "fauna acuática"
+      ],
+      "exclusivity": "Muestras limitadas por protocolo y disponibilidad real",
+      "initial_state": "eligible_after_floor2_access_and_funding",
+      "narrative_guard": "No afirmar contaminación ni resultado químico antes del análisis."
+    },
+    {
+      "id": "MIS-006",
+      "version": 1,
+      "title": "Escoltar una caravana de suministros",
+      "type": "escort",
+      "issuer_npc_id": "npc_0025",
+      "sponsor_id": "merchant_supply_contract",
+      "reason": "Un lote de mercancía debe llegar desde el almacén a los talleres y el cliente quiere reducir riesgo de pérdida.",
+      "participants": "Escoltas con disponibilidad y equipo apropiado para el recorrido.",
+      "objectives": [
+        "acordar ruta y obligaciones",
+        "acompañar la carga hasta su destino",
+        "registrar daños, retrasos o desvíos"
+      ],
+      "success_conditions": [
+        "entrega recibida y conciliada",
+        "incidentes documentados"
+      ],
+      "failure_conditions": [
+        "carga perdida",
+        "ruta cerrada",
+        "contrato abandonado sin relevo"
+      ],
+      "evidence": [
+        "inventario de salida y llegada",
+        "firmas de entrega",
+        "registro de incidentes"
+      ],
+      "reward_source": "pago del comerciante desde contrato financiado",
+      "location": "Almacén del mercado y talleres",
+      "known_risks": [
+        "retrasos",
+        "avería de vehículo",
+        "hurto o disputa de ruta"
+      ],
+      "exclusivity": "Equipo de escolta asignado por contrato",
+      "initial_state": "eligible_if_caravan_scheduled_and_funded",
+      "narrative_guard": "No crear un ataque obligatorio; el trayecto puede transcurrir sin combate."
+    },
+    {
+      "id": "MIS-007",
+      "version": 1,
+      "title": "Acompañar a un viajero hasta la clínica",
+      "type": "escort_welfare",
+      "issuer_npc_id": "npc_0055",
+      "sponsor_id": "community_aid_fund",
+      "reason": "Un huésped o trabajador necesita acompañamiento seguro tras una lesión o agotamiento.",
+      "participants": "Ayudante disponible; no se exige perfil de combate.",
+      "objectives": [
+        "comprobar consentimiento y condición observable",
+        "acompañar por una ruta accesible",
+        "entregar a personal sanitario"
+      ],
+      "success_conditions": [
+        "llegada y recepción confirmadas",
+        "incidentes comunicados"
+      ],
+      "failure_conditions": [
+        "deterioro que requiere atención inmediata",
+        "ruta insegura",
+        "rechazo del paciente"
+      ],
+      "evidence": [
+        "recepción clínica",
+        "testimonio del paciente"
+      ],
+      "reward_source": "ayuda comunitaria o compensación solo si hay fondos; puede ser una petición no remunerada",
+      "location": "Distrito de Tabernas a Clínica",
+      "known_risks": [
+        "estado médico desconocido",
+        "tránsito urbano"
+      ],
+      "exclusivity": "Un acompañante o equipo",
+      "initial_state": "eligible_if_person_requests_help",
+      "narrative_guard": "No convertir condición médica en dramatización automática."
+    },
+    {
+      "id": "MIS-008",
+      "version": 1,
+      "title": "Reponer suministros de primeros auxilios",
+      "type": "supply",
+      "issuer_npc_id": "npc_0006",
+      "sponsor_id": "guild_medical_ledger",
+      "reason": "La clínica y los equipos de campo necesitan reponer consumibles agotados.",
+      "participants": "Recolector o proveedor con acceso a materiales válidos.",
+      "objectives": [
+        "comprobar existencias y especificaciones",
+        "localizar suministros compatibles",
+        "entregarlos y actualizar inventario"
+      ],
+      "success_conditions": [
+        "material verificado",
+        "transferencia registrada"
+      ],
+      "failure_conditions": [
+        "material incompatible",
+        "suministro no disponible",
+        "contaminación o conservación inadecuada"
+      ],
+      "evidence": [
+        "inventario de salida y entrada",
+        "inspección del material"
+      ],
+      "reward_source": "presupuesto de la clínica o compra institucional con saldo",
+      "location": "Mercado, talleres y clínica",
+      "known_risks": [
+        "escasez",
+        "calidad irregular"
+      ],
+      "exclusivity": "Varios proveedores posibles sin duplicar unidades",
+      "initial_state": "eligible_if_stock_below_threshold_and_funded",
+      "narrative_guard": "No declarar curaciones logradas por el simple hecho de entregar material."
+    },
+    {
+      "id": "MIS-009",
+      "version": 1,
+      "title": "Ayudar a una familia afectada por una expedición",
+      "type": "community_aid",
+      "issuer_npc_id": "npc_0060",
+      "sponsor_id": "community_aid_fund",
+      "reason": "Un hogar necesita ayuda material o logística tras recibir noticias incompletas de una persona vinculada a una expedición.",
+      "participants": "Voluntarios, mensajeros o agentes sociales.",
+      "objectives": [
+        "confirmar qué ayuda solicita el hogar",
+        "coordinar suministro, transporte o comunicación",
+        "respetar privacidad y decisiones familiares"
+      ],
+      "success_conditions": [
+        "ayuda recibida voluntariamente",
+        "recursos y responsables registrados"
+      ],
+      "failure_conditions": [
+        "ayuda rechazada",
+        "recursos insuficientes",
+        "información falsa"
+      ],
+      "evidence": [
+        "consentimiento del hogar",
+        "entrega documentada"
+      ],
+      "reward_source": "puede ser favor social; cualquier pago requiere fondo real",
+      "location": "Distrito Residencial / Clínica / Gremio",
+      "known_risks": [
+        "duelo o conflicto familiar",
+        "rumores"
+      ],
+      "exclusivity": "No exclusiva; varios vecinos pueden colaborar",
+      "initial_state": "eligible_if_household_requests_aid",
+      "narrative_guard": "No afirmar destino de la persona desaparecida ni obligar a la familia a aceptar ayuda."
+    },
+    {
+      "id": "MIS-010",
+      "version": 1,
+      "title": "Entregar un informe entre instituciones",
+      "type": "delivery",
+      "issuer_npc_id": "npc_0043",
+      "sponsor_id": "sender_institution",
+      "reason": "Dos instituciones necesitan intercambiar un documento o resultado de inspección.",
+      "participants": "Mensajero autorizado con registro de recepción.",
+      "objectives": [
+        "recoger paquete sellado",
+        "seguir ruta válida",
+        "obtener acuse del destinatario"
+      ],
+      "success_conditions": [
+        "paquete íntegro y recepción confirmada"
+      ],
+      "failure_conditions": [
+        "paquete perdido o abierto sin autorización",
+        "destinatario inexistente o rechazo documentado"
+      ],
+      "evidence": [
+        "sello",
+        "registro de salida",
+        "acuse de recepción"
+      ],
+      "reward_source": "institución emisora; requiere asignación de gasto",
+      "location": "Edificios cívicos, talleres, estudio y gremio",
+      "known_risks": [
+        "retrasos",
+        "pérdida",
+        "confusión de destinatario"
+      ],
+      "exclusivity": "Un mensajero asignado por paquete",
+      "initial_state": "eligible_if_message_created_and_authorized",
+      "narrative_guard": "El contenido de un paquete sellado no se filtra al mensajero sin razón."
+    },
+    {
+      "id": "MIS-011",
+      "version": 1,
+      "title": "Investigar señales de depredación en una ruta",
+      "type": "ecological_survey",
+      "issuer_npc_id": "npc_0012",
+      "sponsor_id": "guild_ecology_or_survey_fund",
+      "reason": "La fauna muestra un cambio de comportamiento y es necesario saber si una ruta sigue siendo segura.",
+      "participants": "Rastreador o explorador con conocimientos de campo.",
+      "objectives": [
+        "registrar huellas y señales sin asumir especie",
+        "identificar cambios de actividad",
+        "proponer mitigación o ruta alternativa"
+      ],
+      "success_conditions": [
+        "observaciones fechadas",
+        "hipótesis separada de identificación confirmada"
+      ],
+      "failure_conditions": [
+        "señales insuficientes",
+        "condiciones peligrosas",
+        "población desplazada"
+      ],
+      "evidence": [
+        "muestras y huellas",
+        "croquis",
+        "testimonios independientes"
+      ],
+      "reward_source": "fondo de seguridad o patrocinador; saldo requerido",
+      "location": "Piso 1 y accesos de ruta; área exacta emergente",
+      "known_risks": [
+        "encuentro con depredador",
+        "falsa identificación"
+      ],
+      "exclusivity": "Múltiples informes válidos si cubren segmentos distintos",
+      "initial_state": "eligible_if_new_ecological_event_observed",
+      "narrative_guard": "No convertir toda criatura en hostil ni ordenar exterminio de una población."
+    },
+    {
+      "id": "MIS-012",
+      "version": 1,
+      "title": "Documentar una estructura antigua",
+      "type": "archaeological_record",
+      "issuer_npc_id": "npc_0053",
+      "sponsor_id": "institution_research_house",
+      "reason": "Se han recibido descripciones de restos arquitectónicos cuya fecha y función son desconocidas.",
+      "participants": "Investigador acompañado por escolta si el entorno lo requiere.",
+      "objectives": [
+        "registrar geometría y materiales observables",
+        "comparar con referencias disponibles",
+        "conservar dibujos y muestras autorizadas"
+      ],
+      "success_conditions": [
+        "registro reproducible",
+        "conclusiones con nivel de certeza"
+      ],
+      "failure_conditions": [
+        "estructura inaccesible o derrumbada",
+        "muestras contaminadas",
+        "riesgo excesivo"
+      ],
+      "evidence": [
+        "croquis medido",
+        "fotografía o dibujo con escala",
+        "descripción del contexto"
+      ],
+      "reward_source": "financiación de investigación o intercambio de conocimiento y acceso; asignación concreta pendiente",
+      "location": "Ruinas documentadas en pisos 1–5; sin fijar cámara definitiva",
+      "known_risks": [
+        "derrumbes",
+        "inscripciones incompletas",
+        "interpretaciones erróneas"
+      ],
+      "exclusivity": "Varios investigadores pueden documentar, una muestra única no se duplica",
+      "initial_state": "eligible_if_structure_discovered_and_authorized",
+      "narrative_guard": "No determinar por adelantado autoría, antigüedad exacta ni significado último de las ruinas."
+    }
+  ]
+}

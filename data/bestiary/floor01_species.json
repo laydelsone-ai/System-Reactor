@@ -1,0 +1,168 @@
+{
+  "document_id": "BESTIARIO-MAZ-1-5",
+  "version": "0.1",
+  "status": "propuesta_catalogo_pendiente_revision_y_calibracion",
+  "source": "Bestiario_Mazmorra_Pisos_1-5_v0.1.pdf, pages 4-8; cross-check: estadisticas_especies.csv",
+  "species": [
+    {
+      "id": "MON-F1-001",
+      "name": "Rata de filon",
+      "floor": 1,
+      "danger": 1,
+      "nature": "Organismo biologico",
+      "frequency": "Comun",
+      "stats": {
+        "fuerza": 12,
+        "potencia": 10,
+        "agilidad": 78,
+        "coordinacion": 70,
+        "resistencia_fisica": 24,
+        "percepcion": 74
+      },
+      "summary": "Mamifero pequeno de cuerpo bajo, incisivos robustos y vibrisas endurecidas. Cola larga para equilibrarse en vigas y bordes estrechos.",
+      "behavior": "Vive en grupos pequenos, pero forrajea por separado. Huye de vibraciones fuertes y utiliza grietas estrechas. Puede morder si queda atrapada o protege una camada.",
+      "abilities": [
+        "Evasion por grietas",
+        "Alarma de colonia mediante chillidos breves"
+      ],
+      "weaknesses": [
+        "Muy baja resistencia corporal",
+        "Poca fuerza; mordedura peligrosa solo en zonas sensibles o en numero",
+        "Se desorienta en agua profunda y superficies completamente lisas"
+      ],
+      "ecology": "Omnivora oportunista. Consume hongos blandos, larvas, semillas transportadas, restos organicos y biopeliculas con minerales. Dispersa esporas y remueve restos.",
+      "tactical": "No perseguirla a ciegas por grietas desconocidas. Bloquear rutas de escape y observar si su presencia repetida indica un depredador cercano.",
+      "aptitude_scale": "0-100; referencia funcional, no magnitud fisica",
+      "danger_scale": "1-5; orientacion de campo, no nivel de personaje",
+      "status": "propuesta_catalogo_v0.1"
+    },
+    {
+      "id": "MON-F1-002",
+      "name": "Escarabajo ferrante",
+      "floor": 1,
+      "danger": 1,
+      "nature": "Organismo biologico",
+      "frequency": "Comun",
+      "stats": {
+        "fuerza": 32,
+        "potencia": 28,
+        "agilidad": 30,
+        "coordinacion": 45,
+        "resistencia_fisica": 76,
+        "percepcion": 52
+      },
+      "summary": "Artropodo de seis patas, mandibulas cortas y elitros gruesos con depositos minerales incrustados. Vientre y articulaciones con placas mas finas.",
+      "behavior": "Lento al alimentarse. Ante amenaza se repliega bajo los elitros o se deja caer desde una pared. Los adultos pueden embestir si se bloquea su refugio.",
+      "abilities": [
+        "Repliegue dorsal",
+        "Embate corto con el caparazon"
+      ],
+      "weaknesses": [
+        "Articulaciones y vientre menos protegidos",
+        "Movilidad reducida en barro profundo y agua rapida",
+        "Repliegue no protege ojos, antenas ni puntos de apoyo"
+      ],
+      "ecology": "Detritivoro y consumidor de biopeliculas; descompone materia organica y aprovecha sales y compuestos minerales blandos.",
+      "tactical": "No insistir con tajos contra el dorso. Atacar uniones entre placas o evitar el encuentro si no bloquea el paso.",
+      "aptitude_scale": "0-100; referencia funcional, no magnitud fisica",
+      "danger_scale": "1-5; orientacion de campo, no nivel de personaje",
+      "status": "propuesta_catalogo_v0.1"
+    },
+    {
+      "id": "MON-F1-003",
+      "name": "Hongo farolero",
+      "floor": 1,
+      "danger": 2,
+      "nature": "Organismo biologico colonial",
+      "frequency": "Frecuente en zonas humedas",
+      "stats": {
+        "fuerza": 0,
+        "potencia": 0,
+        "agilidad": 0,
+        "coordinacion": 8,
+        "resistencia_fisica": 62,
+        "percepcion": 18
+      },
+      "summary": "Red micelial anclada a la roca, con cuerpos fructiferos bulbosos que emiten luz tenue por un proceso biologico. No posee locomocion animal ni centro nervioso.",
+      "behavior": "La colonia no persigue ni toma decisiones. Una perturbacion puede activar liberacion de esporas, segun humedad, madurez y dano local.",
+      "abilities": [
+        "Nube de esporas irritantes en camaras cerradas",
+        "Luminiscencia tenue, insuficiente para iluminar toda una sala"
+      ],
+      "weaknesses": [
+        "Depende de humedad y sustrato adecuados",
+        "Tejido expuesto puede deshidratarse o quemarse",
+        "No puede perseguir, esquivar ni elegir objetivos"
+      ],
+      "ecology": "Descomponedor y base de alimentacion para larvas, ratas y algunos insectos. Retiene humedad y altera lentamente el sustrato.",
+      "tactical": "No debe tratarse como una bestia con HP. Evitar golpear cuerpos fructiferos en espacios cerrados sin proteccion respiratoria.",
+      "aptitude_scale": "0-100; referencia funcional, no magnitud fisica",
+      "danger_scale": "1-5; orientacion de campo, no nivel de personaje",
+      "status": "propuesta_catalogo_v0.1"
+    },
+    {
+      "id": "MON-F1-004",
+      "name": "Murcielago de eco",
+      "floor": 1,
+      "danger": 2,
+      "nature": "Organismo biologico",
+      "frequency": "Comun",
+      "stats": {
+        "fuerza": 18,
+        "potencia": 36,
+        "agilidad": 92,
+        "coordinacion": 84,
+        "resistencia_fisica": 34,
+        "percepcion": 89
+      },
+      "summary": "Mamifero volador de alas membranosas, garras prensiles y cabeza corta. El pecho contiene musculatura de vuelo desarrollada; las alas son delicadas y vascularizadas.",
+      "behavior": "Descansa en grupos. Al ser perturbado puede levantar vuelo y saturar el espacio con trayectorias cambiantes. No ataca normalmente a seres grandes salvo acorralamiento, defensa de cria o escasez extrema.",
+      "abilities": [
+        "Barrido de eco para reconocer obstaculos y movimientos",
+        "Picado evasivo con cambios rapidos de altura"
+      ],
+      "weaknesses": [
+        "Membranas vulnerables a cortes y desgarros",
+        "Ruido continuo y ecos superpuestos reducen precision",
+        "Poca resistencia al dano localizado"
+      ],
+      "ecology": "Insectivoro; consume escarabajos pequenos, larvas, polillas y otros organismos voladores. Controla poblaciones de insectos.",
+      "tactical": "No luchar bajo una colonia si puede evitarse. En camara baja pierde ventaja aerea; redes y barreras pueden ser mas utiles que espadas largas.",
+      "aptitude_scale": "0-100; referencia funcional, no magnitud fisica",
+      "danger_scale": "1-5; orientacion de campo, no nivel de personaje",
+      "status": "propuesta_catalogo_v0.1"
+    },
+    {
+      "id": "MON-F1-005",
+      "name": "Rastrero de escombro",
+      "floor": 1,
+      "danger": 3,
+      "nature": "Organismo biologico",
+      "frequency": "Poco comun",
+      "stats": {
+        "fuerza": 55,
+        "potencia": 61,
+        "agilidad": 69,
+        "coordinacion": 57,
+        "resistencia_fisica": 64,
+        "percepcion": 73
+      },
+      "summary": "Artropodo depredador de seis patas con cuerpo bajo, mandibulas prensiles y placas dorsales de roca adherida. Abdomen flexible y patas delanteras con espinas para sujetar presas.",
+      "behavior": "Espera inmovil junto a escombros y ataca desde un angulo lateral. Puede abandonar una presa peligrosa. Aprende patrones observados solo tras encuentros y evidencia.",
+      "abilities": [
+        "Enganche de extremidad para inmovilizar",
+        "Emboscada lateral aprovechando obstaculos"
+      ],
+      "weaknesses": [
+        "Abdomen y articulaciones menos protegidos",
+        "Poca eficacia sobre superficies lisas o en agua profunda",
+        "La emboscada pierde eficacia si se detecta antes"
+      ],
+      "ecology": "Carnivoro y carronero oportunista. Caza ratas, insectos grandes y murcielagos caidos; puede consumir restos de criaturas mayores.",
+      "tactical": "Vigilar laterales y suelo, no solo el frente. Mantener distancia de las patas delanteras y evitar un corredor lleno de escombros.",
+      "aptitude_scale": "0-100; referencia funcional, no magnitud fisica",
+      "danger_scale": "1-5; orientacion de campo, no nivel de personaje",
+      "status": "propuesta_catalogo_v0.1"
+    }
+  ]
+}

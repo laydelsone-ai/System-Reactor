@@ -1,0 +1,3957 @@
+[
+  {
+    "id": "npc_0001",
+    "entity_id": "npc_0001",
+    "universal_identity_id": "uid_npc_0001",
+    "life_episode_id": "life_npc_0001_initial",
+    "body_id": "body_npc_0001_initial",
+    "cognitive_profile_id": "cog_npc_0001",
+    "social_identity_id": "social_npc_0001",
+    "name": "Ilyen Arveth",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Maestro del Gremio de Aventureros",
+    "district_or_work_area": "Distrito del Gremio",
+    "affiliations": [
+      "institution_adventurers_guild"
+    ],
+    "public_profile": "Veterano de expediciones que dirige el gremio con una mezcla de prudencia y pragmatismo. Prefiere contratos verificables a promesas heroicas.",
+    "personality_traits": [
+      "prudente",
+      "firme",
+      "protector"
+    ],
+    "primary_motivation": "Mantener el gremio solvente y útil para la ciudad",
+    "current_tension": "Debe repartir recursos entre rescates, investigación y mantenimiento sin poder financiarlo todo.",
+    "knowledge_scope": "Conoce la historia institucional del gremio y los informes que ha leído; no conoce el destino real de la expedición desaparecida.",
+    "private_personal_fact": "Conserva una carta sin enviar a la familia de un aventurero que abandonó el gremio.",
+    "daily_routine": "oficina por la mañana; sala de contratos al mediodía; hogar al anochecer",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 32,
+        "power": 34,
+        "agility": 40,
+        "coordination": 47,
+        "physical_endurance": 53,
+        "perception": 55
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 69,
+        "memory": 75,
+        "attention": 70,
+        "learning": 72,
+        "communication": 71
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Maestro del Gremio de Aventureros"
+    ],
+    "mission_template_ids": [
+      "MIS-002",
+      "MIS-003"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [
+      {
+        "target_id": "npc_0002",
+        "type": "coordinator",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0003",
+        "type": "risk_advisor",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0004",
+        "type": "archive_custodian",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0007",
+        "type": "rescue_coordinator",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      }
+    ],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0002",
+    "entity_id": "npc_0002",
+    "universal_identity_id": "uid_npc_0002",
+    "life_episode_id": "life_npc_0002_initial",
+    "body_id": "body_npc_0002_initial",
+    "cognitive_profile_id": "cog_npc_0002",
+    "social_identity_id": "social_npc_0002",
+    "name": "Selya Vorn",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Registradora de contratos",
+    "district_or_work_area": "Distrito del Gremio",
+    "affiliations": [
+      "institution_adventurers_guild"
+    ],
+    "public_profile": "Organiza solicitudes, comprueba requisitos y se niega a publicar encargos sin emisor ni financiación identificables.",
+    "personality_traits": [
+      "metódica",
+      "directa",
+      "paciente"
+    ],
+    "primary_motivation": "Evitar que los aventureros acepten contratos engañosos",
+    "current_tension": "Tiene una acumulación de reclamaciones por contratos mal documentados.",
+    "knowledge_scope": "Conoce el contenido público del tablón y los expedientes que tramita, no las operaciones privadas de cada grupo.",
+    "private_personal_fact": "Aprendió contabilidad para impedir que se repita una quiebra que afectó a su hogar.",
+    "daily_routine": "mostrador temprano; archivo después del mediodía; descanso al cierre",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 35,
+        "power": 34,
+        "agility": 43,
+        "coordination": 48,
+        "physical_endurance": 43,
+        "perception": 57
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 71,
+        "memory": 76,
+        "attention": 79,
+        "learning": 70,
+        "communication": 79
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Registradora de contratos"
+    ],
+    "mission_template_ids": [
+      "MIS-001",
+      "MIS-002"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [
+      {
+        "target_id": "npc_0004",
+        "type": "works_with",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0010",
+        "type": "dispatches_messages_to",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      }
+    ],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0003",
+    "entity_id": "npc_0003",
+    "universal_identity_id": "uid_npc_0003",
+    "life_episode_id": "life_npc_0003_initial",
+    "body_id": "body_npc_0003_initial",
+    "cognitive_profile_id": "cog_npc_0003",
+    "social_identity_id": "social_npc_0003",
+    "name": "Tavor Rusk",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Evaluador de riesgo y capacidades",
+    "district_or_work_area": "Distrito del Gremio",
+    "affiliations": [
+      "institution_adventurers_guild"
+    ],
+    "public_profile": "Evalúa aptitudes, equipo y preparación de grupos. No confunde rango institucional con capacidad real.",
+    "personality_traits": [
+      "exigente",
+      "analítico",
+      "poco adulador"
+    ],
+    "primary_motivation": "Mejorar los criterios de seguridad de las expediciones",
+    "current_tension": "Sus advertencias anteriores fueron ignoradas y dejaron una relación tensa con varios veteranos.",
+    "knowledge_scope": "Conoce pruebas de evaluación y lesiones declaradas por quienes examina; no puede conocer capacidades ocultas sin evidencia.",
+    "private_personal_fact": "Guarda notas de un error propio de evaluación que todavía intenta comprender.",
+    "daily_routine": "patio de pruebas por la mañana; entrevistas por la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 33,
+        "power": 29,
+        "agility": 43,
+        "coordination": 41,
+        "physical_endurance": 53,
+        "perception": 56
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 70,
+        "memory": 71,
+        "attention": 71,
+        "learning": 69,
+        "communication": 71
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Evaluador de riesgo y capacidades"
+    ],
+    "mission_template_ids": [
+      "MIS-003"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0004",
+    "entity_id": "npc_0004",
+    "universal_identity_id": "uid_npc_0004",
+    "life_episode_id": "life_npc_0004_initial",
+    "body_id": "body_npc_0004_initial",
+    "cognitive_profile_id": "cog_npc_0004",
+    "social_identity_id": "social_npc_0004",
+    "name": "Mira Deneth",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Archivista de expediciones",
+    "district_or_work_area": "Distrito del Gremio",
+    "affiliations": [
+      "institution_adventurers_guild"
+    ],
+    "public_profile": "Custodia bitácoras, mapas, testimonios y objetos depositados por las expediciones. Distingue documentos originales de copias y rumores.",
+    "personality_traits": [
+      "curiosa",
+      "reservada",
+      "rigurosa"
+    ],
+    "primary_motivation": "Reconstruir expediciones pasadas sin alterar sus registros",
+    "current_tension": "Un índice antiguo contiene una laguna de fechas que nadie ha explicado satisfactoriamente.",
+    "knowledge_scope": "Conoce los documentos disponibles y su procedencia; no sabe si los testimonios de terceros son verdaderos.",
+    "private_personal_fact": "Ha comenzado un índice privado de contradicciones entre mapas antiguos.",
+    "daily_routine": "archivo casi todo el día; consulta pública en dos franjas",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 41,
+        "power": 27,
+        "agility": 49,
+        "coordination": 46,
+        "physical_endurance": 41,
+        "perception": 65
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 76,
+        "memory": 82,
+        "attention": 79,
+        "learning": 70,
+        "communication": 84
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Archivista de expediciones"
+    ],
+    "mission_template_ids": [
+      "MIS-002",
+      "MIS-012"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [
+      {
+        "target_id": "npc_0053",
+        "type": "research_collaborator",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0050",
+        "type": "archive_peer",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      }
+    ],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0005",
+    "entity_id": "npc_0005",
+    "universal_identity_id": "uid_npc_0005",
+    "life_episode_id": "life_npc_0005_initial",
+    "body_id": "body_npc_0005_initial",
+    "cognitive_profile_id": "cog_npc_0005",
+    "social_identity_id": "social_npc_0005",
+    "name": "Brannik Vey",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Responsable de suministros del gremio",
+    "district_or_work_area": "Distrito del Gremio",
+    "affiliations": [
+      "institution_adventurers_guild"
+    ],
+    "public_profile": "Gestiona equipo común, consumibles y compras. Puede rechazar una expedición si faltan suministros esenciales.",
+    "personality_traits": [
+      "práctico",
+      "desconfiado",
+      "generoso con aprendices"
+    ],
+    "primary_motivation": "Reducir pérdidas de material y mantener reservas de emergencia",
+    "current_tension": "El inventario de cuerda y lámparas está bajo presión por varias expediciones simultáneas.",
+    "knowledge_scope": "Conoce existencias registradas, deudas y proveedores contratados; desconoce mercancía no declarada.",
+    "private_personal_fact": "Una herramienta heredada que considera irreemplazable está deteriorada.",
+    "daily_routine": "almacén al amanecer; compras en el mercado; cierre al anochecer",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 36,
+        "power": 25,
+        "agility": 39,
+        "coordination": 45,
+        "physical_endurance": 48,
+        "perception": 62
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 71,
+        "memory": 74,
+        "attention": 79,
+        "learning": 62,
+        "communication": 79
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Responsable de suministros del gremio"
+    ],
+    "mission_template_ids": [
+      "MIS-004",
+      "MIS-006"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [
+      {
+        "target_id": "npc_0025",
+        "type": "supply_vendor",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0038",
+        "type": "market_contact",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      }
+    ],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0006",
+    "entity_id": "npc_0006",
+    "universal_identity_id": "uid_npc_0006",
+    "life_episode_id": "life_npc_0006_initial",
+    "body_id": "body_npc_0006_initial",
+    "cognitive_profile_id": "cog_npc_0006",
+    "social_identity_id": "social_npc_0006",
+    "name": "Maelis Ordan",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Sanadora de campo",
+    "district_or_work_area": "Distrito del Gremio / Clínica",
+    "affiliations": [
+      "institution_adventurers_guild"
+    ],
+    "public_profile": "Atiende lesiones de aventureros y enseña primeros auxilios. Advierte que estabilizar no equivale a curar por completo.",
+    "personality_traits": [
+      "compasiva",
+      "firme",
+      "disciplinada"
+    ],
+    "primary_motivation": "Reducir muertes evitables y formar personal de apoyo",
+    "current_tension": "La clínica carece de manos suficientes cuando regresan varias expediciones a la vez.",
+    "knowledge_scope": "Conoce las lesiones de pacientes que la han autorizado a tratar; no conoce los detalles de expediciones ajenas.",
+    "private_personal_fact": "Se culpa por una evacuación en la que llegó demasiado tarde, aunque no controla todos sus factores.",
+    "daily_routine": "clínica al amanecer y tarde; guardia rotatoria de emergencia",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 35,
+        "power": 39,
+        "agility": 44,
+        "coordination": 55,
+        "physical_endurance": 41,
+        "perception": 63
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 78,
+        "memory": 73,
+        "attention": 71,
+        "learning": 61,
+        "communication": 71
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Sanadora de campo"
+    ],
+    "mission_template_ids": [
+      "MIS-008",
+      "MIS-009"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [
+      {
+        "target_id": "npc_0021",
+        "type": "field_medicine_collaborator",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0020",
+        "type": "medical_peer",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      }
+    ],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0007",
+    "entity_id": "npc_0007",
+    "universal_identity_id": "uid_npc_0007",
+    "life_episode_id": "life_npc_0007_initial",
+    "body_id": "body_npc_0007_initial",
+    "cognitive_profile_id": "cog_npc_0007",
+    "social_identity_id": "social_npc_0007",
+    "name": "Keldran Voss",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Coordinador de rescates",
+    "district_or_work_area": "Distrito del Gremio",
+    "affiliations": [
+      "institution_adventurers_guild"
+    ],
+    "public_profile": "Planifica evacuaciones, equipos de búsqueda y rutas de retorno. Fue explorador antes de asumir labores de coordinación.",
+    "personality_traits": [
+      "sereno",
+      "perseverante",
+      "cauteloso"
+    ],
+    "primary_motivation": "Mantener rutas de rescate utilizables y no prometer supervivencias imposibles",
+    "current_tension": "Una ruta que antes utilizaba quedó parcialmente bloqueada.",
+    "knowledge_scope": "Conoce procedimientos y mapas de rescate que ha consultado; no conoce el estado actual de toda persona desaparecida.",
+    "private_personal_fact": "Evita descender sin un plan de extracción, incluso cuando otros lo consideran excesivo.",
+    "daily_routine": "sala de mapas por la mañana; patio y puerta de la torre por la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 32,
+        "power": 32,
+        "agility": 49,
+        "coordination": 43,
+        "physical_endurance": 52,
+        "perception": 67
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 69,
+        "memory": 73,
+        "attention": 72,
+        "learning": 62,
+        "communication": 82
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Coordinador de rescates"
+    ],
+    "mission_template_ids": [
+      "MIS-003",
+      "MIS-007",
+      "MIS-009"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [
+      {
+        "target_id": "npc_0011",
+        "type": "field_contact",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0019",
+        "type": "route_contact",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      }
+    ],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0008",
+    "entity_id": "npc_0008",
+    "universal_identity_id": "uid_npc_0008",
+    "life_episode_id": "life_npc_0008_initial",
+    "body_id": "body_npc_0008_initial",
+    "cognitive_profile_id": "cog_npc_0008",
+    "social_identity_id": "social_npc_0008",
+    "name": "Veya Talren",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Cartógrafa del gremio",
+    "district_or_work_area": "Distrito del Gremio",
+    "affiliations": [
+      "institution_adventurers_guild"
+    ],
+    "public_profile": "Contrasta croquis de aventureros y registra desniveles, derrumbes, corrientes de aire y rutas transitables.",
+    "personality_traits": [
+      "observadora",
+      "independiente",
+      "obstinada"
+    ],
+    "primary_motivation": "Crear mapas útiles que indiquen también incertidumbre y fecha de observación",
+    "current_tension": "Tiene mapas incompatibles de una misma galería y debe determinar si el lugar cambió o si uno estaba equivocado.",
+    "knowledge_scope": "Conoce únicamente los sectores que ha visitado, medido o recibido de fuentes identificadas.",
+    "private_personal_fact": "Marca sus propios errores en tinta distinta para no ocultarlos.",
+    "daily_routine": "mesa cartográfica por la mañana; torre o campo cuando hay expedición",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 43,
+        "power": 27,
+        "agility": 41,
+        "coordination": 52,
+        "physical_endurance": 45,
+        "perception": 63
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 69,
+        "memory": 77,
+        "attention": 77,
+        "learning": 73,
+        "communication": 84
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Cartógrafa del gremio"
+    ],
+    "mission_template_ids": [
+      "MIS-003",
+      "MIS-012"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [
+      {
+        "target_id": "npc_0019",
+        "type": "mapping_collaborator",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0011",
+        "type": "field_contact",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      }
+    ],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0009",
+    "entity_id": "npc_0009",
+    "universal_identity_id": "uid_npc_0009",
+    "life_episode_id": "life_npc_0009_initial",
+    "body_id": "body_npc_0009_initial",
+    "cognitive_profile_id": "cog_npc_0009",
+    "social_identity_id": "social_npc_0009",
+    "name": "Odrik Pell",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Mediador de reclamaciones",
+    "district_or_work_area": "Distrito del Gremio",
+    "affiliations": [
+      "institution_adventurers_guild"
+    ],
+    "public_profile": "Interviene en disputas de propiedad, reparto de cristales y cumplimiento de contratos, con acceso a expedientes presentados.",
+    "personality_traits": [
+      "imparcial",
+      "minucioso",
+      "inflexible con falsificaciones"
+    ],
+    "primary_motivation": "Evitar que los conflictos por botín se conviertan en violencia",
+    "current_tension": "Dos grupos reclaman el mérito por un hallazgo cuya evidencia está incompleta.",
+    "knowledge_scope": "Conoce declaraciones y pruebas admitidas; no puede saber quién dice la verdad sin corroboración.",
+    "private_personal_fact": "Fue aventurero y dejó de descender tras una disputa de propiedad mal resuelta.",
+    "daily_routine": "audiencias por la mañana; revisión de pruebas por la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 44,
+        "power": 31,
+        "agility": 42,
+        "coordination": 48,
+        "physical_endurance": 45,
+        "perception": 55
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 74,
+        "memory": 78,
+        "attention": 78,
+        "learning": 61,
+        "communication": 75
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Mediador de reclamaciones"
+    ],
+    "mission_template_ids": [],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0010",
+    "entity_id": "npc_0010",
+    "universal_identity_id": "uid_npc_0010",
+    "life_episode_id": "life_npc_0010_initial",
+    "body_id": "body_npc_0010_initial",
+    "cognitive_profile_id": "cog_npc_0010",
+    "social_identity_id": "social_npc_0010",
+    "name": "Neris Vael",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Mensajera y enlace del gremio",
+    "district_or_work_area": "Distrito del Gremio",
+    "affiliations": [
+      "institution_adventurers_guild"
+    ],
+    "public_profile": "Entrega notificaciones y mantiene comunicación física entre gremio, talleres, clínica y puestos de guardia.",
+    "personality_traits": [
+      "rápida",
+      "sociable",
+      "discreta"
+    ],
+    "primary_motivation": "Conseguir independencia económica y ser reconocida por su fiabilidad",
+    "current_tension": "Un retraso en una entrega importante ha puesto en duda su reputación.",
+    "knowledge_scope": "Sabe qué mensajes le han confiado y quién los recibió; no conoce el contenido de mensajes sellados.",
+    "private_personal_fact": "Recuerda rutas y horarios con extraordinaria precisión, pero no retiene bien nombres nuevos.",
+    "daily_routine": "rutas variables durante el día; vuelve al gremio al cierre",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 35,
+        "power": 29,
+        "agility": 45,
+        "coordination": 44,
+        "physical_endurance": 45,
+        "perception": 67
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 69,
+        "memory": 81,
+        "attention": 68,
+        "learning": 66,
+        "communication": 78
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Mensajera y enlace del gremio"
+    ],
+    "mission_template_ids": [
+      "MIS-010"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0011",
+    "entity_id": "npc_0011",
+    "universal_identity_id": "uid_npc_0011",
+    "life_episode_id": "life_npc_0011_initial",
+    "body_id": "body_npc_0011_initial",
+    "cognitive_profile_id": "cog_npc_0011",
+    "social_identity_id": "social_npc_0011",
+    "name": "Arel Tovan",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Explorador y líder de expedición",
+    "district_or_work_area": "Distrito de Tabernas / Gremio",
+    "affiliations": [
+      "association_adventurer_network"
+    ],
+    "public_profile": "Dirige grupos pequeños y prefiere avanzar con rutas de retirada conocidas. Sus compañeros no siempre comparten su prudencia.",
+    "personality_traits": [
+      "decidido",
+      "cuidadoso",
+      "protector"
+    ],
+    "primary_motivation": "Construir una reputación basada en expediciones que regresan",
+    "current_tension": "Necesita reemplazar una pieza de equipo sin endeudarse más.",
+    "knowledge_scope": "Conoce rutas que ha recorrido y testimonios de sus compañeros; distingue experiencia propia de rumor.",
+    "private_personal_fact": "Se siente responsable de un compañero que abandonó una expedición herido.",
+    "daily_routine": "entrena temprano; revisa equipo al mediodía; taberna al anochecer",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 67,
+        "power": 69,
+        "agility": 62,
+        "coordination": 73,
+        "physical_endurance": 68,
+        "perception": 79
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 57,
+        "memory": 56,
+        "attention": 59,
+        "learning": 64,
+        "communication": 64
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Explorador y líder de expedición"
+    ],
+    "mission_template_ids": [
+      "MIS-003",
+      "MIS-006"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [
+      {
+        "target_id": "npc_0012",
+        "type": "expedition_partner",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0013",
+        "type": "expedition_partner",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0014",
+        "type": "expedition_partner",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0015",
+        "type": "expedition_partner",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      }
+    ],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0012",
+    "entity_id": "npc_0012",
+    "universal_identity_id": "uid_npc_0012",
+    "life_episode_id": "life_npc_0012_initial",
+    "body_id": "body_npc_0012_initial",
+    "cognitive_profile_id": "cog_npc_0012",
+    "social_identity_id": "social_npc_0012",
+    "name": "Dema Rhy",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Rastreadora y especialista en supervivencia",
+    "district_or_work_area": "Distrito Residencial",
+    "affiliations": [
+      "association_adventurer_network"
+    ],
+    "public_profile": "Lee rastros, corrientes de aire y señales de fauna. Evita matar criaturas que pueden apartarse sin riesgo.",
+    "personality_traits": [
+      "atenta",
+      "reservada",
+      "tenaz"
+    ],
+    "primary_motivation": "Mejorar la seguridad de las rutas y documentar comportamientos animales",
+    "current_tension": "Una zona de recolección habitual está siendo utilizada por otra población.",
+    "knowledge_scope": "Conoce señales que ha observado directamente; no atribuye automáticamente una huella a una especie concreta.",
+    "private_personal_fact": "Mantiene un registro de especies que otros aventureros consideran irrelevantes.",
+    "daily_routine": "sale al amanecer; regresa antes del anochecer",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 60,
+        "power": 57,
+        "agility": 65,
+        "coordination": 73,
+        "physical_endurance": 67,
+        "perception": 71
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 50,
+        "memory": 50,
+        "attention": 65,
+        "learning": 65,
+        "communication": 59
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Rastreadora y especialista en supervivencia"
+    ],
+    "mission_template_ids": [
+      "MIS-003",
+      "MIS-011"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0013",
+    "entity_id": "npc_0013",
+    "universal_identity_id": "uid_npc_0013",
+    "life_episode_id": "life_npc_0013_initial",
+    "body_id": "body_npc_0013_initial",
+    "cognitive_profile_id": "cog_npc_0013",
+    "social_identity_id": "social_npc_0013",
+    "name": "Kairen Valt",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Lancero de primera línea",
+    "district_or_work_area": "Distrito de Tabernas / Gremio",
+    "affiliations": [
+      "association_adventurer_network"
+    ],
+    "public_profile": "Combatiente de alcance que protege la retirada de su grupo y practica maniobras en espacios estrechos.",
+    "personality_traits": [
+      "competitivo",
+      "disciplinado",
+      "orgulloso"
+    ],
+    "primary_motivation": "Demostrar que la técnica supera a la fuerza bruta",
+    "current_tension": "Una lesión antigua reaparece cuando entrena demasiado tiempo.",
+    "knowledge_scope": "Conoce sus propias técnicas y lo observado en combates; no predice ataques que nunca ha visto.",
+    "private_personal_fact": "Compite en secreto con una antigua compañera a la que respeta.",
+    "daily_routine": "entrenamiento al alba; taller por la tarde; taberna en días libres",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 60,
+        "power": 60,
+        "agility": 72,
+        "coordination": 68,
+        "physical_endurance": 68,
+        "perception": 68
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 50,
+        "memory": 59,
+        "attention": 72,
+        "learning": 61,
+        "communication": 59
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Lancero de primera línea"
+    ],
+    "mission_template_ids": [
+      "MIS-003",
+      "MIS-009"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0014",
+    "entity_id": "npc_0014",
+    "universal_identity_id": "uid_npc_0014",
+    "life_episode_id": "life_npc_0014_initial",
+    "body_id": "body_npc_0014_initial",
+    "cognitive_profile_id": "cog_npc_0014",
+    "social_identity_id": "social_npc_0014",
+    "name": "Thessa Mor",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Aprendiz de formulación arcana",
+    "district_or_work_area": "Distrito de Estudio",
+    "affiliations": [
+      "association_adventurer_network"
+    ],
+    "public_profile": "Estudia Veyrath y operaciones de utilidad. Puede explicar principios básicos, pero no domina todas las fórmulas que lee.",
+    "personality_traits": [
+      "curiosa",
+      "impaciente",
+      "honesta"
+    ],
+    "primary_motivation": "Obtener experiencia experimental reproducible",
+    "current_tension": "Necesita materiales y supervisión para continuar una investigación pequeña.",
+    "knowledge_scope": "Conoce las fórmulas que ha estudiado y su nivel de dominio; no puede ejecutar automáticamente todo lo que comprende.",
+    "private_personal_fact": "Oculta que un experimento sencillo falló por un error suyo de preparación.",
+    "daily_routine": "clases por la mañana; estudio y laboratorio por la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 64,
+        "power": 56,
+        "agility": 68,
+        "coordination": 77,
+        "physical_endurance": 63,
+        "perception": 69
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 56,
+        "memory": 53,
+        "attention": 70,
+        "learning": 63,
+        "communication": 66
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Aprendiz de formulación arcana"
+    ],
+    "mission_template_ids": [
+      "MIS-001",
+      "MIS-012"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0015",
+    "entity_id": "npc_0015",
+    "universal_identity_id": "uid_npc_0015",
+    "life_episode_id": "life_npc_0015_initial",
+    "body_id": "body_npc_0015_initial",
+    "cognitive_profile_id": "cog_npc_0015",
+    "social_identity_id": "social_npc_0015",
+    "name": "Edran Malk",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Escudero y guardaespaldas de expedición",
+    "district_or_work_area": "Distrito Residencial",
+    "affiliations": [
+      "association_adventurer_network"
+    ],
+    "public_profile": "Prefiere proteger a sus compañeros y controlar el espacio antes que perseguir enemigos.",
+    "personality_traits": [
+      "leal",
+      "paciente",
+      "firme"
+    ],
+    "primary_motivation": "Mantener unido a su grupo y reunir dinero para su hogar",
+    "current_tension": "Sus responsabilidades familiares limitan la duración de sus expediciones.",
+    "knowledge_scope": "Conoce la situación de su grupo y las técnicas que ha practicado; no tiene información privilegiada del gremio.",
+    "private_personal_fact": "Envía parte de sus ingresos a un familiar que no quiere depender de él.",
+    "daily_routine": "trabaja por turnos; entrenamiento tres tardes a la semana",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 66,
+        "power": 68,
+        "agility": 74,
+        "coordination": 69,
+        "physical_endurance": 72,
+        "perception": 69
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 45,
+        "memory": 50,
+        "attention": 68,
+        "learning": 60,
+        "communication": 60
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Escudero y guardaespaldas de expedición"
+    ],
+    "mission_template_ids": [
+      "MIS-006",
+      "MIS-007"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0016",
+    "entity_id": "npc_0016",
+    "universal_identity_id": "uid_npc_0016",
+    "life_episode_id": "life_npc_0016_initial",
+    "body_id": "body_npc_0016_initial",
+    "cognitive_profile_id": "cog_npc_0016",
+    "social_identity_id": "social_npc_0016",
+    "name": "Lio Fen",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Mensajero de expediciones y aventurero novel",
+    "district_or_work_area": "Distrito de Tabernas",
+    "affiliations": [
+      "association_adventurer_network"
+    ],
+    "public_profile": "Joven rápido que conoce accesos urbanos y empieza a acompañar grupos como apoyo logístico.",
+    "personality_traits": [
+      "entusiasta",
+      "impulsivo",
+      "observador"
+    ],
+    "primary_motivation": "Conseguir experiencia real sin quedarse siempre como recadero",
+    "current_tension": "Tiende a aceptar tareas por encima de su preparación para demostrar valor.",
+    "knowledge_scope": "Conoce rutas urbanas y encargos que ha entregado; su conocimiento de la Mazmorra es limitado.",
+    "private_personal_fact": "Está ahorrando para reemplazar el equipo de un familiar.",
+    "daily_routine": "mensajería por la mañana; entrenamiento supervisado por la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 62,
+        "power": 57,
+        "agility": 76,
+        "coordination": 76,
+        "physical_endurance": 64,
+        "perception": 79
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 51,
+        "memory": 53,
+        "attention": 58,
+        "learning": 62,
+        "communication": 66
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Mensajero de expediciones y aventurero novel"
+    ],
+    "mission_template_ids": [
+      "MIS-010"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0017",
+    "entity_id": "npc_0017",
+    "universal_identity_id": "uid_npc_0017",
+    "life_episode_id": "life_npc_0017_initial",
+    "body_id": "body_npc_0017_initial",
+    "cognitive_profile_id": "cog_npc_0017",
+    "social_identity_id": "social_npc_0017",
+    "name": "Vara Kesh",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Capitana de un grupo aventurero rival",
+    "district_or_work_area": "Distrito de Tabernas / Gremio",
+    "affiliations": [
+      "association_adventurer_network"
+    ],
+    "public_profile": "Lidera una cuadrilla competente y competitiva. Rivaliza por contratos, pero no busca pelea sin motivo.",
+    "personality_traits": [
+      "ambiciosa",
+      "estratégica",
+      "franca"
+    ],
+    "primary_motivation": "Aumentar la autonomía de su grupo y negociar mejores contratos",
+    "current_tension": "Su cuadrilla discute si aceptar una ruta más peligrosa por una recompensa mayor.",
+    "knowledge_scope": "Conoce lo que ha visto su grupo y lo que sus informantes han comunicado; no controla a sus rivales.",
+    "private_personal_fact": "Protege la identidad de un antiguo patrocinador que abandonó la ciudad.",
+    "daily_routine": "reunión de grupo temprano; mercado; entrenamiento por la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 66,
+        "power": 68,
+        "agility": 65,
+        "coordination": 65,
+        "physical_endurance": 61,
+        "perception": 74
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 58,
+        "memory": 53,
+        "attention": 68,
+        "learning": 52,
+        "communication": 57
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Capitana de un grupo aventurero rival"
+    ],
+    "mission_template_ids": [
+      "MIS-003",
+      "MIS-006"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [
+      {
+        "target_id": "npc_0011",
+        "type": "professional_rivalry",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0023",
+        "type": "competes_for_contracts",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      }
+    ],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0018",
+    "entity_id": "npc_0018",
+    "universal_identity_id": "uid_npc_0018",
+    "life_episode_id": "life_npc_0018_initial",
+    "body_id": "body_npc_0018_initial",
+    "cognitive_profile_id": "cog_npc_0018",
+    "social_identity_id": "social_npc_0018",
+    "name": "Oran Vey",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Aventurero veterano retirado parcialmente",
+    "district_or_work_area": "Distrito de Tabernas",
+    "affiliations": [
+      "association_adventurer_network"
+    ],
+    "public_profile": "Conserva experiencia de combate y rutas antiguas, pero sus capacidades físicas ya no son las de su mejor época.",
+    "personality_traits": [
+      "irónico",
+      "paciente",
+      "perspicaz"
+    ],
+    "primary_motivation": "Transmitir experiencia sin volver a arriesgar su vida innecesariamente",
+    "current_tension": "Algunos jóvenes interpretan sus advertencias como cobardía.",
+    "knowledge_scope": "Conoce sectores recorridos hace años; sus mapas pueden estar desactualizados.",
+    "private_personal_fact": "No ha contado a nadie por qué abandonó su última expedición.",
+    "daily_routine": "taberna al mediodía; archivo del gremio algunas tardes",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 59,
+        "power": 70,
+        "agility": 73,
+        "coordination": 75,
+        "physical_endurance": 75,
+        "perception": 68
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 49,
+        "memory": 53,
+        "attention": 63,
+        "learning": 63,
+        "communication": 62
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Aventurero veterano retirado parcialmente"
+    ],
+    "mission_template_ids": [
+      "MIS-002",
+      "MIS-003"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [
+      {
+        "target_id": "npc_0014",
+        "type": "mentor_by_conversation",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0003",
+        "type": "criticizes_risk_assessments",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      }
+    ],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0019",
+    "entity_id": "npc_0019",
+    "universal_identity_id": "uid_npc_0019",
+    "life_episode_id": "life_npc_0019_initial",
+    "body_id": "body_npc_0019_initial",
+    "cognitive_profile_id": "cog_npc_0019",
+    "social_identity_id": "social_npc_0019",
+    "name": "Sira Tenn",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Exploradora de espacios confinados",
+    "district_or_work_area": "Distrito Residencial",
+    "affiliations": [
+      "association_adventurer_network"
+    ],
+    "public_profile": "Especialista en leer obstáculos, alturas libres y pasos estrechos. Evita rutas donde su grupo no pueda evacuar.",
+    "personality_traits": [
+      "silenciosa",
+      "precisa",
+      "independiente"
+    ],
+    "primary_motivation": "Encontrar vías seguras para grupos con equipos diversos",
+    "current_tension": "No dispone de una cuerda suficientemente larga para una ruta que está estudiando.",
+    "knowledge_scope": "Conoce galerías que ha recorrido; no presupone que un paso siga abierto tras un derrumbe.",
+    "private_personal_fact": "Tiene miedo a espacios inundados, aunque sabe trabajar cerca del agua.",
+    "daily_routine": "revisa herramientas por la mañana; trabaja en campo cuando hay luz suficiente",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 61,
+        "power": 57,
+        "agility": 63,
+        "coordination": 72,
+        "physical_endurance": 70,
+        "perception": 76
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 57,
+        "memory": 47,
+        "attention": 72,
+        "learning": 55,
+        "communication": 56
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Exploradora de espacios confinados"
+    ],
+    "mission_template_ids": [
+      "MIS-003",
+      "MIS-012"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0020",
+    "entity_id": "npc_0020",
+    "universal_identity_id": "uid_npc_0020",
+    "life_episode_id": "life_npc_0020_initial",
+    "body_id": "body_npc_0020_initial",
+    "cognitive_profile_id": "cog_npc_0020",
+    "social_identity_id": "social_npc_0020",
+    "name": "Dervan Korr",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Sanador itinerante de expediciones",
+    "district_or_work_area": "Distrito de Clínica",
+    "affiliations": [
+      "association_adventurer_network"
+    ],
+    "public_profile": "Acompaña grupos cuando puede y trata lesiones dentro de sus capacidades, derivando casos complejos.",
+    "personality_traits": [
+      "sereno",
+      "empático",
+      "práctico"
+    ],
+    "primary_motivation": "Aprender técnicas de campo y evitar daños por tratamientos incorrectos",
+    "current_tension": "Le faltan instrumentos para intervenciones delicadas.",
+    "knowledge_scope": "Conoce anatomía y tratamientos que ha aprendido; no ofrece diagnósticos definitivos sin examen.",
+    "private_personal_fact": "Mantiene una libreta de errores clínicos para no repetirlos.",
+    "daily_routine": "clínica por la mañana; prácticas y visitas por la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 64,
+        "power": 69,
+        "agility": 63,
+        "coordination": 70,
+        "physical_endurance": 63,
+        "perception": 73
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 46,
+        "memory": 58,
+        "attention": 70,
+        "learning": 51,
+        "communication": 61
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Sanador itinerante de expediciones"
+    ],
+    "mission_template_ids": [
+      "MIS-008",
+      "MIS-009"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [
+      {
+        "target_id": "npc_0006",
+        "type": "medical_colleague",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0059",
+        "type": "care_network",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      }
+    ],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0021",
+    "entity_id": "npc_0021",
+    "universal_identity_id": "uid_npc_0021",
+    "life_episode_id": "life_npc_0021_initial",
+    "body_id": "body_npc_0021_initial",
+    "cognitive_profile_id": "cog_npc_0021",
+    "social_identity_id": "social_npc_0021",
+    "name": "Ysel Kade",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Mecánica de trampas y dispositivos de expedición",
+    "district_or_work_area": "Distrito de Talleres",
+    "affiliations": [
+      "association_adventurer_network"
+    ],
+    "public_profile": "Diseña mecanismos simples de señalización, anclaje y seguridad; no fabrica dispositivos infalibles.",
+    "personality_traits": [
+      "inventiva",
+      "desconfiada",
+      "metódica"
+    ],
+    "primary_motivation": "Crear herramientas reutilizables y abrir un pequeño taller propio",
+    "current_tension": "Un lote de piezas de metal llegó con calidad irregular.",
+    "knowledge_scope": "Conoce los mecanismos que ha construido y probado; no conoce automáticamente todos los artefactos antiguos.",
+    "private_personal_fact": "Conserva un prototipo fallido que le recuerda por qué debe probar antes de vender.",
+    "daily_routine": "taller durante el día; visita al gremio al cierre",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 62,
+        "power": 60,
+        "agility": 69,
+        "coordination": 73,
+        "physical_endurance": 70,
+        "perception": 66
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 58,
+        "memory": 61,
+        "attention": 58,
+        "learning": 51,
+        "communication": 56
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Mecánica de trampas y dispositivos de expedición"
+    ],
+    "mission_template_ids": [
+      "MIS-004",
+      "MIS-010"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0022",
+    "entity_id": "npc_0022",
+    "universal_identity_id": "uid_npc_0022",
+    "life_episode_id": "life_npc_0022_initial",
+    "body_id": "body_npc_0022_initial",
+    "cognitive_profile_id": "cog_npc_0022",
+    "social_identity_id": "social_npc_0022",
+    "name": "Halen Orr",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Escolta y antiguo porteador de expediciones",
+    "district_or_work_area": "Distrito de Tabernas",
+    "affiliations": [
+      "association_adventurer_network"
+    ],
+    "public_profile": "Conoce los costes físicos de transportar equipo y procura que los grupos no sobrecarguen a sus miembros.",
+    "personality_traits": [
+      "práctico",
+      "humilde",
+      "firme"
+    ],
+    "primary_motivation": "Conseguir trabajo estable sin descuidar a su hogar",
+    "current_tension": "Una deuda comercial limita qué contratos puede aceptar.",
+    "knowledge_scope": "Conoce rutas de carga y pesos aproximados; no es un cartógrafo experto.",
+    "private_personal_fact": "Se niega a abandonar a un compañero aunque eso le haya costado dinero.",
+    "daily_routine": "mercado por la mañana; gremio por la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 68,
+        "power": 68,
+        "agility": 70,
+        "coordination": 68,
+        "physical_endurance": 67,
+        "perception": 78
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 57,
+        "memory": 54,
+        "attention": 69,
+        "learning": 53,
+        "communication": 64
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Escolta y antiguo porteador de expediciones"
+    ],
+    "mission_template_ids": [
+      "MIS-006",
+      "MIS-007"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0023",
+    "entity_id": "npc_0023",
+    "universal_identity_id": "uid_npc_0023",
+    "life_episode_id": "life_npc_0023_initial",
+    "body_id": "body_npc_0023_initial",
+    "cognitive_profile_id": "cog_npc_0023",
+    "social_identity_id": "social_npc_0023",
+    "name": "Nima Rell",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Rastreadora de fauna y recolectora",
+    "district_or_work_area": "Distrito Residencial / Mercado",
+    "affiliations": [
+      "association_adventurer_network"
+    ],
+    "public_profile": "Combina rastreo y recolección sin asumir que todo monstruo es agresivo o útil como botín.",
+    "personality_traits": [
+      "curiosa",
+      "cauta",
+      "independiente"
+    ],
+    "primary_motivation": "Establecer una red fiable de proveedores de muestras",
+    "current_tension": "Sus recolectores han encontrado señales de depredación en una zona antes tranquila.",
+    "knowledge_scope": "Conoce patrones observados de fauna y hábitat; sus conclusiones pueden ser hipótesis.",
+    "private_personal_fact": "No quiere que su trabajo de recolección se convierta en una excusa para exterminar poblaciones.",
+    "daily_routine": "sale temprano; vende o clasifica muestras por la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 67,
+        "power": 61,
+        "agility": 66,
+        "coordination": 67,
+        "physical_endurance": 68,
+        "perception": 79
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 49,
+        "memory": 61,
+        "attention": 69,
+        "learning": 61,
+        "communication": 65
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Rastreadora de fauna y recolectora"
+    ],
+    "mission_template_ids": [
+      "MIS-005",
+      "MIS-011"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0024",
+    "entity_id": "npc_0024",
+    "universal_identity_id": "uid_npc_0024",
+    "life_episode_id": "life_npc_0024_initial",
+    "body_id": "body_npc_0024_initial",
+    "cognitive_profile_id": "cog_npc_0024",
+    "social_identity_id": "social_npc_0024",
+    "name": "Toren Sald",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Combatiente de asta y escolta",
+    "district_or_work_area": "Distrito del Gremio",
+    "affiliations": [
+      "association_adventurer_network"
+    ],
+    "public_profile": "Trabaja como escolta temporal y prefiere contratos claros sobre rutas, paga y obligaciones.",
+    "personality_traits": [
+      "formal",
+      "perseverante",
+      "desconfiado"
+    ],
+    "primary_motivation": "Conseguir estabilidad laboral y evitar disputas de pago",
+    "current_tension": "Un empleador anterior no cumplió un acuerdo y su reputación quedó afectada.",
+    "knowledge_scope": "Conoce sus contratos y las rutas de escolta que ha recorrido; no acepta rumores como prueba.",
+    "private_personal_fact": "Conserva copias de todos sus acuerdos.",
+    "daily_routine": "busca contratos por la mañana; entrena por la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 63,
+        "power": 64,
+        "agility": 70,
+        "coordination": 69,
+        "physical_endurance": 71,
+        "perception": 71
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 50,
+        "memory": 55,
+        "attention": 70,
+        "learning": 59,
+        "communication": 57
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Combatiente de asta y escolta"
+    ],
+    "mission_template_ids": [
+      "MIS-006",
+      "MIS-007"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0025",
+    "entity_id": "npc_0025",
+    "universal_identity_id": "uid_npc_0025",
+    "life_episode_id": "life_npc_0025_initial",
+    "body_id": "body_npc_0025_initial",
+    "cognitive_profile_id": "cog_npc_0025",
+    "social_identity_id": "social_npc_0025",
+    "name": "Varn Dorel",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Maestro herrero",
+    "district_or_work_area": "Distrito de Talleres",
+    "affiliations": [
+      "association_trade_and_workshops"
+    ],
+    "public_profile": "Fabrica y repara herramientas, clavos, piezas y armas. Explica las limitaciones del metal según su calidad.",
+    "personality_traits": [
+      "orgulloso",
+      "responsable",
+      "directo"
+    ],
+    "primary_motivation": "Mantener su taller y formar a un aprendiz competente",
+    "current_tension": "La demanda de herramientas de expedición supera su capacidad actual.",
+    "knowledge_scope": "Conoce materiales que ha probado y pedidos que ha aceptado; no tasará un cristal sin examinarlo.",
+    "private_personal_fact": "Teme que su taller familiar desaparezca si no enseña su oficio.",
+    "daily_routine": "forja desde primera hora; compras al mediodía; trabajo ligero al cierre",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 42,
+        "power": 53,
+        "agility": 48,
+        "coordination": 60,
+        "physical_endurance": 54,
+        "perception": 58
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 58,
+        "memory": 68,
+        "attention": 65,
+        "learning": 60,
+        "communication": 65
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Maestro herrero"
+    ],
+    "mission_template_ids": [
+      "MIS-004",
+      "MIS-010",
+      "MIS-006"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [
+      {
+        "target_id": "npc_0026",
+        "type": "apprentice",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0027",
+        "type": "supplier",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0036",
+        "type": "warehouse_contact",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      }
+    ],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0026",
+    "entity_id": "npc_0026",
+    "universal_identity_id": "uid_npc_0026",
+    "life_episode_id": "life_npc_0026_initial",
+    "body_id": "body_npc_0026_initial",
+    "cognitive_profile_id": "cog_npc_0026",
+    "social_identity_id": "social_npc_0026",
+    "name": "Elya Ruun",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Aprendiz de herrería",
+    "district_or_work_area": "Distrito de Talleres",
+    "affiliations": [
+      "association_trade_and_workshops"
+    ],
+    "public_profile": "Realiza trabajos sencillos bajo supervisión y aprende a reconocer defectos del metal.",
+    "personality_traits": [
+      "aplicada",
+      "tímida",
+      "ambiciosa"
+    ],
+    "primary_motivation": "Alcanzar autonomía técnica sin saltarse el aprendizaje",
+    "current_tension": "Su maestro no le permite todavía aceptar pedidos complejos.",
+    "knowledge_scope": "Conoce técnicas que ha practicado; sus tasaciones aún requieren revisión.",
+    "private_personal_fact": "Quiere fabricar herramientas de exploración, no solo armas.",
+    "daily_routine": "taller mañana y tarde; clases dos noches por semana",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 53,
+        "power": 52,
+        "agility": 38,
+        "coordination": 51,
+        "physical_endurance": 51,
+        "perception": 58
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 58,
+        "memory": 66,
+        "attention": 64,
+        "learning": 64,
+        "communication": 65
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Aprendiz de herrería"
+    ],
+    "mission_template_ids": [],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0027",
+    "entity_id": "npc_0027",
+    "universal_identity_id": "uid_npc_0027",
+    "life_episode_id": "life_npc_0027_initial",
+    "body_id": "body_npc_0027_initial",
+    "cognitive_profile_id": "cog_npc_0027",
+    "social_identity_id": "social_npc_0027",
+    "name": "Halvek Mord",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Comerciante de mineral y metal",
+    "district_or_work_area": "Distrito Comercial",
+    "affiliations": [
+      "association_trade_and_workshops"
+    ],
+    "public_profile": "Compra mineral con procedencia conocida y mantiene contratos con mineros y talleres.",
+    "personality_traits": [
+      "negociador",
+      "prudente",
+      "observador"
+    ],
+    "primary_motivation": "Mantener el suministro sin comprometer más capital del disponible",
+    "current_tension": "Un proveedor habitual redujo entregas por problemas en la ruta.",
+    "knowledge_scope": "Conoce precios y existencias de sus operaciones; no sabe de vetas no descubiertas.",
+    "private_personal_fact": "Está buscando asociarse con un taller pequeño en lugar de expandirse solo.",
+    "daily_routine": "almacén al amanecer; mercado y proveedores durante el día",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 45,
+        "power": 40,
+        "agility": 44,
+        "coordination": 62,
+        "physical_endurance": 53,
+        "perception": 58
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 59,
+        "memory": 61,
+        "attention": 67,
+        "learning": 63,
+        "communication": 73
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Comerciante de mineral y metal"
+    ],
+    "mission_template_ids": [
+      "MIS-004",
+      "MIS-006"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0028",
+    "entity_id": "npc_0028",
+    "universal_identity_id": "uid_npc_0028",
+    "life_episode_id": "life_npc_0028_initial",
+    "body_id": "body_npc_0028_initial",
+    "cognitive_profile_id": "cog_npc_0028",
+    "social_identity_id": "social_npc_0028",
+    "name": "Soren Vale",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Tasador de cristales",
+    "district_or_work_area": "Distrito Comercial",
+    "affiliations": [
+      "association_trade_and_workshops"
+    ],
+    "public_profile": "Examina tamaño, pureza, estabilidad y composición antes de ofrecer una tasación.",
+    "personality_traits": [
+      "preciso",
+      "escéptico",
+      "reservado"
+    ],
+    "primary_motivation": "Construir una reputación de tasación verificable",
+    "current_tension": "Un cristal dañado produjo resultados contradictorios en dos instrumentos.",
+    "knowledge_scope": "Conoce muestras que ha examinado y métodos de tasación que ha aprendido; no conoce el origen de cristales sin procedencia.",
+    "private_personal_fact": "Mantiene un registro de tasaciones fallidas que sus competidores no suelen publicar.",
+    "daily_routine": "laboratorio por la mañana; recepción de muestras por la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 54,
+        "power": 46,
+        "agility": 38,
+        "coordination": 60,
+        "physical_endurance": 55,
+        "perception": 66
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 58,
+        "memory": 55,
+        "attention": 68,
+        "learning": 59,
+        "communication": 64
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Tasador de cristales"
+    ],
+    "mission_template_ids": [
+      "MIS-005",
+      "MIS-012"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [
+      {
+        "target_id": "npc_0047",
+        "type": "sample_analysis_partner",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0052",
+        "type": "research_contact",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      }
+    ],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0029",
+    "entity_id": "npc_0029",
+    "universal_identity_id": "uid_npc_0029",
+    "life_episode_id": "life_npc_0029_initial",
+    "body_id": "body_npc_0029_initial",
+    "cognitive_profile_id": "cog_npc_0029",
+    "social_identity_id": "social_npc_0029",
+    "name": "Yara Fen",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Herbolaria y recolectora",
+    "district_or_work_area": "Distrito Comercial",
+    "affiliations": [
+      "association_trade_and_workshops"
+    ],
+    "public_profile": "Vende plantas medicinales y preparados simples, y distingue muestras cultivadas de recolectadas.",
+    "personality_traits": [
+      "amable",
+      "cautelosa",
+      "observadora"
+    ],
+    "primary_motivation": "Mantener una cadena sostenible de recolección",
+    "current_tension": "Un área de plantas medicinales se está agotando por extracción excesiva.",
+    "knowledge_scope": "Conoce plantas y usos que ha verificado; advierte cuando un uso es tradicional pero no confirmado.",
+    "private_personal_fact": "Rechaza comprar materiales obtenidos mediante daño innecesario a una población.",
+    "daily_routine": "recolección al alba; puesto de mercado al mediodía",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 42,
+        "power": 40,
+        "agility": 46,
+        "coordination": 55,
+        "physical_endurance": 57,
+        "perception": 65
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 68,
+        "memory": 55,
+        "attention": 69,
+        "learning": 71,
+        "communication": 67
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Herbolaria y recolectora"
+    ],
+    "mission_template_ids": [
+      "MIS-005",
+      "MIS-008"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [
+      {
+        "target_id": "npc_0006",
+        "type": "herbal_supplier",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0054",
+        "type": "traditional_knowledge_contact",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      }
+    ],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0030",
+    "entity_id": "npc_0030",
+    "universal_identity_id": "uid_npc_0030",
+    "life_episode_id": "life_npc_0030_initial",
+    "body_id": "body_npc_0030_initial",
+    "cognitive_profile_id": "cog_npc_0030",
+    "social_identity_id": "social_npc_0030",
+    "name": "Brel Ordan",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Fabricante de recipientes y cerámica",
+    "district_or_work_area": "Distrito de Talleres",
+    "affiliations": [
+      "association_trade_and_workshops"
+    ],
+    "public_profile": "Produce recipientes de almacenamiento, aislantes y material de laboratorio.",
+    "personality_traits": [
+      "creativo",
+      "meticuloso",
+      "sociable"
+    ],
+    "primary_motivation": "Conseguir arcilla de calidad uniforme",
+    "current_tension": "Sus hornos necesitan reparación y piezas que no están disponibles de inmediato.",
+    "knowledge_scope": "Conoce la calidad de sus lotes y procesos; no garantiza que todo recipiente resista sustancias desconocidas.",
+    "private_personal_fact": "Está desarrollando un recipiente de transporte para muestras delicadas.",
+    "daily_routine": "taller durante el día; horno en ciclos programados",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 45,
+        "power": 49,
+        "agility": 40,
+        "coordination": 57,
+        "physical_endurance": 56,
+        "perception": 55
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 62,
+        "memory": 65,
+        "attention": 77,
+        "learning": 68,
+        "communication": 65
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Fabricante de recipientes y cerámica"
+    ],
+    "mission_template_ids": [
+      "MIS-005",
+      "MIS-012"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0031",
+    "entity_id": "npc_0031",
+    "universal_identity_id": "uid_npc_0031",
+    "life_episode_id": "life_npc_0031_initial",
+    "body_id": "body_npc_0031_initial",
+    "cognitive_profile_id": "cog_npc_0031",
+    "social_identity_id": "social_npc_0031",
+    "name": "Darek Venn",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Curtidor y trabajador de cuero",
+    "district_or_work_area": "Distrito de Talleres",
+    "affiliations": [
+      "association_trade_and_workshops"
+    ],
+    "public_profile": "Procesa pieles y fibras con atención a conservación, grosor y resistencia.",
+    "personality_traits": [
+      "paciente",
+      "práctico",
+      "reservado"
+    ],
+    "primary_motivation": "Mejorar la calidad sin elevar demasiado los costes",
+    "current_tension": "Algunos materiales llegan contaminados o mal conservados.",
+    "knowledge_scope": "Conoce los procesos que domina; necesita pruebas para trabajar materiales monstruosos nuevos.",
+    "private_personal_fact": "Prefiere enseñar a un aprendiz antes que aceptar encargos que no pueda cumplir.",
+    "daily_routine": "taller al mediodía y tarde; mercado temprano",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 47,
+        "power": 52,
+        "agility": 49,
+        "coordination": 50,
+        "physical_endurance": 54,
+        "perception": 68
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 61,
+        "memory": 69,
+        "attention": 74,
+        "learning": 58,
+        "communication": 71
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Curtidor y trabajador de cuero"
+    ],
+    "mission_template_ids": [
+      "MIS-004",
+      "MIS-010"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0032",
+    "entity_id": "npc_0032",
+    "universal_identity_id": "uid_npc_0032",
+    "life_episode_id": "life_npc_0032_initial",
+    "body_id": "body_npc_0032_initial",
+    "cognitive_profile_id": "cog_npc_0032",
+    "social_identity_id": "social_npc_0032",
+    "name": "Nala Vey",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Cocinera y abastecedora de expediciones",
+    "district_or_work_area": "Distrito de Tabernas",
+    "affiliations": [
+      "association_trade_and_workshops"
+    ],
+    "public_profile": "Prepara comidas y raciones para viajeros y sabe qué alimentos soportan bien el transporte.",
+    "personality_traits": [
+      "enérgica",
+      "protectora",
+      "franca"
+    ],
+    "primary_motivation": "Mantener una cocina rentable y alimentar bien a trabajadores y aventureros",
+    "current_tension": "El precio de algunos ingredientes subió tras interrupciones de suministro.",
+    "knowledge_scope": "Conoce pedidos y proveedores propios; no conoce la economía completa de la ciudad.",
+    "private_personal_fact": "Guarda una receta familiar que solo prepara en ocasiones especiales.",
+    "daily_routine": "cocina antes del amanecer; comedor al mediodía y noche",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 49,
+        "power": 53,
+        "agility": 41,
+        "coordination": 54,
+        "physical_endurance": 57,
+        "perception": 56
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 68,
+        "memory": 58,
+        "attention": 77,
+        "learning": 71,
+        "communication": 74
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Cocinera y abastecedora de expediciones"
+    ],
+    "mission_template_ids": [
+      "MIS-006",
+      "MIS-007"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0033",
+    "entity_id": "npc_0033",
+    "universal_identity_id": "uid_npc_0033",
+    "life_episode_id": "life_npc_0033_initial",
+    "body_id": "body_npc_0033_initial",
+    "cognitive_profile_id": "cog_npc_0033",
+    "social_identity_id": "social_npc_0033",
+    "name": "Garren Mork",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Reparador de herramientas y mecanismos",
+    "district_or_work_area": "Distrito de Talleres",
+    "affiliations": [
+      "association_trade_and_workshops"
+    ],
+    "public_profile": "Arregla cerraduras, poleas, lámparas y equipo de carga cuando dispone de piezas y tiempo.",
+    "personality_traits": [
+      "ingenioso",
+      "gruñón",
+      "fiable"
+    ],
+    "primary_motivation": "Conservar un negocio pequeño y evitar trabajos inseguros",
+    "current_tension": "Hay escasez de piezas estandarizadas y algunos clientes piden reparaciones imposibles.",
+    "knowledge_scope": "Conoce mecanismos que ha desmontado; no puede reparar artefactos arcanos sin formación adecuada.",
+    "private_personal_fact": "No acepta alterar herramientas de seguridad para ahorrar unos pocos materiales.",
+    "daily_routine": "taller al amanecer; visitas a almacenes por la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 47,
+        "power": 50,
+        "agility": 49,
+        "coordination": 56,
+        "physical_endurance": 49,
+        "perception": 65
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 65,
+        "memory": 67,
+        "attention": 70,
+        "learning": 58,
+        "communication": 75
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Reparador de herramientas y mecanismos"
+    ],
+    "mission_template_ids": [
+      "MIS-004",
+      "MIS-010"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0034",
+    "entity_id": "npc_0034",
+    "universal_identity_id": "uid_npc_0034",
+    "life_episode_id": "life_npc_0034_initial",
+    "body_id": "body_npc_0034_initial",
+    "cognitive_profile_id": "cog_npc_0034",
+    "social_identity_id": "social_npc_0034",
+    "name": "Tessa Rilan",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Sastre y reparadora de equipo textil",
+    "district_or_work_area": "Distrito Comercial",
+    "affiliations": [
+      "association_trade_and_workshops"
+    ],
+    "public_profile": "Confecciona ropa de trabajo, capas y reparaciones de correas, costuras y acolchados.",
+    "personality_traits": [
+      "detallista",
+      "cordial",
+      "perspicaz"
+    ],
+    "primary_motivation": "Conservar clientela de residentes y aventureros",
+    "current_tension": "Su proveedor de fibras retrasó una entrega.",
+    "knowledge_scope": "Conoce medidas y reparaciones de clientes que la han contratado; no conoce sus asuntos privados por defecto.",
+    "private_personal_fact": "Está reuniendo retales para enseñar costura a jóvenes del barrio.",
+    "daily_routine": "taller por la mañana; entregas por la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 55,
+        "power": 48,
+        "agility": 52,
+        "coordination": 53,
+        "physical_endurance": 51,
+        "perception": 55
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 56,
+        "memory": 66,
+        "attention": 67,
+        "learning": 64,
+        "communication": 64
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Sastre y reparadora de equipo textil"
+    ],
+    "mission_template_ids": [],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0035",
+    "entity_id": "npc_0035",
+    "universal_identity_id": "uid_npc_0035",
+    "life_episode_id": "life_npc_0035_initial",
+    "body_id": "body_npc_0035_initial",
+    "cognitive_profile_id": "cog_npc_0035",
+    "social_identity_id": "social_npc_0035",
+    "name": "Kormel Dask",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Carpintero y fabricante de carros",
+    "district_or_work_area": "Distrito de Talleres",
+    "affiliations": [
+      "association_trade_and_workshops"
+    ],
+    "public_profile": "Construye ruedas, carretas, soportes y estructuras de madera para transporte y almacén.",
+    "personality_traits": [
+      "paciente",
+      "fuerte",
+      "minucioso"
+    ],
+    "primary_motivation": "Mantener rutas comerciales transitables y obtener madera seca",
+    "current_tension": "Una carreta dañada bloquea un espacio de trabajo compartido.",
+    "knowledge_scope": "Conoce madera y diseños que ha probado; no tiene datos de las rutas más profundas.",
+    "private_personal_fact": "Quiere convencer a los transportistas de mantener mejor sus vehículos.",
+    "daily_routine": "patio de trabajo durante el día; inspecciones al final de la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 50,
+        "power": 52,
+        "agility": 47,
+        "coordination": 59,
+        "physical_endurance": 52,
+        "perception": 58
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 59,
+        "memory": 64,
+        "attention": 67,
+        "learning": 71,
+        "communication": 71
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Carpintero y fabricante de carros"
+    ],
+    "mission_template_ids": [
+      "MIS-006"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0036",
+    "entity_id": "npc_0036",
+    "universal_identity_id": "uid_npc_0036",
+    "life_episode_id": "life_npc_0036_initial",
+    "body_id": "body_npc_0036_initial",
+    "cognitive_profile_id": "cog_npc_0036",
+    "social_identity_id": "social_npc_0036",
+    "name": "Ilva Ren",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Encargada de almacén del mercado",
+    "district_or_work_area": "Distrito Comercial",
+    "affiliations": [
+      "association_trade_and_workshops"
+    ],
+    "public_profile": "Registra entradas, salidas y deterioro de mercancías; no tolera inventarios ficticios.",
+    "personality_traits": [
+      "ordenada",
+      "desconfiada",
+      "justa"
+    ],
+    "primary_motivation": "Reducir pérdidas y mantener abastecimiento estable",
+    "current_tension": "Hay discrepancias entre albaranes y existencias de dos proveedores.",
+    "knowledge_scope": "Conoce los registros de su almacén; no puede confirmar el contenido de cargamentos que no ha inspeccionado.",
+    "private_personal_fact": "Teme que un empleado esté desviando mercancía, pero aún no tiene pruebas.",
+    "daily_routine": "almacén al amanecer; registro de cuentas al cierre",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 51,
+        "power": 40,
+        "agility": 47,
+        "coordination": 60,
+        "physical_endurance": 62,
+        "perception": 58
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 60,
+        "memory": 66,
+        "attention": 68,
+        "learning": 63,
+        "communication": 69
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Encargada de almacén del mercado"
+    ],
+    "mission_template_ids": [
+      "MIS-004",
+      "MIS-006"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0037",
+    "entity_id": "npc_0037",
+    "universal_identity_id": "uid_npc_0037",
+    "life_episode_id": "life_npc_0037_initial",
+    "body_id": "body_npc_0037_initial",
+    "cognitive_profile_id": "cog_npc_0037",
+    "social_identity_id": "social_npc_0037",
+    "name": "Arven Dhal",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Comandante de la guardia urbana",
+    "district_or_work_area": "Distrito Cívico",
+    "affiliations": [
+      "institution_city_services"
+    ],
+    "public_profile": "Coordina turnos y respuesta a incidentes sin controlar por sí solo todas las decisiones legales del territorio.",
+    "personality_traits": [
+      "disciplinado",
+      "reservado",
+      "responsable"
+    ],
+    "primary_motivation": "Mantener seguridad pública y reducir abusos de autoridad",
+    "current_tension": "La guardia tiene turnos vacantes y rutas que cubrir.",
+    "knowledge_scope": "Conoce incidentes denunciados y órdenes oficiales; no sabe todo lo que ocurre en cada hogar.",
+    "private_personal_fact": "Debe decidir si ampliar patrullas o reforzar la puerta de la muralla.",
+    "daily_routine": "cuartel al amanecer; rondas variables; reuniones al anochecer",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 58,
+        "power": 44,
+        "agility": 60,
+        "coordination": 65,
+        "physical_endurance": 59,
+        "perception": 69
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 63,
+        "memory": 71,
+        "attention": 72,
+        "learning": 61,
+        "communication": 61
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Comandante de la guardia urbana"
+    ],
+    "mission_template_ids": [
+      "MIS-007",
+      "MIS-010"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [
+      {
+        "target_id": "npc_0038",
+        "type": "subordinate",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0039",
+        "type": "subordinate",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0042",
+        "type": "public_services_contact",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      }
+    ],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0038",
+    "entity_id": "npc_0038",
+    "universal_identity_id": "uid_npc_0038",
+    "life_episode_id": "life_npc_0038_initial",
+    "body_id": "body_npc_0038_initial",
+    "cognitive_profile_id": "cog_npc_0038",
+    "social_identity_id": "social_npc_0038",
+    "name": "Rika Tern",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Sargento de la puerta de la muralla",
+    "district_or_work_area": "Puerta de la Muralla",
+    "affiliations": [
+      "institution_city_services"
+    ],
+    "public_profile": "Supervisa permisos, viajeros y movimientos de mercancía en uno de los accesos principales.",
+    "personality_traits": [
+      "atenta",
+      "firme",
+      "desconfiada"
+    ],
+    "primary_motivation": "Evitar entradas peligrosas sin obstaculizar el comercio legítimo",
+    "current_tension": "La falta de personal provoca colas en periodos de llegada de caravanas.",
+    "knowledge_scope": "Conoce registros de entrada que ha revisado; no conoce automáticamente lo que transporta cada viajero.",
+    "private_personal_fact": "Su hermano trabaja en rutas exteriores y suele discutir sus decisiones.",
+    "daily_routine": "turnos de puerta rotatorios; descanso en el cuartel",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 53,
+        "power": 52,
+        "agility": 50,
+        "coordination": 52,
+        "physical_endurance": 56,
+        "perception": 64
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 60,
+        "memory": 60,
+        "attention": 66,
+        "learning": 55,
+        "communication": 63
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Sargento de la puerta de la muralla"
+    ],
+    "mission_template_ids": [
+      "MIS-006",
+      "MIS-007"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0039",
+    "entity_id": "npc_0039",
+    "universal_identity_id": "uid_npc_0039",
+    "life_episode_id": "life_npc_0039_initial",
+    "body_id": "body_npc_0039_initial",
+    "cognitive_profile_id": "cog_npc_0039",
+    "social_identity_id": "social_npc_0039",
+    "name": "Belor Kann",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Jefe de patrulla de distrito",
+    "district_or_work_area": "Distrito Cívico",
+    "affiliations": [
+      "institution_city_services"
+    ],
+    "public_profile": "Conoce calles, horarios y problemas recurrentes de su sector. Prefiere prevenir antes que castigar.",
+    "personality_traits": [
+      "observador",
+      "paciente",
+      "protector"
+    ],
+    "primary_motivation": "Reducir conflictos y responder a emergencias locales",
+    "current_tension": "Una disputa vecinal consume tiempo que debería dedicar a patrullas.",
+    "knowledge_scope": "Conoce las denuncias de su distrito y observaciones propias; no presume culpabilidad por rumores.",
+    "private_personal_fact": "Mantiene una relación cordial con comerciantes que no siempre declaran todos sus problemas.",
+    "daily_routine": "patrullas por mañana y tarde; informes al cierre",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 52,
+        "power": 52,
+        "agility": 55,
+        "coordination": 61,
+        "physical_endurance": 64,
+        "perception": 63
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 62,
+        "memory": 68,
+        "attention": 71,
+        "learning": 56,
+        "communication": 67
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Jefe de patrulla de distrito"
+    ],
+    "mission_template_ids": [
+      "MIS-007",
+      "MIS-009"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0040",
+    "entity_id": "npc_0040",
+    "universal_identity_id": "uid_npc_0040",
+    "life_episode_id": "life_npc_0040_initial",
+    "body_id": "body_npc_0040_initial",
+    "cognitive_profile_id": "cog_npc_0040",
+    "social_identity_id": "social_npc_0040",
+    "name": "Edris Sol",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Escribana del tribunal local",
+    "district_or_work_area": "Distrito Cívico",
+    "affiliations": [
+      "institution_city_services"
+    ],
+    "public_profile": "Registra declaraciones, acuerdos y reclamaciones. Sabe que un testimonio no equivale a una prueba concluyente.",
+    "personality_traits": [
+      "formal",
+      "prudente",
+      "curiosa"
+    ],
+    "primary_motivation": "Garantizar registros claros y accesibles",
+    "current_tension": "El archivo jurídico necesita ordenar expedientes antiguos.",
+    "knowledge_scope": "Conoce documentos presentados formalmente; no conoce hechos no declarados.",
+    "private_personal_fact": "Está estudiando cómo registrar acuerdos entre individuos de distinto estatus jurídico.",
+    "daily_routine": "tribunal por la mañana; archivo por la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 47,
+        "power": 45,
+        "agility": 58,
+        "coordination": 65,
+        "physical_endurance": 70,
+        "perception": 60
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 67,
+        "memory": 68,
+        "attention": 74,
+        "learning": 65,
+        "communication": 68
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Escribana del tribunal local"
+    ],
+    "mission_template_ids": [],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0041",
+    "entity_id": "npc_0041",
+    "universal_identity_id": "uid_npc_0041",
+    "life_episode_id": "life_npc_0041_initial",
+    "body_id": "body_npc_0041_initial",
+    "cognitive_profile_id": "cog_npc_0041",
+    "social_identity_id": "social_npc_0041",
+    "name": "Talen Mor",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Responsable de mantenimiento de agua",
+    "district_or_work_area": "Distrito de Servicios",
+    "affiliations": [
+      "institution_city_services"
+    ],
+    "public_profile": "Supervisa cisternas, tuberías y puntos de agua, y organiza reparaciones cuando se detectan fugas.",
+    "personality_traits": [
+      "práctico",
+      "concienzudo",
+      "reservado"
+    ],
+    "primary_motivation": "Mantener agua limpia y accesible",
+    "current_tension": "Una cisterna requiere revisión y hay pocos trabajadores disponibles.",
+    "knowledge_scope": "Conoce instalaciones inspeccionadas y mediciones disponibles; no diagnostica contaminantes sin análisis.",
+    "private_personal_fact": "Sospecha que un conducto antiguo conecta dos sectores que los planos muestran separados.",
+    "daily_routine": "ronda de instalaciones temprano; oficina por la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 47,
+        "power": 42,
+        "agility": 56,
+        "coordination": 66,
+        "physical_endurance": 58,
+        "perception": 58
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 63,
+        "memory": 70,
+        "attention": 70,
+        "learning": 60,
+        "communication": 72
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Responsable de mantenimiento de agua"
+    ],
+    "mission_template_ids": [
+      "MIS-005",
+      "MIS-010"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0042",
+    "entity_id": "npc_0042",
+    "universal_identity_id": "uid_npc_0042",
+    "life_episode_id": "life_npc_0042_initial",
+    "body_id": "body_npc_0042_initial",
+    "cognitive_profile_id": "cog_npc_0042",
+    "social_identity_id": "social_npc_0042",
+    "name": "Sava Keln",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Supervisora de limpieza y saneamiento",
+    "district_or_work_area": "Distrito de Servicios",
+    "affiliations": [
+      "institution_city_services"
+    ],
+    "public_profile": "Coordina recolección, drenaje y retirada de residuos. Conoce zonas donde se acumulan plagas.",
+    "personality_traits": [
+      "directa",
+      "trabajadora",
+      "solidaria"
+    ],
+    "primary_motivation": "Mejorar las condiciones sanitarias sin dejar barrios desatendidos",
+    "current_tension": "Faltan trabajadores en los turnos nocturnos.",
+    "knowledge_scope": "Conoce problemas de saneamiento que ha inspeccionado; no puede atribuir una enfermedad a una causa sin pruebas.",
+    "private_personal_fact": "Quiere que se valore el trabajo de mantenimiento tanto como el de los aventureros.",
+    "daily_routine": "rutas al amanecer; revisión de drenajes después del mediodía",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 57,
+        "power": 43,
+        "agility": 56,
+        "coordination": 60,
+        "physical_endurance": 62,
+        "perception": 63
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 62,
+        "memory": 59,
+        "attention": 76,
+        "learning": 66,
+        "communication": 64
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Supervisora de limpieza y saneamiento"
+    ],
+    "mission_template_ids": [
+      "MIS-005",
+      "MIS-011"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0043",
+    "entity_id": "npc_0043",
+    "universal_identity_id": "uid_npc_0043",
+    "life_episode_id": "life_npc_0043_initial",
+    "body_id": "body_npc_0043_initial",
+    "cognitive_profile_id": "cog_npc_0043",
+    "social_identity_id": "social_npc_0043",
+    "name": "Venn Oris",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Coordinador de mensajería civil",
+    "district_or_work_area": "Distrito Cívico",
+    "affiliations": [
+      "institution_city_services"
+    ],
+    "public_profile": "Distribuye rutas de correo, avisos y entregas oficiales, con registros de recepción.",
+    "personality_traits": [
+      "sociable",
+      "metódico",
+      "discreto"
+    ],
+    "primary_motivation": "Mantener la red de comunicación y formar nuevos mensajeros",
+    "current_tension": "Algunas rutas quedan sin cubrir cuando la puerta se congestiona.",
+    "knowledge_scope": "Conoce mensajes entregados y pendientes; no conoce el contenido sellado.",
+    "private_personal_fact": "Está intentando reconciliar a dos mensajeros que compiten por la misma ruta.",
+    "daily_routine": "oficina al amanecer; distribución y seguimiento todo el día",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 55,
+        "power": 51,
+        "agility": 49,
+        "coordination": 56,
+        "physical_endurance": 70,
+        "perception": 63
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 65,
+        "memory": 61,
+        "attention": 77,
+        "learning": 62,
+        "communication": 73
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Coordinador de mensajería civil"
+    ],
+    "mission_template_ids": [
+      "MIS-010"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0044",
+    "entity_id": "npc_0044",
+    "universal_identity_id": "uid_npc_0044",
+    "life_episode_id": "life_npc_0044_initial",
+    "body_id": "body_npc_0044_initial",
+    "cognitive_profile_id": "cog_npc_0044",
+    "social_identity_id": "social_npc_0044",
+    "name": "Orla Dhen",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Maestra de escuela comunitaria",
+    "district_or_work_area": "Distrito Residencial",
+    "affiliations": [
+      "institution_city_services"
+    ],
+    "public_profile": "Enseña lectura, cálculo y conocimientos prácticos a niños y adultos con horarios diversos.",
+    "personality_traits": [
+      "paciente",
+      "curiosa",
+      "firme"
+    ],
+    "primary_motivation": "Mantener la escuela abierta y accesible",
+    "current_tension": "Faltan libros y materiales para ampliar clases nocturnas.",
+    "knowledge_scope": "Conoce a sus alumnos y los textos disponibles; no tiene autoridad sobre sus familias.",
+    "private_personal_fact": "Recibe a aprendices que no pueden pagar una formación completa cuando dispone de tiempo.",
+    "daily_routine": "clases por la mañana y tarde; preparación por la noche",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 49,
+        "power": 45,
+        "agility": 55,
+        "coordination": 59,
+        "physical_endurance": 67,
+        "perception": 68
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 69,
+        "memory": 69,
+        "attention": 76,
+        "learning": 56,
+        "communication": 63
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Maestra de escuela comunitaria"
+    ],
+    "mission_template_ids": [],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0045",
+    "entity_id": "npc_0045",
+    "universal_identity_id": "uid_npc_0045",
+    "life_episode_id": "life_npc_0045_initial",
+    "body_id": "body_npc_0045_initial",
+    "cognitive_profile_id": "cog_npc_0045",
+    "social_identity_id": "social_npc_0045",
+    "name": "Merek Voss",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Encargado de establos y animales de carga",
+    "district_or_work_area": "Distrito de Tabernas",
+    "affiliations": [
+      "institution_city_services"
+    ],
+    "public_profile": "Cuida monturas y animales de transporte, y advierte cuando un viajero exige demasiado a una bestia.",
+    "personality_traits": [
+      "tranquilo",
+      "cuidadoso",
+      "obstinado"
+    ],
+    "primary_motivation": "Mantener animales sanos y un servicio sostenible",
+    "current_tension": "Un proveedor ha entregado alimento de calidad irregular.",
+    "knowledge_scope": "Conoce animales bajo su cuidado y rutas habituales de suministro; no conoce todas las condiciones del bosque.",
+    "private_personal_fact": "Rechaza prestar animales agotados aunque pierda una venta.",
+    "daily_routine": "establos al amanecer; atención todo el día",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 55,
+        "power": 53,
+        "agility": 60,
+        "coordination": 54,
+        "physical_endurance": 58,
+        "perception": 59
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 60,
+        "memory": 69,
+        "attention": 72,
+        "learning": 56,
+        "communication": 72
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Encargado de establos y animales de carga"
+    ],
+    "mission_template_ids": [
+      "MIS-006"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0046",
+    "entity_id": "npc_0046",
+    "universal_identity_id": "uid_npc_0046",
+    "life_episode_id": "life_npc_0046_initial",
+    "body_id": "body_npc_0046_initial",
+    "cognitive_profile_id": "cog_npc_0046",
+    "social_identity_id": "social_npc_0046",
+    "name": "Danira Pell",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Coordinadora de ayuda vecinal",
+    "district_or_work_area": "Distrito Residencial",
+    "affiliations": [
+      "institution_city_services"
+    ],
+    "public_profile": "Organiza apoyo para hogares afectados por lesiones, pérdidas o falta temporal de recursos.",
+    "personality_traits": [
+      "compasiva",
+      "decidida",
+      "diplomática"
+    ],
+    "primary_motivation": "Evitar que una crisis individual se convierta en abandono social",
+    "current_tension": "Los fondos comunitarios son limitados y varias familias necesitan ayuda.",
+    "knowledge_scope": "Conoce solicitudes que le han comunicado y recursos comunitarios disponibles; respeta la privacidad de los hogares.",
+    "private_personal_fact": "Fue ayudada por vecinos en el pasado y no olvida esa deuda social.",
+    "daily_routine": "visitas por la mañana; coordinación en centro vecinal por la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 58,
+        "power": 45,
+        "agility": 58,
+        "coordination": 58,
+        "physical_endurance": 68,
+        "perception": 62
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 59,
+        "memory": 64,
+        "attention": 72,
+        "learning": 59,
+        "communication": 75
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Coordinadora de ayuda vecinal"
+    ],
+    "mission_template_ids": [
+      "MIS-008",
+      "MIS-009"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0047",
+    "entity_id": "npc_0047",
+    "universal_identity_id": "uid_npc_0047",
+    "life_episode_id": "life_npc_0047_initial",
+    "body_id": "body_npc_0047_initial",
+    "cognitive_profile_id": "cog_npc_0047",
+    "social_identity_id": "social_npc_0047",
+    "name": "Oryn Vale",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Investigador de fenómenos arcanos",
+    "district_or_work_area": "Distrito de Estudio",
+    "affiliations": [
+      "institution_study_and_research"
+    ],
+    "public_profile": "Estudia registros del Triple Eco sin afirmar que conoce su causa. Requiere mediciones repetidas y muestras fiables.",
+    "personality_traits": [
+      "analítico",
+      "obsesivo",
+      "prudente"
+    ],
+    "primary_motivation": "Determinar si los pulsos comparten una fuente o solo una semejanza",
+    "current_tension": "Le faltan instrumentos calibrados y observadores independientes.",
+    "knowledge_scope": "Conoce registros que ha consultado y resultados de sus pruebas; sus interpretaciones siguen siendo hipótesis.",
+    "private_personal_fact": "No quiere que su trabajo se convierta en propaganda del gremio ni de un culto.",
+    "daily_routine": "sala de estudio temprano; mediciones cuando las condiciones lo permiten",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 41,
+        "power": 27,
+        "agility": 45,
+        "coordination": 45,
+        "physical_endurance": 38,
+        "perception": 78
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 79,
+        "memory": 84,
+        "attention": 76,
+        "learning": 84,
+        "communication": 71
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Investigador de fenómenos arcanos"
+    ],
+    "mission_template_ids": [
+      "MIS-001",
+      "MIS-005",
+      "MIS-012"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [
+      {
+        "target_id": "npc_0049",
+        "type": "instrument_collaborator",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0050",
+        "type": "archive_contact",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0053",
+        "type": "historian_contact",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      }
+    ],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0048",
+    "entity_id": "npc_0048",
+    "universal_identity_id": "uid_npc_0048",
+    "life_episode_id": "life_npc_0048_initial",
+    "body_id": "body_npc_0048_initial",
+    "cognitive_profile_id": "cog_npc_0048",
+    "social_identity_id": "social_npc_0048",
+    "name": "Senna Veyr",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Docente de Veyrath y formulación",
+    "district_or_work_area": "Distrito de Estudio",
+    "affiliations": [
+      "institution_study_and_research"
+    ],
+    "public_profile": "Enseña estructura de oraciones, pronunciación y práctica responsable; distingue conocer palabras de dominar hechizos.",
+    "personality_traits": [
+      "exigente",
+      "culta",
+      "paciente"
+    ],
+    "primary_motivation": "Formar practicantes que comprendan antes de ejecutar",
+    "current_tension": "Sus estudiantes quieren fórmulas avanzadas antes de dominar los fundamentos.",
+    "knowledge_scope": "Conoce materiales docentes y formulaciones que domina; no conoce la capacidad arcana de cada persona sin evaluarla.",
+    "private_personal_fact": "Fue autodidacta durante años y protege el acceso a la enseñanza básica.",
+    "daily_routine": "clases matinales; tutorías por la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 38,
+        "power": 35,
+        "agility": 48,
+        "coordination": 46,
+        "physical_endurance": 41,
+        "perception": 66
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 88,
+        "memory": 75,
+        "attention": 77,
+        "learning": 80,
+        "communication": 66
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Docente de Veyrath y formulación"
+    ],
+    "mission_template_ids": [],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [
+      {
+        "target_id": "npc_0014",
+        "type": "student",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0053",
+        "type": "language_reference_contact",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      }
+    ],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0049",
+    "entity_id": "npc_0049",
+    "universal_identity_id": "uid_npc_0049",
+    "life_episode_id": "life_npc_0049_initial",
+    "body_id": "body_npc_0049_initial",
+    "cognitive_profile_id": "cog_npc_0049",
+    "social_identity_id": "social_npc_0049",
+    "name": "Cael Mor",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Técnico de instrumentos de Resonancia",
+    "district_or_work_area": "Distrito de Estudio",
+    "affiliations": [
+      "institution_study_and_research"
+    ],
+    "public_profile": "Calibra sensores y registra condiciones de medición. No atribuye voluntad a la Trama ni a la Mazmorra.",
+    "personality_traits": [
+      "preciso",
+      "escéptico",
+      "reservado"
+    ],
+    "primary_motivation": "Conseguir lecturas reproducibles",
+    "current_tension": "Un instrumento da resultados distintos bajo humedad elevada.",
+    "knowledge_scope": "Conoce el funcionamiento de sus instrumentos y lecturas propias; no interpreta solo la causa última.",
+    "private_personal_fact": "Sospecha que un defecto de fabricación ha contaminado algunos datos históricos.",
+    "daily_routine": "laboratorio por la mañana; calibración de campo por la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 37,
+        "power": 27,
+        "agility": 45,
+        "coordination": 49,
+        "physical_endurance": 48,
+        "perception": 76
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 79,
+        "memory": 80,
+        "attention": 79,
+        "learning": 76,
+        "communication": 67
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Técnico de instrumentos de Resonancia"
+    ],
+    "mission_template_ids": [
+      "MIS-001",
+      "MIS-005",
+      "MIS-012"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0050",
+    "entity_id": "npc_0050",
+    "universal_identity_id": "uid_npc_0050",
+    "life_episode_id": "life_npc_0050_initial",
+    "body_id": "body_npc_0050_initial",
+    "cognitive_profile_id": "cog_npc_0050",
+    "social_identity_id": "social_npc_0050",
+    "name": "Nerin Sol",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Conservadora del archivo de investigación",
+    "district_or_work_area": "Distrito de Estudio",
+    "affiliations": [
+      "institution_study_and_research"
+    ],
+    "public_profile": "Protege informes, muestras y cuadernos, registrando quién consulta cada documento.",
+    "personality_traits": [
+      "ordenada",
+      "inquisitiva",
+      "cautelosa"
+    ],
+    "primary_motivation": "Evitar que la evidencia se pierda o altere",
+    "current_tension": "Hay copias sin firma y fechas que no coinciden.",
+    "knowledge_scope": "Conoce el contenido de archivos consultados; no se le concede conocimiento de documentos sellados que no ha abierto.",
+    "private_personal_fact": "Mantiene una copia de seguridad física de registros que considera frágiles.",
+    "daily_routine": "archivo durante el día; inventario al cierre",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 36,
+        "power": 30,
+        "agility": 48,
+        "coordination": 54,
+        "physical_endurance": 50,
+        "perception": 67
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 80,
+        "memory": 84,
+        "attention": 81,
+        "learning": 83,
+        "communication": 60
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Conservadora del archivo de investigación"
+    ],
+    "mission_template_ids": [
+      "MIS-002",
+      "MIS-012"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0051",
+    "entity_id": "npc_0051",
+    "universal_identity_id": "uid_npc_0051",
+    "life_episode_id": "life_npc_0051_initial",
+    "body_id": "body_npc_0051_initial",
+    "cognitive_profile_id": "cog_npc_0051",
+    "social_identity_id": "social_npc_0051",
+    "name": "Orvek Dhal",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Artesano de instrumentos arcanos",
+    "district_or_work_area": "Distrito de Talleres / Estudio",
+    "affiliations": [
+      "institution_study_and_research"
+    ],
+    "public_profile": "Fabrica piezas de medición y reparación para dispositivos de utilidad bajo especificaciones conocidas.",
+    "personality_traits": [
+      "creativo",
+      "meticuloso",
+      "orgulloso"
+    ],
+    "primary_motivation": "Mejorar instrumentos sin vender prototipos no probados",
+    "current_tension": "Necesita materiales de procedencia estable para un nuevo sensor.",
+    "knowledge_scope": "Conoce sus diseños y pruebas; no garantiza compatibilidad con artefactos antiguos desconocidos.",
+    "private_personal_fact": "Una de sus herramientas más útiles fue diseñada por su antigua maestra.",
+    "daily_routine": "taller durante el día; pruebas de banco por la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 28,
+        "power": 37,
+        "agility": 43,
+        "coordination": 48,
+        "physical_endurance": 39,
+        "perception": 73
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 89,
+        "memory": 82,
+        "attention": 86,
+        "learning": 70,
+        "communication": 68
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Artesano de instrumentos arcanos"
+    ],
+    "mission_template_ids": [
+      "MIS-005",
+      "MIS-012"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0052",
+    "entity_id": "npc_0052",
+    "universal_identity_id": "uid_npc_0052",
+    "life_episode_id": "life_npc_0052_initial",
+    "body_id": "body_npc_0052_initial",
+    "cognitive_profile_id": "cog_npc_0052",
+    "social_identity_id": "social_npc_0052",
+    "name": "Isera Korr",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Historiadora de ruinas",
+    "district_or_work_area": "Distrito de Estudio",
+    "affiliations": [
+      "institution_study_and_research"
+    ],
+    "public_profile": "Compara estilos de construcción y documentos, y advierte que una interpretación puede ser errónea.",
+    "personality_traits": [
+      "escéptica",
+      "tenaz",
+      "imaginativa"
+    ],
+    "primary_motivation": "Distinguir restos de la primera excavación de añadidos posteriores",
+    "current_tension": "Las fuentes escritas sobre las ruinas son fragmentarias.",
+    "knowledge_scope": "Conoce comparaciones y fuentes revisadas; no sabe quién construyó cada estructura sin evidencia.",
+    "private_personal_fact": "Publicó una interpretación que ahora considera demasiado segura.",
+    "daily_routine": "archivo por la mañana; visitas de campo cuando hay escolta",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 40,
+        "power": 37,
+        "agility": 43,
+        "coordination": 51,
+        "physical_endurance": 48,
+        "perception": 76
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 88,
+        "memory": 78,
+        "attention": 80,
+        "learning": 75,
+        "communication": 69
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Historiadora de ruinas"
+    ],
+    "mission_template_ids": [
+      "MIS-002",
+      "MIS-012"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0053",
+    "entity_id": "npc_0053",
+    "universal_identity_id": "uid_npc_0053",
+    "life_episode_id": "life_npc_0053_initial",
+    "body_id": "body_npc_0053_initial",
+    "cognitive_profile_id": "cog_npc_0053",
+    "social_identity_id": "social_npc_0053",
+    "name": "Vaelis Renn",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Investigador de materiales y cristales",
+    "district_or_work_area": "Distrito Comercial / Estudio",
+    "affiliations": [
+      "institution_study_and_research"
+    ],
+    "public_profile": "Analiza propiedades físicas y arcanas de muestras con métodos documentados y límites explícitos.",
+    "personality_traits": [
+      "curioso",
+      "prudente",
+      "colaborador"
+    ],
+    "primary_motivation": "Crear un registro de materiales útiles para artesanos y sanadores",
+    "current_tension": "Faltan muestras de referencia con trazabilidad completa.",
+    "knowledge_scope": "Conoce las muestras examinadas y sus métodos de prueba; no conoce propiedades sin medirlas.",
+    "private_personal_fact": "Quiere compartir sus datos con talleres independientes, aunque eso reduzca su ventaja comercial.",
+    "daily_routine": "laboratorio por la mañana; mercado y talleres por la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 39,
+        "power": 27,
+        "agility": 47,
+        "coordination": 48,
+        "physical_endurance": 50,
+        "perception": 71
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 84,
+        "memory": 83,
+        "attention": 82,
+        "learning": 80,
+        "communication": 61
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Investigador de materiales y cristales"
+    ],
+    "mission_template_ids": [
+      "MIS-005",
+      "MIS-012"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0054",
+    "entity_id": "npc_0054",
+    "universal_identity_id": "uid_npc_0054",
+    "life_episode_id": "life_npc_0054_initial",
+    "body_id": "body_npc_0054_initial",
+    "cognitive_profile_id": "cog_npc_0054",
+    "social_identity_id": "social_npc_0054",
+    "name": "Miren Tol",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Custodia de una pequeña casa de estudio y culto local",
+    "district_or_work_area": "Distrito Residencial",
+    "affiliations": [
+      "institution_study_and_research"
+    ],
+    "public_profile": "Administra un espacio de reunión y estudio filosófico; permite que convivan creyentes y escépticos.",
+    "personality_traits": [
+      "serena",
+      "conciliadora",
+      "reflexiva"
+    ],
+    "primary_motivation": "Mantener la comunidad unida sin imponer una explicación del mundo",
+    "current_tension": "Dos grupos discuten sobre el significado religioso de la señal reciente.",
+    "knowledge_scope": "Conoce las creencias de quienes participan y textos de su tradición; no posee prueba de una causa divina.",
+    "private_personal_fact": "Cuida en privado a una persona mayor que no tiene familia cercana.",
+    "daily_routine": "casa de estudio por la mañana y tarde; visitas comunitarias",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 32,
+        "power": 30,
+        "agility": 43,
+        "coordination": 48,
+        "physical_endurance": 45,
+        "perception": 67
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 76,
+        "memory": 81,
+        "attention": 87,
+        "learning": 74,
+        "communication": 72
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Custodia de una pequeña casa de estudio y culto local"
+    ],
+    "mission_template_ids": [],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0055",
+    "entity_id": "npc_0055",
+    "universal_identity_id": "uid_npc_0055",
+    "life_episode_id": "life_npc_0055_initial",
+    "body_id": "body_npc_0055_initial",
+    "cognitive_profile_id": "cog_npc_0055",
+    "social_identity_id": "social_npc_0055",
+    "name": "Eren Kall",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Propietario de posada",
+    "district_or_work_area": "Distrito de Tabernas",
+    "affiliations": [
+      "community_households_network"
+    ],
+    "public_profile": "Ofrece alojamiento y comedor con precios y disponibilidad reales; conoce a muchos viajeros por trato directo.",
+    "personality_traits": [
+      "hospitalario",
+      "observador",
+      "prudente"
+    ],
+    "primary_motivation": "Mantener el negocio y evitar que los conflictos de aventureros afecten a otros huéspedes",
+    "current_tension": "Varias habitaciones están ocupadas por expedicionarios que aún no regresan.",
+    "knowledge_scope": "Conoce lo que sus huéspedes le cuentan y lo que observa; no conoce secretos de sus habitaciones sin causa.",
+    "private_personal_fact": "Guarda una habitación para viajeros que no pueden pagar de inmediato, con límites claros.",
+    "daily_routine": "prepara el local temprano; atiende comida y noche; cierra tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 36,
+        "power": 41,
+        "agility": 46,
+        "coordination": 54,
+        "physical_endurance": 57,
+        "perception": 70
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 68,
+        "memory": 61,
+        "attention": 61,
+        "learning": 55,
+        "communication": 80
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Propietario de posada"
+    ],
+    "mission_template_ids": [
+      "MIS-007",
+      "MIS-009"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [
+      {
+        "target_id": "npc_0056",
+        "type": "family_and_business_partner",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0057",
+        "type": "stable_service_contact",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0018",
+        "type": "regular_guest",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      }
+    ],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0056",
+    "entity_id": "npc_0056",
+    "universal_identity_id": "uid_npc_0056",
+    "life_episode_id": "life_npc_0056_initial",
+    "body_id": "body_npc_0056_initial",
+    "cognitive_profile_id": "cog_npc_0056",
+    "social_identity_id": "social_npc_0056",
+    "name": "Fira Kall",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Cocinera y administradora de la posada",
+    "district_or_work_area": "Distrito de Tabernas",
+    "affiliations": [
+      "community_households_network"
+    ],
+    "public_profile": "Organiza comidas y turnos del comedor. Recuerda preferencias de clientes habituales, pero no sus asuntos privados.",
+    "personality_traits": [
+      "ingeniosa",
+      "alegre",
+      "impaciente"
+    ],
+    "primary_motivation": "Ahorrar para abrir un comedor propio",
+    "current_tension": "No está de acuerdo con su padre sobre cuánto riesgo asumir con nuevos clientes.",
+    "knowledge_scope": "Conoce pedidos, reservas y conversaciones que ha escuchado; los rumores no son hechos para ella.",
+    "private_personal_fact": "Escribe relatos breves inspirados en los viajeros que conoce, cambiando identidades.",
+    "daily_routine": "cocina temprano; comedor al mediodía y noche",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 37,
+        "power": 41,
+        "agility": 51,
+        "coordination": 58,
+        "physical_endurance": 54,
+        "perception": 65
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 64,
+        "memory": 72,
+        "attention": 67,
+        "learning": 57,
+        "communication": 83
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Cocinera y administradora de la posada"
+    ],
+    "mission_template_ids": [
+      "MIS-006"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [
+      {
+        "target_id": "npc_0029",
+        "type": "ingredient_supplier",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0055",
+        "type": "family_and_business_partner",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      }
+    ],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0057",
+    "entity_id": "npc_0057",
+    "universal_identity_id": "uid_npc_0057",
+    "life_episode_id": "life_npc_0057_initial",
+    "body_id": "body_npc_0057_initial",
+    "cognitive_profile_id": "cog_npc_0057",
+    "social_identity_id": "social_npc_0057",
+    "name": "Doran Pell",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Mozo de establos y cuidador",
+    "district_or_work_area": "Distrito de Tabernas",
+    "affiliations": [
+      "community_households_network"
+    ],
+    "public_profile": "Trabaja con animales de carga y ayuda a preparar transportes y caravanas.",
+    "personality_traits": [
+      "trabajador",
+      "amable",
+      "nervioso"
+    ],
+    "primary_motivation": "Conseguir formación veterinaria básica",
+    "current_tension": "Un animal bajo su cuidado muestra síntomas que aún no sabe interpretar.",
+    "knowledge_scope": "Conoce el comportamiento reciente de animales del establo; no sustituye diagnóstico veterinario.",
+    "private_personal_fact": "Tiene facilidad para calmar animales asustados.",
+    "daily_routine": "establos al amanecer y al anochecer; recados al mediodía",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 39,
+        "power": 43,
+        "agility": 40,
+        "coordination": 58,
+        "physical_endurance": 56,
+        "perception": 64
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 66,
+        "memory": 63,
+        "attention": 64,
+        "learning": 56,
+        "communication": 82
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Mozo de establos y cuidador"
+    ],
+    "mission_template_ids": [
+      "MIS-006",
+      "MIS-008"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0058",
+    "entity_id": "npc_0058",
+    "universal_identity_id": "uid_npc_0058",
+    "life_episode_id": "life_npc_0058_initial",
+    "body_id": "body_npc_0058_initial",
+    "cognitive_profile_id": "cog_npc_0058",
+    "social_identity_id": "social_npc_0058",
+    "name": "Ysel Arven",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Partera y cuidadora comunitaria",
+    "district_or_work_area": "Distrito Residencial",
+    "affiliations": [
+      "community_households_network"
+    ],
+    "public_profile": "Asiste nacimientos y cuidados básicos, y deriva complicaciones a personal cualificado.",
+    "personality_traits": [
+      "serena",
+      "protectora",
+      "firme"
+    ],
+    "primary_motivation": "Mantener una red de cuidados accesible",
+    "current_tension": "La comunidad necesita más suministros médicos y ayuda de otras cuidadoras.",
+    "knowledge_scope": "Conoce la salud de quienes ha atendido con su consentimiento; respeta confidencialidad.",
+    "private_personal_fact": "Enseña cuidados básicos a dos aprendices sin exigir pago cuando puede hacerlo.",
+    "daily_routine": "visitas por la mañana; consulta y enseñanza por la tarde",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 48,
+        "power": 39,
+        "agility": 39,
+        "coordination": 49,
+        "physical_endurance": 59,
+        "perception": 59
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 63,
+        "memory": 71,
+        "attention": 73,
+        "learning": 62,
+        "communication": 80
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Partera y cuidadora comunitaria"
+    ],
+    "mission_template_ids": [
+      "MIS-008"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0059",
+    "entity_id": "npc_0059",
+    "universal_identity_id": "uid_npc_0059",
+    "life_episode_id": "life_npc_0059_initial",
+    "body_id": "body_npc_0059_initial",
+    "cognitive_profile_id": "cog_npc_0059",
+    "social_identity_id": "social_npc_0059",
+    "name": "Mael Runn",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Molinero y proveedor de harina",
+    "district_or_work_area": "Distrito Comercial",
+    "affiliations": [
+      "community_households_network"
+    ],
+    "public_profile": "Abastece cocinas y panaderos, y depende de rutas regulares de grano y mantenimiento de maquinaria.",
+    "personality_traits": [
+      "práctico",
+      "reservado",
+      "justo"
+    ],
+    "primary_motivation": "Mantener el suministro sin endeudarse demasiado",
+    "current_tension": "El transporte de grano se ha retrasado y sus reservas disminuyen.",
+    "knowledge_scope": "Conoce sus existencias, contratos y molienda; no controla el suministro regional completo.",
+    "private_personal_fact": "Está considerando asociarse con otro molino para repartir costes.",
+    "daily_routine": "molienda desde la madrugada; entregas al mediodía",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 38,
+        "power": 34,
+        "agility": 39,
+        "coordination": 48,
+        "physical_endurance": 51,
+        "perception": 56
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 59,
+        "memory": 61,
+        "attention": 65,
+        "learning": 58,
+        "communication": 79
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Molinero y proveedor de harina"
+    ],
+    "mission_template_ids": [
+      "MIS-006",
+      "MIS-010"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  },
+  {
+    "id": "npc_0060",
+    "entity_id": "npc_0060",
+    "universal_identity_id": "uid_npc_0060",
+    "life_episode_id": "life_npc_0060_initial",
+    "body_id": "body_npc_0060_initial",
+    "cognitive_profile_id": "cog_npc_0060",
+    "social_identity_id": "social_npc_0060",
+    "name": "Ressa Venn",
+    "name_status": "PROVISIONAL_WORKING_NAME",
+    "entity_type": "biological_agent",
+    "species_id": "species_human_baseline_provisional",
+    "population_layer": "authored_named_cast",
+    "simulation_tier": "individual_agent_priority_updates_based_on_relevance",
+    "role": "Mensajera vecinal y cuidadora de su hogar",
+    "district_or_work_area": "Distrito Residencial",
+    "affiliations": [
+      "community_households_network"
+    ],
+    "public_profile": "Combina entregas locales con responsabilidades familiares; conoce muchas calles y personas del barrio.",
+    "personality_traits": [
+      "sociable",
+      "cuidadosa",
+      "independiente"
+    ],
+    "primary_motivation": "Asegurar recursos y tiempo para su hogar",
+    "current_tension": "Un familiar necesita apoyo y sus horarios se han vuelto difíciles.",
+    "knowledge_scope": "Conoce asuntos que le han confiado y rutas de su barrio; no es informante omnisciente.",
+    "private_personal_fact": "Se ha propuesto aprender contabilidad para administrar mejor el dinero familiar.",
+    "daily_routine": "recados temprano y tarde; tareas del hogar al mediodía",
+    "aptitudes": {
+      "physical_functional_aptitudes_0_100": {
+        "strength": 38,
+        "power": 33,
+        "agility": 43,
+        "coordination": 52,
+        "physical_endurance": 46,
+        "perception": 67
+      },
+      "cognitive_aptitudes_0_100": {
+        "reasoning": 65,
+        "memory": 73,
+        "attention": 72,
+        "learning": 56,
+        "communication": 71
+      },
+      "calibration_status": "provisional_profile_estimate_not_a_physical_unit"
+    },
+    "skills_or_competencies": [
+      "Mensajera vecinal y cuidadora de su hogar"
+    ],
+    "mission_template_ids": [
+      "MIS-009",
+      "MIS-010"
+    ],
+    "can_offer_personal_requests": true,
+    "mission_offers_require_valid_sponsor": true,
+    "life_status": "alive_at_initialization_only; thereafter_simulated",
+    "identity_persistence": "stable_unique_entity_id; not tied to model_or_scene",
+    "relationships": [
+      {
+        "target_id": "npc_0059",
+        "type": "community_aid_colleague",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      },
+      {
+        "target_id": "npc_0055",
+        "type": "community_contact",
+        "basis": "authored_initial_relationship; can_change_through_events"
+      }
+    ],
+    "dialogue_policy": "speak_only_from_known_information_and_current_state"
+  }
+]

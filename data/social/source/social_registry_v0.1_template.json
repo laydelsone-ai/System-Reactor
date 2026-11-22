@@ -1,0 +1,2143 @@
+{
+  "metadata": {
+    "document_id": "WLA-CONTENT-SOCIAL-001",
+    "version": "0.1.0",
+    "status": "content_proposal_not_canon_until_author_approval",
+    "created_date": "2026-11-20",
+    "source_npc_catalogue": "NPC named cast v0.1; 60 named NPC",
+    "source_city_catalogue": "WLA city registry v0.1",
+    "normative_dependencies": [
+      "SR-01",
+      "SR-02",
+      "SR-03",
+      "SR-04",
+      "SR-05",
+      "SR-06",
+      "SR-10",
+      "SR-11",
+      "SR-12",
+      "SR-13",
+      "SR-14",
+      "SR-15"
+    ],
+    "scope": {
+      "named_people_included": 60,
+      "background_population_imported": 0,
+      "previously_reported_background_population": 120,
+      "background_population_status": "not imported because exact source records/IDs were not present in the current input files"
+    },
+    "authority_rule": "This registry is subordinate content. It does not change the SR norms or make proposed ties canonical.",
+    "coordinate_policy": "No residential coordinates, addresses, map topology, or final district placements are invented.",
+    "economy_policy": "Household assets, wages, debts, budgets and money are references to SR-10 ledgers; no balances are seeded here."
+  },
+  "people": [
+    {
+      "person_id": "npc_0001",
+      "display_name": "Ilyen Arveth",
+      "source_role": "Maestro del Gremio de Aventureros",
+      "source_work_area": "Distrito del Gremio",
+      "motivation_summary": "Mantener el gremio solvente y útil para la ciudad",
+      "current_tension_summary": "Debe repartir recursos entre rescates, investigación y mantenimiento sin poder financiarlo todo.",
+      "declared_affiliation_ids": [
+        "institution_adventurers_guild"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0002",
+      "display_name": "Selya Vorn",
+      "source_role": "Registradora de contratos",
+      "source_work_area": "Distrito del Gremio",
+      "motivation_summary": "Evitar que los aventureros acepten contratos engañosos",
+      "current_tension_summary": "Tiene una acumulación de reclamaciones por contratos mal documentados.",
+      "declared_affiliation_ids": [
+        "institution_adventurers_guild"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0003",
+      "display_name": "Tavor Rusk",
+      "source_role": "Evaluador de riesgo y capacidades",
+      "source_work_area": "Distrito del Gremio",
+      "motivation_summary": "Mejorar los criterios de seguridad de las expediciones",
+      "current_tension_summary": "Sus advertencias anteriores fueron ignoradas y dejaron una relación tensa con varios veteranos.",
+      "declared_affiliation_ids": [
+        "institution_adventurers_guild"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0004",
+      "display_name": "Mira Deneth",
+      "source_role": "Archivista de expediciones",
+      "source_work_area": "Distrito del Gremio",
+      "motivation_summary": "Reconstruir expediciones pasadas sin alterar sus registros",
+      "current_tension_summary": "Un índice antiguo contiene una laguna de fechas que nadie ha explicado satisfactoriamente.",
+      "declared_affiliation_ids": [
+        "institution_adventurers_guild"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0005",
+      "display_name": "Brannik Vey",
+      "source_role": "Responsable de suministros del gremio",
+      "source_work_area": "Distrito del Gremio",
+      "motivation_summary": "Reducir pérdidas de material y mantener reservas de emergencia",
+      "current_tension_summary": "El inventario de cuerda y lámparas está bajo presión por varias expediciones simultáneas.",
+      "declared_affiliation_ids": [
+        "institution_adventurers_guild"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0006",
+      "display_name": "Maelis Ordan",
+      "source_role": "Sanadora de campo",
+      "source_work_area": "Distrito del Gremio / Clínica",
+      "motivation_summary": "Reducir muertes evitables y formar personal de apoyo",
+      "current_tension_summary": "La clínica carece de manos suficientes cuando regresan varias expediciones a la vez.",
+      "declared_affiliation_ids": [
+        "institution_adventurers_guild"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0007",
+      "display_name": "Keldran Voss",
+      "source_role": "Coordinador de rescates",
+      "source_work_area": "Distrito del Gremio",
+      "motivation_summary": "Mantener rutas de rescate utilizables y no prometer supervivencias imposibles",
+      "current_tension_summary": "Una ruta que antes utilizaba quedó parcialmente bloqueada.",
+      "declared_affiliation_ids": [
+        "institution_adventurers_guild"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0008",
+      "display_name": "Veya Talren",
+      "source_role": "Cartógrafa del gremio",
+      "source_work_area": "Distrito del Gremio",
+      "motivation_summary": "Crear mapas útiles que indiquen también incertidumbre y fecha de observación",
+      "current_tension_summary": "Tiene mapas incompatibles de una misma galería y debe determinar si el lugar cambió o si uno estaba equivocado.",
+      "declared_affiliation_ids": [
+        "institution_adventurers_guild"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0009",
+      "display_name": "Odrik Pell",
+      "source_role": "Mediador de reclamaciones",
+      "source_work_area": "Distrito del Gremio",
+      "motivation_summary": "Evitar que los conflictos por botín se conviertan en violencia",
+      "current_tension_summary": "Dos grupos reclaman el mérito por un hallazgo cuya evidencia está incompleta.",
+      "declared_affiliation_ids": [
+        "institution_adventurers_guild"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0010",
+      "display_name": "Neris Vael",
+      "source_role": "Mensajera y enlace del gremio",
+      "source_work_area": "Distrito del Gremio",
+      "motivation_summary": "Conseguir independencia económica y ser reconocida por su fiabilidad",
+      "current_tension_summary": "Un retraso en una entrega importante ha puesto en duda su reputación.",
+      "declared_affiliation_ids": [
+        "institution_adventurers_guild"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0011",
+      "display_name": "Arel Tovan",
+      "source_role": "Explorador y líder de expedición",
+      "source_work_area": "Distrito de Tabernas / Gremio",
+      "motivation_summary": "Construir una reputación basada en expediciones que regresan",
+      "current_tension_summary": "Necesita reemplazar una pieza de equipo sin endeudarse más.",
+      "declared_affiliation_ids": [
+        "association_adventurer_network"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0012",
+      "display_name": "Dema Rhy",
+      "source_role": "Rastreadora y especialista en supervivencia",
+      "source_work_area": "Distrito Residencial",
+      "motivation_summary": "Mejorar la seguridad de las rutas y documentar comportamientos animales",
+      "current_tension_summary": "Una zona de recolección habitual está siendo utilizada por otra población.",
+      "declared_affiliation_ids": [
+        "association_adventurer_network"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0013",
+      "display_name": "Kairen Valt",
+      "source_role": "Lancero de primera línea",
+      "source_work_area": "Distrito de Tabernas / Gremio",
+      "motivation_summary": "Demostrar que la técnica supera a la fuerza bruta",
+      "current_tension_summary": "Una lesión antigua reaparece cuando entrena demasiado tiempo.",
+      "declared_affiliation_ids": [
+        "association_adventurer_network"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0014",
+      "display_name": "Thessa Mor",
+      "source_role": "Aprendiz de formulación arcana",
+      "source_work_area": "Distrito de Estudio",
+      "motivation_summary": "Obtener experiencia experimental reproducible",
+      "current_tension_summary": "Necesita materiales y supervisión para continuar una investigación pequeña.",
+      "declared_affiliation_ids": [
+        "association_adventurer_network"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0015",
+      "display_name": "Edran Malk",
+      "source_role": "Escudero y guardaespaldas de expedición",
+      "source_work_area": "Distrito Residencial",
+      "motivation_summary": "Mantener unido a su grupo y reunir dinero para su hogar",
+      "current_tension_summary": "Sus responsabilidades familiares limitan la duración de sus expediciones.",
+      "declared_affiliation_ids": [
+        "association_adventurer_network"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0016",
+      "display_name": "Lio Fen",
+      "source_role": "Mensajero de expediciones y aventurero novel",
+      "source_work_area": "Distrito de Tabernas",
+      "motivation_summary": "Conseguir experiencia real sin quedarse siempre como recadero",
+      "current_tension_summary": "Tiende a aceptar tareas por encima de su preparación para demostrar valor.",
+      "declared_affiliation_ids": [
+        "association_adventurer_network"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0017",
+      "display_name": "Vara Kesh",
+      "source_role": "Capitana de un grupo aventurero rival",
+      "source_work_area": "Distrito de Tabernas / Gremio",
+      "motivation_summary": "Aumentar la autonomía de su grupo y negociar mejores contratos",
+      "current_tension_summary": "Su cuadrilla discute si aceptar una ruta más peligrosa por una recompensa mayor.",
+      "declared_affiliation_ids": [
+        "association_adventurer_network"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0018",
+      "display_name": "Oran Vey",
+      "source_role": "Aventurero veterano retirado parcialmente",
+      "source_work_area": "Distrito de Tabernas",
+      "motivation_summary": "Transmitir experiencia sin volver a arriesgar su vida innecesariamente",
+      "current_tension_summary": "Algunos jóvenes interpretan sus advertencias como cobardía.",
+      "declared_affiliation_ids": [
+        "association_adventurer_network"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0019",
+      "display_name": "Sira Tenn",
+      "source_role": "Exploradora de espacios confinados",
+      "source_work_area": "Distrito Residencial",
+      "motivation_summary": "Encontrar vías seguras para grupos con equipos diversos",
+      "current_tension_summary": "No dispone de una cuerda suficientemente larga para una ruta que está estudiando.",
+      "declared_affiliation_ids": [
+        "association_adventurer_network"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0020",
+      "display_name": "Dervan Korr",
+      "source_role": "Sanador itinerante de expediciones",
+      "source_work_area": "Distrito de Clínica",
+      "motivation_summary": "Aprender técnicas de campo y evitar daños por tratamientos incorrectos",
+      "current_tension_summary": "Le faltan instrumentos para intervenciones delicadas.",
+      "declared_affiliation_ids": [
+        "association_adventurer_network"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0021",
+      "display_name": "Ysel Kade",
+      "source_role": "Mecánica de trampas y dispositivos de expedición",
+      "source_work_area": "Distrito de Talleres",
+      "motivation_summary": "Crear herramientas reutilizables y abrir un pequeño taller propio",
+      "current_tension_summary": "Un lote de piezas de metal llegó con calidad irregular.",
+      "declared_affiliation_ids": [
+        "association_adventurer_network"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0022",
+      "display_name": "Halen Orr",
+      "source_role": "Escolta y antiguo porteador de expediciones",
+      "source_work_area": "Distrito de Tabernas",
+      "motivation_summary": "Conseguir trabajo estable sin descuidar a su hogar",
+      "current_tension_summary": "Una deuda comercial limita qué contratos puede aceptar.",
+      "declared_affiliation_ids": [
+        "association_adventurer_network"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0023",
+      "display_name": "Nima Rell",
+      "source_role": "Rastreadora de fauna y recolectora",
+      "source_work_area": "Distrito Residencial / Mercado",
+      "motivation_summary": "Establecer una red fiable de proveedores de muestras",
+      "current_tension_summary": "Sus recolectores han encontrado señales de depredación en una zona antes tranquila.",
+      "declared_affiliation_ids": [
+        "association_adventurer_network"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0024",
+      "display_name": "Toren Sald",
+      "source_role": "Combatiente de asta y escolta",
+      "source_work_area": "Distrito del Gremio",
+      "motivation_summary": "Conseguir estabilidad laboral y evitar disputas de pago",
+      "current_tension_summary": "Un empleador anterior no cumplió un acuerdo y su reputación quedó afectada.",
+      "declared_affiliation_ids": [
+        "association_adventurer_network"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0025",
+      "display_name": "Varn Dorel",
+      "source_role": "Maestro herrero",
+      "source_work_area": "Distrito de Talleres",
+      "motivation_summary": "Mantener su taller y formar a un aprendiz competente",
+      "current_tension_summary": "La demanda de herramientas de expedición supera su capacidad actual.",
+      "declared_affiliation_ids": [
+        "association_trade_and_workshops"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0026",
+      "display_name": "Elya Ruun",
+      "source_role": "Aprendiz de herrería",
+      "source_work_area": "Distrito de Talleres",
+      "motivation_summary": "Alcanzar autonomía técnica sin saltarse el aprendizaje",
+      "current_tension_summary": "Su maestro no le permite todavía aceptar pedidos complejos.",
+      "declared_affiliation_ids": [
+        "association_trade_and_workshops"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0027",
+      "display_name": "Halvek Mord",
+      "source_role": "Comerciante de mineral y metal",
+      "source_work_area": "Distrito Comercial",
+      "motivation_summary": "Mantener el suministro sin comprometer más capital del disponible",
+      "current_tension_summary": "Un proveedor habitual redujo entregas por problemas en la ruta.",
+      "declared_affiliation_ids": [
+        "association_trade_and_workshops"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0028",
+      "display_name": "Soren Vale",
+      "source_role": "Tasador de cristales",
+      "source_work_area": "Distrito Comercial",
+      "motivation_summary": "Construir una reputación de tasación verificable",
+      "current_tension_summary": "Un cristal dañado produjo resultados contradictorios en dos instrumentos.",
+      "declared_affiliation_ids": [
+        "association_trade_and_workshops"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0029",
+      "display_name": "Yara Fen",
+      "source_role": "Herbolaria y recolectora",
+      "source_work_area": "Distrito Comercial",
+      "motivation_summary": "Mantener una cadena sostenible de recolección",
+      "current_tension_summary": "Un área de plantas medicinales se está agotando por extracción excesiva.",
+      "declared_affiliation_ids": [
+        "association_trade_and_workshops"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0030",
+      "display_name": "Brel Ordan",
+      "source_role": "Fabricante de recipientes y cerámica",
+      "source_work_area": "Distrito de Talleres",
+      "motivation_summary": "Conseguir arcilla de calidad uniforme",
+      "current_tension_summary": "Sus hornos necesitan reparación y piezas que no están disponibles de inmediato.",
+      "declared_affiliation_ids": [
+        "association_trade_and_workshops"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0031",
+      "display_name": "Darek Venn",
+      "source_role": "Curtidor y trabajador de cuero",
+      "source_work_area": "Distrito de Talleres",
+      "motivation_summary": "Mejorar la calidad sin elevar demasiado los costes",
+      "current_tension_summary": "Algunos materiales llegan contaminados o mal conservados.",
+      "declared_affiliation_ids": [
+        "association_trade_and_workshops"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0032",
+      "display_name": "Nala Vey",
+      "source_role": "Cocinera y abastecedora de expediciones",
+      "source_work_area": "Distrito de Tabernas",
+      "motivation_summary": "Mantener una cocina rentable y alimentar bien a trabajadores y aventureros",
+      "current_tension_summary": "El precio de algunos ingredientes subió tras interrupciones de suministro.",
+      "declared_affiliation_ids": [
+        "association_trade_and_workshops"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0033",
+      "display_name": "Garren Mork",
+      "source_role": "Reparador de herramientas y mecanismos",
+      "source_work_area": "Distrito de Talleres",
+      "motivation_summary": "Conservar un negocio pequeño y evitar trabajos inseguros",
+      "current_tension_summary": "Hay escasez de piezas estandarizadas y algunos clientes piden reparaciones imposibles.",
+      "declared_affiliation_ids": [
+        "association_trade_and_workshops"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0034",
+      "display_name": "Tessa Rilan",
+      "source_role": "Sastre y reparadora de equipo textil",
+      "source_work_area": "Distrito Comercial",
+      "motivation_summary": "Conservar clientela de residentes y aventureros",
+      "current_tension_summary": "Su proveedor de fibras retrasó una entrega.",
+      "declared_affiliation_ids": [
+        "association_trade_and_workshops"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0035",
+      "display_name": "Kormel Dask",
+      "source_role": "Carpintero y fabricante de carros",
+      "source_work_area": "Distrito de Talleres",
+      "motivation_summary": "Mantener rutas comerciales transitables y obtener madera seca",
+      "current_tension_summary": "Una carreta dañada bloquea un espacio de trabajo compartido.",
+      "declared_affiliation_ids": [
+        "association_trade_and_workshops"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0036",
+      "display_name": "Ilva Ren",
+      "source_role": "Encargada de almacén del mercado",
+      "source_work_area": "Distrito Comercial",
+      "motivation_summary": "Reducir pérdidas y mantener abastecimiento estable",
+      "current_tension_summary": "Hay discrepancias entre albaranes y existencias de dos proveedores.",
+      "declared_affiliation_ids": [
+        "association_trade_and_workshops"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0037",
+      "display_name": "Arven Dhal",
+      "source_role": "Comandante de la guardia urbana",
+      "source_work_area": "Distrito Cívico",
+      "motivation_summary": "Mantener seguridad pública y reducir abusos de autoridad",
+      "current_tension_summary": "La guardia tiene turnos vacantes y rutas que cubrir.",
+      "declared_affiliation_ids": [
+        "institution_city_services"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0038",
+      "display_name": "Rika Tern",
+      "source_role": "Sargento de la puerta de la muralla",
+      "source_work_area": "Puerta de la Muralla",
+      "motivation_summary": "Evitar entradas peligrosas sin obstaculizar el comercio legítimo",
+      "current_tension_summary": "La falta de personal provoca colas en periodos de llegada de caravanas.",
+      "declared_affiliation_ids": [
+        "institution_city_services"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0039",
+      "display_name": "Belor Kann",
+      "source_role": "Jefe de patrulla de distrito",
+      "source_work_area": "Distrito Cívico",
+      "motivation_summary": "Reducir conflictos y responder a emergencias locales",
+      "current_tension_summary": "Una disputa vecinal consume tiempo que debería dedicar a patrullas.",
+      "declared_affiliation_ids": [
+        "institution_city_services"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0040",
+      "display_name": "Edris Sol",
+      "source_role": "Escribana del tribunal local",
+      "source_work_area": "Distrito Cívico",
+      "motivation_summary": "Garantizar registros claros y accesibles",
+      "current_tension_summary": "El archivo jurídico necesita ordenar expedientes antiguos.",
+      "declared_affiliation_ids": [
+        "institution_city_services"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0041",
+      "display_name": "Talen Mor",
+      "source_role": "Responsable de mantenimiento de agua",
+      "source_work_area": "Distrito de Servicios",
+      "motivation_summary": "Mantener agua limpia y accesible",
+      "current_tension_summary": "Una cisterna requiere revisión y hay pocos trabajadores disponibles.",
+      "declared_affiliation_ids": [
+        "institution_city_services"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0042",
+      "display_name": "Sava Keln",
+      "source_role": "Supervisora de limpieza y saneamiento",
+      "source_work_area": "Distrito de Servicios",
+      "motivation_summary": "Mejorar las condiciones sanitarias sin dejar barrios desatendidos",
+      "current_tension_summary": "Faltan trabajadores en los turnos nocturnos.",
+      "declared_affiliation_ids": [
+        "institution_city_services"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0043",
+      "display_name": "Venn Oris",
+      "source_role": "Coordinador de mensajería civil",
+      "source_work_area": "Distrito Cívico",
+      "motivation_summary": "Mantener la red de comunicación y formar nuevos mensajeros",
+      "current_tension_summary": "Algunas rutas quedan sin cubrir cuando la puerta se congestiona.",
+      "declared_affiliation_ids": [
+        "institution_city_services"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0044",
+      "display_name": "Orla Dhen",
+      "source_role": "Maestra de escuela comunitaria",
+      "source_work_area": "Distrito Residencial",
+      "motivation_summary": "Mantener la escuela abierta y accesible",
+      "current_tension_summary": "Faltan libros y materiales para ampliar clases nocturnas.",
+      "declared_affiliation_ids": [
+        "institution_city_services"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0045",
+      "display_name": "Merek Voss",
+      "source_role": "Encargado de establos y animales de carga",
+      "source_work_area": "Distrito de Tabernas",
+      "motivation_summary": "Mantener animales sanos y un servicio sostenible",
+      "current_tension_summary": "Un proveedor ha entregado alimento de calidad irregular.",
+      "declared_affiliation_ids": [
+        "institution_city_services"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0046",
+      "display_name": "Danira Pell",
+      "source_role": "Coordinadora de ayuda vecinal",
+      "source_work_area": "Distrito Residencial",
+      "motivation_summary": "Evitar que una crisis individual se convierta en abandono social",
+      "current_tension_summary": "Los fondos comunitarios son limitados y varias familias necesitan ayuda.",
+      "declared_affiliation_ids": [
+        "institution_city_services"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0047",
+      "display_name": "Oryn Vale",
+      "source_role": "Investigador de fenómenos arcanos",
+      "source_work_area": "Distrito de Estudio",
+      "motivation_summary": "Determinar si los pulsos comparten una fuente o solo una semejanza",
+      "current_tension_summary": "Le faltan instrumentos calibrados y observadores independientes.",
+      "declared_affiliation_ids": [
+        "institution_study_and_research"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0048",
+      "display_name": "Senna Veyr",
+      "source_role": "Docente de Veyrath y formulación",
+      "source_work_area": "Distrito de Estudio",
+      "motivation_summary": "Formar practicantes que comprendan antes de ejecutar",
+      "current_tension_summary": "Sus estudiantes quieren fórmulas avanzadas antes de dominar los fundamentos.",
+      "declared_affiliation_ids": [
+        "institution_study_and_research"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0049",
+      "display_name": "Cael Mor",
+      "source_role": "Técnico de instrumentos de Resonancia",
+      "source_work_area": "Distrito de Estudio",
+      "motivation_summary": "Conseguir lecturas reproducibles",
+      "current_tension_summary": "Un instrumento da resultados distintos bajo humedad elevada.",
+      "declared_affiliation_ids": [
+        "institution_study_and_research"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0050",
+      "display_name": "Nerin Sol",
+      "source_role": "Conservadora del archivo de investigación",
+      "source_work_area": "Distrito de Estudio",
+      "motivation_summary": "Evitar que la evidencia se pierda o altere",
+      "current_tension_summary": "Hay copias sin firma y fechas que no coinciden.",
+      "declared_affiliation_ids": [
+        "institution_study_and_research"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0051",
+      "display_name": "Orvek Dhal",
+      "source_role": "Artesano de instrumentos arcanos",
+      "source_work_area": "Distrito de Talleres / Estudio",
+      "motivation_summary": "Mejorar instrumentos sin vender prototipos no probados",
+      "current_tension_summary": "Necesita materiales de procedencia estable para un nuevo sensor.",
+      "declared_affiliation_ids": [
+        "institution_study_and_research"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0052",
+      "display_name": "Isera Korr",
+      "source_role": "Historiadora de ruinas",
+      "source_work_area": "Distrito de Estudio",
+      "motivation_summary": "Distinguir restos de la primera excavación de añadidos posteriores",
+      "current_tension_summary": "Las fuentes escritas sobre las ruinas son fragmentarias.",
+      "declared_affiliation_ids": [
+        "institution_study_and_research"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0053",
+      "display_name": "Vaelis Renn",
+      "source_role": "Investigador de materiales y cristales",
+      "source_work_area": "Distrito Comercial / Estudio",
+      "motivation_summary": "Crear un registro de materiales útiles para artesanos y sanadores",
+      "current_tension_summary": "Faltan muestras de referencia con trazabilidad completa.",
+      "declared_affiliation_ids": [
+        "institution_study_and_research"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0054",
+      "display_name": "Miren Tol",
+      "source_role": "Custodia de una pequeña casa de estudio y culto local",
+      "source_work_area": "Distrito Residencial",
+      "motivation_summary": "Mantener la comunidad unida sin imponer una explicación del mundo",
+      "current_tension_summary": "Dos grupos discuten sobre el significado religioso de la señal reciente.",
+      "declared_affiliation_ids": [
+        "institution_study_and_research"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0055",
+      "display_name": "Eren Kall",
+      "source_role": "Propietario de posada",
+      "source_work_area": "Distrito de Tabernas",
+      "motivation_summary": "Mantener el negocio y evitar que los conflictos de aventureros afecten a otros huéspedes",
+      "current_tension_summary": "Varias habitaciones están ocupadas por expedicionarios que aún no regresan.",
+      "declared_affiliation_ids": [
+        "community_households_network"
+      ],
+      "family_group_ids": [
+        "FAM-KALL-PROVISIONAL"
+      ],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0056",
+      "display_name": "Fira Kall",
+      "source_role": "Cocinera y administradora de la posada",
+      "source_work_area": "Distrito de Tabernas",
+      "motivation_summary": "Ahorrar para abrir un comedor propio",
+      "current_tension_summary": "No está de acuerdo con su padre sobre cuánto riesgo asumir con nuevos clientes.",
+      "declared_affiliation_ids": [
+        "community_households_network"
+      ],
+      "family_group_ids": [
+        "FAM-KALL-PROVISIONAL"
+      ],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0057",
+      "display_name": "Doran Pell",
+      "source_role": "Mozo de establos y cuidador",
+      "source_work_area": "Distrito de Tabernas",
+      "motivation_summary": "Conseguir formación veterinaria básica",
+      "current_tension_summary": "Un animal bajo su cuidado muestra síntomas que aún no sabe interpretar.",
+      "declared_affiliation_ids": [
+        "community_households_network"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0058",
+      "display_name": "Ysel Arven",
+      "source_role": "Partera y cuidadora comunitaria",
+      "source_work_area": "Distrito Residencial",
+      "motivation_summary": "Mantener una red de cuidados accesible",
+      "current_tension_summary": "La comunidad necesita más suministros médicos y ayuda de otras cuidadoras.",
+      "declared_affiliation_ids": [
+        "community_households_network"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0059",
+      "display_name": "Mael Runn",
+      "source_role": "Molinero y proveedor de harina",
+      "source_work_area": "Distrito Comercial",
+      "motivation_summary": "Mantener el suministro sin endeudarse demasiado",
+      "current_tension_summary": "El transporte de grano se ha retrasado y sus reservas disminuyen.",
+      "declared_affiliation_ids": [
+        "community_households_network"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    },
+    {
+      "person_id": "npc_0060",
+      "display_name": "Ressa Venn",
+      "source_role": "Mensajera vecinal y cuidadora de su hogar",
+      "source_work_area": "Distrito Residencial",
+      "motivation_summary": "Asegurar recursos y tiempo para su hogar",
+      "current_tension_summary": "Un familiar necesita apoyo y sus horarios se han vuelto difíciles.",
+      "declared_affiliation_ids": [
+        "community_households_network"
+      ],
+      "family_group_ids": [],
+      "household_id": null,
+      "residence_facility_id": null,
+      "residence_status": "unassigned_pending_valid_residence_and_world_start_state",
+      "social_attributes": {
+        "age": null,
+        "species_or_people": null,
+        "culture": null,
+        "languages": null,
+        "legal_status": null,
+        "relationship_orientation": null,
+        "notes": "No rellenar sin procedencia. Estos campos no son necesarios para todos los individuos."
+      },
+      "relationship_views": [],
+      "source_record": "npc_named_cast.csv"
+    }
+  ],
+  "families": [
+    {
+      "family_group_id": "FAM-KALL-PROVISIONAL",
+      "display_label": "Vínculo familiar Kall (provisional)",
+      "status": "proposed_pending_author_confirmation",
+      "member_person_ids": [
+        "npc_0055",
+        "npc_0056"
+      ],
+      "relation_ids": [
+        "REL-KALL-001"
+      ],
+      "known_context": "Ambos trabajan en la misma posada; Fira menciona un desacuerdo con su padre.",
+      "not_assumed": [
+        "No confirma convivencia.",
+        "No define filiación biológica o legal.",
+        "No implica propiedad conjunta del negocio.",
+        "No determina afecto o confianza."
+      ]
+    }
+  ],
+  "households": [],
+  "relationships": [
+    {
+      "relationship_id": "REL-KALL-001",
+      "source_person_id": "npc_0055",
+      "target_person_id": "npc_0056",
+      "relationship_type": "possible_parent_of",
+      "reciprocal_type": "possible_child_of",
+      "status": "high_confidence_inference_pending_author_confirmation",
+      "evidence": [
+        "npc_0056 (Fira Kall) indica que discrepa con su padre sobre la gestión de clientes.",
+        "npc_0055 (Eren Kall) es propietario de la posada; npc_0056 trabaja como cocinera y administradora en la misma posada.",
+        "Ambos comparten apellido Kall."
+      ],
+      "evidence_source": "npc_named_cast.csv rows npc_0055 and npc_0056",
+      "confidence": "high_inference_not_verified_fact",
+      "effective_from": null,
+      "effective_to": null,
+      "legal_parentage_status": "unknown",
+      "biological_or_adoptive_status": "unknown",
+      "co_residence_status": "unknown",
+      "approval_required_before_canon": true
+    }
+  ],
+  "unresolved_social_claims": [
+    {
+      "claim_id": "SOC-UNRESOLVED-001",
+      "person_id": "npc_0015",
+      "claim_type": "family_responsibility",
+      "source_text": "Sus responsabilidades familiares limitan la duración de sus expediciones.",
+      "known": "Edran Malk tiene responsabilidades familiares que afectan su disponibilidad.",
+      "unknown": [
+        "Identidad de familiares",
+        "Parentesco",
+        "Convivencia",
+        "Naturaleza de la obligación",
+        "Frecuencia y coste"
+      ],
+      "must_not_create_placeholder_person": true
+    },
+    {
+      "claim_id": "SOC-UNRESOLVED-002",
+      "person_id": "npc_0022",
+      "claim_type": "household_responsibility",
+      "source_text": "Conseguir trabajo estable sin descuidar a su hogar.",
+      "known": "Halen Orr tiene compromisos vinculados a su hogar.",
+      "unknown": [
+        "Miembros del hogar",
+        "Si son familiares o compañeros",
+        "Ubicación de residencia",
+        "Obligaciones concretas"
+      ],
+      "must_not_create_placeholder_person": true
+    },
+    {
+      "claim_id": "SOC-UNRESOLVED-003",
+      "person_id": "npc_0060",
+      "claim_type": "unidentified_relative_needs_support",
+      "source_text": "Un familiar necesita apoyo y sus horarios se han vuelto difíciles.",
+      "known": "Ressa Venn tiene un familiar que necesita apoyo.",
+      "unknown": [
+        "Identidad",
+        "Parentesco",
+        "Edad",
+        "Residencia",
+        "Tipo de apoyo"
+      ],
+      "must_not_create_placeholder_person": true
+    },
+    {
+      "claim_id": "SOC-UNRESOLVED-004",
+      "person_id": "npc_0046",
+      "claim_type": "community_aid_not_personal_kinship",
+      "source_text": "Los fondos comunitarios son limitados y varias familias necesitan ayuda.",
+      "known": "Danira Pell coordina ayuda vecinal y conoce una necesidad comunitaria plural.",
+      "unknown": [
+        "Familias afectadas",
+        "Viviendas",
+        "Necesidades",
+        "Elegibilidad",
+        "Fondos disponibles"
+      ],
+      "must_not_create_placeholder_person": true
+    }
+  ],
+  "affiliation_groups": [
+    {
+      "group_id": "association_adventurer_network",
+      "member_person_ids": [
+        "npc_0011",
+        "npc_0012",
+        "npc_0013",
+        "npc_0014",
+        "npc_0015",
+        "npc_0016",
+        "npc_0017",
+        "npc_0018",
+        "npc_0019",
+        "npc_0020",
+        "npc_0021",
+        "npc_0022",
+        "npc_0023",
+        "npc_0024"
+      ],
+      "status": "affiliation_declared_in_source_npc_catalogue",
+      "formal_institution_id": null,
+      "mapping_note": "Solo el grupo del Gremio se enlaza por identidad inequívoca con el registro de ciudad. Los demás tags se preservan como grupos de origen sin inventar personalidad jurídica, sede o estatutos."
+    },
+    {
+      "group_id": "association_trade_and_workshops",
+      "member_person_ids": [
+        "npc_0025",
+        "npc_0026",
+        "npc_0027",
+        "npc_0028",
+        "npc_0029",
+        "npc_0030",
+        "npc_0031",
+        "npc_0032",
+        "npc_0033",
+        "npc_0034",
+        "npc_0035",
+        "npc_0036"
+      ],
+      "status": "affiliation_declared_in_source_npc_catalogue",
+      "formal_institution_id": null,
+      "mapping_note": "Solo el grupo del Gremio se enlaza por identidad inequívoca con el registro de ciudad. Los demás tags se preservan como grupos de origen sin inventar personalidad jurídica, sede o estatutos."
+    },
+    {
+      "group_id": "community_households_network",
+      "member_person_ids": [
+        "npc_0055",
+        "npc_0056",
+        "npc_0057",
+        "npc_0058",
+        "npc_0059",
+        "npc_0060"
+      ],
+      "status": "affiliation_declared_in_source_npc_catalogue",
+      "formal_institution_id": null,
+      "mapping_note": "Solo el grupo del Gremio se enlaza por identidad inequívoca con el registro de ciudad. Los demás tags se preservan como grupos de origen sin inventar personalidad jurídica, sede o estatutos."
+    },
+    {
+      "group_id": "institution_adventurers_guild",
+      "member_person_ids": [
+        "npc_0001",
+        "npc_0002",
+        "npc_0003",
+        "npc_0004",
+        "npc_0005",
+        "npc_0006",
+        "npc_0007",
+        "npc_0008",
+        "npc_0009",
+        "npc_0010"
+      ],
+      "status": "affiliation_declared_in_source_npc_catalogue",
+      "formal_institution_id": "ORG-ADVENTURERS-GUILD",
+      "mapping_note": "Solo el grupo del Gremio se enlaza por identidad inequívoca con el registro de ciudad. Los demás tags se preservan como grupos de origen sin inventar personalidad jurídica, sede o estatutos."
+    },
+    {
+      "group_id": "institution_city_services",
+      "member_person_ids": [
+        "npc_0037",
+        "npc_0038",
+        "npc_0039",
+        "npc_0040",
+        "npc_0041",
+        "npc_0042",
+        "npc_0043",
+        "npc_0044",
+        "npc_0045",
+        "npc_0046"
+      ],
+      "status": "affiliation_declared_in_source_npc_catalogue",
+      "formal_institution_id": null,
+      "mapping_note": "Solo el grupo del Gremio se enlaza por identidad inequívoca con el registro de ciudad. Los demás tags se preservan como grupos de origen sin inventar personalidad jurídica, sede o estatutos."
+    },
+    {
+      "group_id": "institution_study_and_research",
+      "member_person_ids": [
+        "npc_0047",
+        "npc_0048",
+        "npc_0049",
+        "npc_0050",
+        "npc_0051",
+        "npc_0052",
+        "npc_0053",
+        "npc_0054"
+      ],
+      "status": "affiliation_declared_in_source_npc_catalogue",
+      "formal_institution_id": null,
+      "mapping_note": "Solo el grupo del Gremio se enlaza por identidad inequívoca con el registro de ciudad. Los demás tags se preservan como grupos de origen sin inventar personalidad jurídica, sede o estatutos."
+    }
+  ],
+  "work_appointments_crosswalk": [
+    {
+      "source_city_npc_alias": "NPC-ILYEN-ARVETH",
+      "person_id": "npc_0001",
+      "display_name": "Ilyen Arveth",
+      "job_id": "JOB-GUILD-MASTER",
+      "facility_id": "BLD-GUILD-HQ",
+      "institution_id": "ORG-ADVENTURERS-GUILD",
+      "appointment_status": "proposed_from_NPC_catalogue_v0.1_not_employment_contract",
+      "source_status": "crosswalked_by_exact_name_match",
+      "employment_contract_status": "not_established",
+      "authority_note": "Su autoridad se limita al gremio; no implica autoridad política sobre la ciudad."
+    },
+    {
+      "source_city_npc_alias": "NPC-MIRA-DENETH",
+      "person_id": "npc_0004",
+      "display_name": "Mira Deneth",
+      "job_id": "JOB-ARCHIVIST",
+      "facility_id": "BLD-GUILD-ARCHIVE",
+      "institution_id": "ORG-ADVENTURERS-GUILD",
+      "appointment_status": "proposed_from_NPC_catalogue_v0.1_not_employment_contract",
+      "source_status": "crosswalked_by_exact_name_match",
+      "employment_contract_status": "not_established",
+      "authority_note": "Custodia registros; no conoce automáticamente documentos que no ha consultado."
+    },
+    {
+      "source_city_npc_alias": "NPC-VEYA-TALREN",
+      "person_id": "npc_0008",
+      "display_name": "Veya Talren",
+      "job_id": "JOB-CARTOGRAPHER",
+      "facility_id": "BLD-CARTOGRAPHY-OFFICE",
+      "institution_id": "ORG-ADVENTURERS-GUILD",
+      "appointment_status": "proposed_from_NPC_catalogue_v0.1_not_employment_contract",
+      "source_status": "crosswalked_by_exact_name_match",
+      "employment_contract_status": "not_established",
+      "authority_note": "Debe distinguir rutas recorridas, informes ajenos e hipótesis."
+    },
+    {
+      "source_city_npc_alias": "NPC-ORYN-VALE",
+      "person_id": "npc_0047",
+      "display_name": "Oryn Vale",
+      "job_id": "JOB-ARCANE-RESEARCHER",
+      "facility_id": "BLD-ARCANE-OBSERVATORY",
+      "institution_id": "ORG-ARCANE-RESEARCH",
+      "appointment_status": "proposed_from_NPC_catalogue_v0.1_not_employment_contract",
+      "source_status": "crosswalked_by_exact_name_match",
+      "employment_contract_status": "not_established",
+      "authority_note": "Es investigador; sus teorías no son automáticamente hechos objetivos."
+    },
+    {
+      "source_city_npc_alias": "NPC-MAELIS-ORDAN",
+      "person_id": "npc_0006",
+      "display_name": "Maelis Ordan",
+      "job_id": "JOB-CLINICIAN",
+      "facility_id": "BLD-CLINIC",
+      "institution_id": "ORG-HEALTH-PRACTICE",
+      "appointment_status": "proposed_from_NPC_catalogue_v0.1_not_employment_contract",
+      "source_status": "crosswalked_by_exact_name_match",
+      "employment_contract_status": "not_established",
+      "authority_note": "Puede tratar pacientes dentro de conocimientos, capacidad y suministros reales."
+    }
+  ],
+  "residential_facility_candidates": [
+    {
+      "facility_id": "BLD-COURTYARD-HOUSING",
+      "display_label": "Viviendas de patio compartido",
+      "district_id": "DST-RESIDENTIAL",
+      "capacity_estimate": {
+        "estimate": "3-8 households (calibration)",
+        "status": "calibration_not_fixed_occupancy"
+      },
+      "assignment_status": "candidate_only_not_occupancy",
+      "spatial_status": "not_mapped"
+    },
+    {
+      "facility_id": "BLD-WORKERS-HOUSING",
+      "display_label": "Vivienda de trabajadores",
+      "district_id": "DST-RESIDENTIAL",
+      "capacity_estimate": {
+        "estimate": "4-10 households (calibration)",
+        "status": "calibration_not_fixed_occupancy"
+      },
+      "assignment_status": "candidate_only_not_occupancy",
+      "spatial_status": "not_mapped"
+    },
+    {
+      "facility_id": "BLD-FAMILY-ROW",
+      "display_label": "Conjunto de casas familiares",
+      "district_id": "DST-RESIDENTIAL",
+      "capacity_estimate": {
+        "estimate": "3-6 households (calibration)",
+        "status": "calibration_not_fixed_occupancy"
+      },
+      "assignment_status": "candidate_only_not_occupancy",
+      "spatial_status": "not_mapped"
+    },
+    {
+      "facility_id": "BLD-RENTAL-ROOMS",
+      "display_label": "Casa de habitaciones de alquiler",
+      "district_id": "DST-RESIDENTIAL",
+      "capacity_estimate": {
+        "estimate": "6-14 rooms (calibration)",
+        "status": "calibration_not_fixed_occupancy"
+      },
+      "assignment_status": "candidate_only_not_occupancy",
+      "spatial_status": "not_mapped"
+    },
+    {
+      "facility_id": "BLD-APPRENTICE-HOUSE",
+      "display_label": "Alojamiento de aprendices",
+      "district_id": "DST-RESIDENTIAL",
+      "capacity_estimate": {
+        "estimate": "4-10 residents (calibration)",
+        "status": "calibration_not_fixed_occupancy"
+      },
+      "assignment_status": "candidate_only_not_occupancy",
+      "spatial_status": "not_mapped"
+    },
+    {
+      "facility_id": "BLD-SMALL-HOMES",
+      "display_label": "Casas pequeñas independientes",
+      "district_id": "DST-RESIDENTIAL",
+      "capacity_estimate": {
+        "estimate": "2-5 households (calibration)",
+        "status": "calibration_not_fixed_occupancy"
+      },
+      "assignment_status": "candidate_only_not_occupancy",
+      "spatial_status": "not_mapped"
+    },
+    {
+      "facility_id": "BLD-MIXED-RENTALS",
+      "display_label": "Edificio de uso mixto y alquiler",
+      "district_id": "DST-RESIDENTIAL",
+      "capacity_estimate": {
+        "estimate": "3-8 households (calibration)",
+        "status": "calibration_not_fixed_occupancy"
+      },
+      "assignment_status": "candidate_only_not_occupancy",
+      "spatial_status": "not_mapped"
+    },
+    {
+      "facility_id": "BLD-ADVENTURER-LODGING",
+      "display_label": "Casa de habitaciones para aventureros",
+      "district_id": "DST-RESIDENTIAL",
+      "capacity_estimate": {
+        "estimate": "4-12 rooms (calibration)",
+        "status": "calibration_not_fixed_occupancy"
+      },
+      "assignment_status": "candidate_only_not_occupancy",
+      "spatial_status": "not_mapped"
+    }
+  ],
+  "household_templates": [
+    {
+      "template_id": "HHT-SOLO",
+      "label": "Hogar unipersonal",
+      "members_min": 1,
+      "members_max": 1,
+      "kinship_required": false
+    },
+    {
+      "template_id": "HHT-PAIR",
+      "label": "Hogar de dos convivientes",
+      "members_min": 2,
+      "members_max": 2,
+      "kinship_required": false
+    },
+    {
+      "template_id": "HHT-FAMILY-NUCLEAR",
+      "label": "Hogar familiar nuclear",
+      "members_min": 2,
+      "members_max": 5,
+      "kinship_required": false
+    },
+    {
+      "template_id": "HHT-FAMILY-EXTENDED",
+      "label": "Hogar familiar extenso",
+      "members_min": 3,
+      "members_max": 12,
+      "kinship_required": false
+    },
+    {
+      "template_id": "HHT-MULTIGENERATIONAL",
+      "label": "Hogar multigeneracional",
+      "members_min": 3,
+      "members_max": 12,
+      "kinship_required": false
+    },
+    {
+      "template_id": "HHT-SHARED-NONKIN",
+      "label": "Hogar compartido sin parentesco",
+      "members_min": 2,
+      "members_max": 8,
+      "kinship_required": false
+    },
+    {
+      "template_id": "HHT-APPRENTICE",
+      "label": "Alojamiento de aprendices o trabajadores",
+      "members_min": 2,
+      "members_max": 12,
+      "kinship_required": false
+    },
+    {
+      "template_id": "HHT-CARE",
+      "label": "Hogar con persona dependiente o cuidado compartido",
+      "members_min": 2,
+      "members_max": 10,
+      "kinship_required": false
+    },
+    {
+      "template_id": "HHT-BOARDING",
+      "label": "Alojamiento temporal / huéspedes",
+      "members_min": 1,
+      "members_max": 20,
+      "kinship_required": false
+    },
+    {
+      "template_id": "HHT-COLLECTIVE",
+      "label": "Hogar colectivo o comunitario",
+      "members_min": 3,
+      "members_max": 30,
+      "kinship_required": false
+    }
+  ],
+  "relationship_model": {
+    "directionality": "Every person-to-person perception is directional. A->B trust is not automatically equal to B->A trust.",
+    "dimensions": [
+      {
+        "id": "trust",
+        "label": "Confianza",
+        "scale": [
+          0,
+          100
+        ]
+      },
+      {
+        "id": "affection",
+        "label": "Afecto",
+        "scale": [
+          0,
+          100
+        ]
+      },
+      {
+        "id": "respect",
+        "label": "Respeto",
+        "scale": [
+          0,
+          100
+        ]
+      },
+      {
+        "id": "fear",
+        "label": "Temor",
+        "scale": [
+          0,
+          100
+        ]
+      },
+      {
+        "id": "dependence",
+        "label": "Dependencia",
+        "scale": [
+          0,
+          100
+        ]
+      },
+      {
+        "id": "rivalry",
+        "label": "Rivalidad",
+        "scale": [
+          0,
+          100
+        ]
+      },
+      {
+        "id": "debt",
+        "label": "Deuda u obligación percibida",
+        "scale": [
+          0,
+          100
+        ]
+      },
+      {
+        "id": "admiration",
+        "label": "Admiración",
+        "scale": [
+          0,
+          100
+        ]
+      },
+      {
+        "id": "resentment",
+        "label": "Resentimiento",
+        "scale": [
+          0,
+          100
+        ]
+      }
+    ],
+    "initial_values_policy": "null means unknown/unmeasured. Never set 50 as a fake neutral bond. Relationship values only change through validated events and agent-specific perception.",
+    "knowledge_policy": "Each NPC stores what it experienced, inferred, or was told. It does not receive the other party's private knowledge automatically."
+  },
+  "household_model": {
+    "definition": "A household is a persistent co-residence and/or shared domestic-resource unit. It is not automatically a family, business, legal institution, or social group.",
+    "membership_basis": "Confirmed co-residence, shared domestic resources, or another explicit household arrangement.",
+    "separation_rules": [
+      "Family relationship does not prove co-residence.",
+      "Shared address does not prove kinship.",
+      "Temporary lodging is not automatically a permanent household.",
+      "A workplace or institution is not a household."
+    ],
+    "economic_link": "Shared assets, expenses, debts, and contributions refer to SR-10 accounting records; the social registry cannot create wealth."
+  },
+  "background_population_import_contract": {
+    "expected_input": "A JSON array or object containing the exact persisted NPC IDs from the existing 120 background population.",
+    "required_fields": [
+      "person_id"
+    ],
+    "optional_fields": [
+      "household_seed_id",
+      "family_group_id",
+      "explicit_relationships",
+      "residence_facility_id",
+      "residence_status"
+    ],
+    "rule": "Only explicit, source-backed household_seed_id/family_group_id/explicit_relationships are imported. No demographic or family structure is guessed from name, profession, district, or shared affiliation."
+  }
+}

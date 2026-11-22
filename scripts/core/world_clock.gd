@@ -1,23 +1,26 @@
+class_name WorldClock
 extends RefCounted
 
-const MAX_GAP_WARNING_SECONDS: int = 31536000 # 365 días; aviso, no recorte.
-
+## WLA-0A conserva un contador monotónico. No fija todavía calendario,
+## velocidad temporal ni frecuencia de simulación; pertenecen a etapas posteriores.
 var world_tick: int = 0
-var last_wall_epoch: int = 0
 
-func calculate_offline_gap(previous_epoch: int, current_epoch: int) -> Dictionary:
-	if previous_epoch <= 0:
-		return {"elapsed_seconds": 0, "anomaly": "missing_previous_checkpoint"}
-	if current_epoch < previous_epoch:
-		return {"elapsed_seconds": 0, "anomaly": "system_clock_moved_backwards"}
-	var elapsed: int = current_epoch - previous_epoch
-	var anomaly: String = ""
-	if elapsed > MAX_GAP_WARNING_SECONDS:
-		anomaly = "gap_over_one_year_review"
-	return {"elapsed_seconds": elapsed, "anomaly": anomaly}
+func restore(value: int) -> Error:
+	if value < 0:
+		return ERR_INVALID_DATA
+	world_tick = value
+	return OK
 
-func commit_wall_checkpoint(epoch: int) -> void:
-	last_wall_epoch = maxi(epoch, 0)
+func advance_to(value: int) -> Error:
+	if value < world_tick:
+		return ERR_INVALID_PARAMETER
+	world_tick = value
+	return OK
 
-func advance_world(seconds: int) -> void:
-	world_tick += maxi(seconds, 0)
+func to_snapshot() -> Dictionary:
+	return {"world_tick": world_tick}
+
+func load_snapshot(data: Dictionary) -> Error:
+	if not data.has("world_tick"):
+		return ERR_INVALID_DATA
+	return restore(int(data.get("world_tick", -1)))

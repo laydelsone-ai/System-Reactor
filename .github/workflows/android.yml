@@ -1,48 +1,140 @@
-name: Build World Laboratory Android
+name: World Laboratory - Android Debug
 
 on:
-  workflow_dispatch:
   push:
-    branches: [main]
+    branches: [ main ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
-  android-debug:
+  verify-and-build:
     runs-on: ubuntu-latest
+    timeout-minutes: 50
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Java
+
+      - name: Install Godot 4.7.2 Standard and export templates
+        uses: chickensoft-games/setup-godot@v2
+        with:
+          version: 4.7.2
+          use-dotnet: false
+          include-templates: true
+
+      - name: Install Java 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-        with:
-          packages: 'platform-tools platforms;android-35 build-tools;35.0.1'
-          accept-android-sdk-licenses: true
-      - name: Install Godot 4.7.2
+
+      - name: Install Android SDK command-line tools
+        uses: android-actions/setup-android@v4
+
+      - name: Install Android export packages
         run: |
-          GODOT_VERSION=4.7.2
-          wget -q https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip -O godot.zip
-          unzip -q godot.zip -d godot-bin
-          sudo install godot-bin/Godot_v${GODOT_VERSION}-stable_linux.x86_64 /usr/local/bin/godot
+          sdkmanager --install \
+            "platform-tools" \
+            "cmdline-tools;latest" \
+            "platforms;android-35" \
+            "build-tools;35.0.1" \
+            "cmake;3.10.2.4988404" \
+            "ndk;28.1.13356709"
+
+      - name: Export Android SDK paths for Godot
+        run: |
+          SDK_ROOT="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-}}"
+          test -n "$SDK_ROOT"
+          test -x "$SDK_ROOT/platform-tools/adb"
+          {
+            echo "ANDROID_HOME=$SDK_ROOT"
+            echo "ANDROID_SDK_ROOT=$SDK_ROOT"
+          } >> "$GITHUB_ENV"
+
+      - name: Create disposable Android Debug keystore
+        run: |
+          mkdir -p "$HOME/.android"
+          keytool -genkeypair -v \
+            -keystore "$HOME/.android/wla-debug.keystore" \
+            -storetype JKS \
+            -storepass android \
+            -alias androiddebugkey \
+            -keypass android \
+            -keyalg RSA \
+            -keysize 2048 \
+            -validity 10000 \
+            -dname "CN=Android Debug,O=Android,C=US"
+          {
+            echo "GODOT_ANDROID_KEYSTORE_DEBUG_PATH=$HOME/.android/wla-debug.keystore"
+            echo "GODOT_ANDROID_KEYSTORE_DEBUG_USER=androiddebugkey"
+            echo "GODOT_ANDROID_KEYSTORE_DEBUG_PASSWORD=android"
+          } >> "$GITHUB_ENV"
+
+      - name: Validate source catalogues and project payload
+        run: |
+          python3 tests/python/validate_social_registry_v2.py data/social/social_registry_v0.2.json
+          python3 tests/python/validate_social_registry_source_v2.py data/social/social_registry_v0.2.json
+          python3 tests/python/test_social_registry_source_v2.py
+          python3 tests/python/validate_bestiary_data.py
+          python3 tests/python/validate_project_payload.py
+
+      - name: Import project and verify engine
+        run: |
           godot --version
-      - name: Install export templates
-        run: |
-          mkdir -p ~/.local/share/godot/export_templates/4.7.2.stable
-          wget -q https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_export_templates.tpz -O templates.tpz
-          unzip -q templates.tpz -d templates
-          cp -r templates/templates/* ~/.local/share/godot/export_templates/4.7.2.stable/
-      - name: Import project
-        run: godot --headless --editor --path . --quit
-      - name: Export Android Debug
-        run: |
           mkdir -p build
-          godot --headless --path . --export-debug "Android Debug" build/WorldLaboratory-debug.apk
-      - name: Upload APK
+          godot --headless --editor --path . --quit
+
+      - name: Run core contracts and persistence tests
+        run: godot --headless --path . -s tests/test_contracts.gd
+
+      - name: Run content data tests
+        run: godot --headless --path . -s tests/test_content_data.gd
+
+      - name: Run WLA-0B autonomous simulation tests
+        run: godot --headless --path . -s tests/test_autonomy.gd
+
+      - name: Run application boot smoke test
+        run: godot --headless --path . --quit-after 8
+
+      - name: Export Android Debug APK
+        run: godot --headless --path . --export-debug "Android Debug" build/WorldLaboratory-WLA0B-Autonomy-debug.apk
+
+      - name: Verify APK and generate SHA-256
+        run: |
+          test -s build/WorldLaboratory-WLA0B-Autonomy-debug.apk
+          sha256sum build/WorldLaboratory-WLA0B-Autonomy-debug.apk | tee build/WorldLaboratory-WLA0B-Autonomy-debug.apk.sha256
+
+      - name: Upload APK and verification hash
         uses: actions/upload-artifact@v4
         with:
-          name: WorldLaboratory-Android-Debug
-          path: build/WorldLaboratory-debug.apk
+          name: WorldLaboratory-WLA0B-Autonomy-Android-Debug-${{ github.sha }}
+          path: |
+            build/WorldLaboratory-WLA0B-Autonomy-debug.apk
+            build/WorldLaboratory-WLA0B-Autonomy-debug.apk.sha256
           if-no-files-found: error
+          retention-days: 30
+
+  publish-release:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: verify-and-build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Download verified APK artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: WorldLaboratory-WLA0B-Autonomy-Android-Debug-${{ github.sha }}
+          path: build
+
+      - name: Publish APK and SHA-256 as GitHub Release assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            build/WorldLaboratory-WLA0B-Autonomy-debug.apk
+            build/WorldLaboratory-WLA0B-Autonomy-debug.apk.sha256
+          generate_release_notes: true

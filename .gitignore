@@ -1,4 +1,13 @@
 .godot/
-build/
-*.apk
-*.aab
+.import/
+.export/
+build/*.apk
+build/*.aab
+build/*.sha256
+*.keystore
+*.jks
+.DS_Store
+Thumbs.db
+__pycache__/
+*.py[cod]
+*.tmp

@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://world-laboratory.invalid/schemas/social_registry_v0.2.schema.json",
+  "title": "WLA Social Registry v0.2.0",
+  "type": "object",
+  "required": [
+    "metadata",
+    "people",
+    "families",
+    "households",
+    "relationships",
+    "unresolved_social_claims",
+    "affiliation_groups",
+    "work_appointments_crosswalk",
+    "residential_facility_candidates",
+    "household_templates",
+    "relationship_model",
+    "household_model",
+    "background_population_import_contract"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": [
+        "document_id",
+        "version",
+        "status",
+        "scope",
+        "normative_dependencies"
+      ],
+      "properties": {
+        "document_id": {
+          "const": "WLA-CONTENT-SOCIAL-001"
+        },
+        "version": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "normative_dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "scope": {
+          "type": "object"
+        }
+      }
+    },
+    "people": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "person_id",
+          "display_name",
+          "family_group_ids",
+          "household_id",
+          "residence_facility_id",
+          "residence_status",
+          "declared_affiliation_ids"
+        ],
+        "properties": {
+          "person_id": {
+            "type": "string"
+          },
+          "display_name": {
+            "type": "string"
+          },
+          "family_group_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "household_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "residence_facility_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "residence_status": {
+            "type": "string"
+          },
+          "declared_affiliation_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "families": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "family_group_id",
+          "member_person_ids",
+          "relation_ids",
+          "status"
+        ]
+      }
+    },
+    "households": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "household_id",
+          "member_person_ids"
+        ]
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "relationship_id",
+          "source_person_id",
+          "target_person_id",
+          "relationship_type",
+          "status"
+        ]
+      }
+    },
+    "unresolved_social_claims": {
+      "type": "array"
+    },
+    "affiliation_groups": {
+      "type": "array"
+    },
+    "work_appointments_crosswalk": {
+      "type": "array"
+    },
+    "residential_facility_candidates": {
+      "type": "array"
+    },
+    "household_templates": {
+      "type": "array"
+    },
+    "relationship_model": {
+      "type": "object"
+    },
+    "household_model": {
+      "type": "object"
+    },
+    "background_population_import_contract": {
+      "type": "object"
+    }
+  }
+}
