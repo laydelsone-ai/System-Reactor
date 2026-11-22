@@ -674,7 +674,8 @@ func _apply_intervention_payload(payload: Dictionary) -> void:
 	var kind := String(payload.get("kind", ""))
 	var room_id := String(payload.get("room_id", ""))
 	var value := float(payload.get("value", 0.0))
-	var rooms: Dictionary = _state.get("environment", {}).get("rooms", {})
+	var environment: Dictionary = _state.get("environment", {})
+	var rooms: Dictionary = environment.get("rooms", {})
 	if not rooms.has(room_id):
 		return
 	var room: Dictionary = rooms[room_id]
@@ -692,7 +693,9 @@ func _apply_intervention_payload(payload: Dictionary) -> void:
 					colony["tissue_damage"] = clampf(float(colony.get("tissue_damage", 0.0)) + value, 0.0, 1.0)
 					colony["last_response"] = "tissue_disturbed_by_observer"
 					break
-		_state.environment.rooms[room_id] = room
+	rooms[room_id] = room
+	environment["rooms"] = rooms
+	_state["environment"] = environment
 
 func _select_human_batch(source_state: Dictionary, budget: int) -> Array:
 	var agents: Dictionary = source_state.get("agents", {})

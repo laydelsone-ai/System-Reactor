@@ -1,7 +1,7 @@
 # World Laboratory / Sistema Reactor
-## Paquete integrado 0.3.7 — WLA-0B Autonomy Trial (Android / Godot)
+## Paquete integrado 0.3.8 — WLA-0B Autonomy Trial (Android / Godot)
 
-**Versión integrada 0.3.7:** incluye las correcciones del parser del renderizador (`draw_texture_rect` y tipos explícitos), carga diagnóstica segura del runtime y un ejecutor de pruebas Godot diferido, con salida en vivo, logs completos y límite de 180 segundos por comprobación. El ZIP contiene el proyecto completo, no un parche diferencial. La versión del motor sigue fijada en Godot 4.7.2. La corrección estática no equivale a una compilación aprobada: la confirmación de parser, pruebas GDScript y APK depende de que Actions termine en verde.
+**Versión integrada 0.3.8:** corrige el error de sintaxis confirmado por Godot 4.7.2 en `_apply_intervention_payload()`: la escritura de `rooms[room_id]` ahora ocurre después del `match`, con actualización explícita de `environment`. Se añade una prueba de regresión para la persistencia y procedencia del estímulo de vibración. La carga de escena y las correcciones del renderizador de 0.3.6/0.3.7 se conservan. La corrección debe pasar todavía por el parser y las pruebas reales de GitHub Actions; no se declara APK compilada.
 
 Esta entrega cambia el foco de la anterior: el Observatorio ya no es únicamente una presentación de pixel-art. Incorpora un primer runtime experimental de autonomía que evalúa agentes sin órdenes del jugador, produce decisiones justificadas, ejecuta cambios de estado, guarda recuerdos individuales y persiste las consecuencias mediante eventos y snapshots.
 

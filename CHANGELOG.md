@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.8 — Autonomy intervention parser fix (2026-11-22)
+
+- Fixed the invalid indentation of the room-state write-back after the `match` in `AutonomyRuntime._apply_intervention_payload()`. The assignment is now executed after the selected intervention branch instead of being parsed as a match pattern.
+- Reworked the write-back through explicitly typed `environment` and `rooms` dictionaries, then stores the updated environment back into the runtime state.
+- Added a regression test that sends an observer vibration, verifies the room noise is persisted, checks the `observer_intervention` provenance on the stimulus, and confirms the intervention metric is separate from autonomous actions.
+- The exact GDScript parser issue reported by GitHub Actions at `autonomy_runtime.gd:695` is addressed. Godot parser/tests and Android export still require the next GitHub Actions run; no successful engine run is claimed here.
+
 ## 0.3.7 — Godot test runner hang repair (2026-11-22)
 
 - Reworked `tests/test_script_preloads.gd` to defer its checks until `SceneTree` initialization has completed.

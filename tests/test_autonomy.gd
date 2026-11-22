@@ -22,6 +22,7 @@ func _run() -> void:
 	_test_agent_and_ecology_initialization(social, bestiary)
 	_test_sensory_limits(social, bestiary)
 	_test_conditioned_environmental_response(social, bestiary)
+	_test_observer_intervention_persistence(social, bestiary)
 	_test_memory_and_individual_cognition(social, bestiary)
 	_test_autonomous_decisions_and_species_behavior(social, bestiary)
 	_test_reproducibility(social, bestiary)
@@ -125,6 +126,29 @@ func _test_conditioned_environmental_response(social: Dictionary, bestiary: Dict
 	var decision: Dictionary = runtime._decide_creature(state, rat, perception, 1)
 	_check(String(decision.get("action", "")) == "flee_to_narrow_refuge", "rat flees from strong environmental vibration even without a detected predator")
 	_check(String(decision.get("reason", "")).contains("vibración intensa"), "rat decision records the actual detected cause rather than a scripted enemy target")
+
+func _test_observer_intervention_persistence(social: Dictionary, bestiary: Dictionary) -> void:
+	var runtime: Variant = _autonomy_runtime_script.new()
+	var initialized: Dictionary = runtime.initialize_experiment(social, bestiary, 77231)
+	_check(initialized.get("ok", false), "observer intervention test initializes an isolated runtime")
+	var intervention: Dictionary = runtime.emit_vibration("R07", 0.73)
+	_check(intervention.get("ok", false), "observer vibration intervention is accepted only for an existing trial room")
+	var state: Dictionary = runtime.get_state_copy()
+	var environment: Dictionary = state.get("environment", {})
+	var rooms: Dictionary = environment.get("rooms", {})
+	var room: Dictionary = rooms.get("R07", {})
+	_check(float(room.get("noise", 0.0)) >= 0.73, "observer vibration updates and persists the target room state")
+	var stimuli: Array = environment.get("stimuli", [])
+	var found_observer_stimulus := false
+	for stimulus_value in stimuli:
+		var stimulus: Dictionary = stimulus_value
+		if String(stimulus.get("type", "")) == "vibration" and String(stimulus.get("room_id", "")) == "R07" and String(stimulus.get("source", "")) == "observer_intervention":
+			found_observer_stimulus = true
+			break
+	_check(found_observer_stimulus, "observer vibration retains explicit intervention provenance")
+	var metrics: Dictionary = state.get("metrics", {})
+	_check(int(metrics.get("observer_interventions", 0)) == 1, "observer intervention is counted separately from autonomous actions")
+
 
 func _test_memory_and_individual_cognition(social: Dictionary, bestiary: Dictionary) -> void:
 	var runtime: Variant = _autonomy_runtime_script.new()

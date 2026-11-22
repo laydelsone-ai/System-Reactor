@@ -1,13 +1,13 @@
 Project: World Laboratory / Sistema Reactor
 Milestone: WLA-0B.2 — Autonomy Trial
-Integrated package: 0.3.7
-App version: 0.3.7
+Integrated package: 0.3.8
+App version: 0.3.8
 Engine baseline: Godot 4.7.2 Standard
 Language: GDScript
 Target: Android arm64-v8a Debug APK
 Normative baseline: SR-01..SR-15, consolidated 2026-11-20; SR-15 v1.0
 Autonomy scope: 180 human agent models, utility arbitration, bounded scheduler, individual memory/experience, 4 isolated biological trial subjects, 1 non-cognitive fungal environmental process
-Integrated repairs: dynamic autonomy loading; Godot 4.7 renderer signatures and explicit Dictionary inference; deferred script-preload test; streamed CI logs with per-check 180-second timeout and retained artifacts
+Integrated repairs: dynamic autonomy loading; Godot 4.7 renderer signatures and explicit Dictionary inference; deferred script-preload test; streamed CI logs with per-check 180-second timeout; corrected intervention-payload match indentation and explicit environment/room dictionary write-back; observer-vibration persistence regression test
 Simulation limits: abstract NPC intent/routine progression; no validated physical NPC locations, full social graph execution, combat, canonical ecology, constructs, off-screen catch-up or calendar time scale
 Visual status: experimental pixel-art/isometric presentation; not a change to the approved SR-15 semi-realistic 3D/2.5D art direction
 Local validation: Python source/catalogue/payload checks run during packaging; Godot 4.7.2 engine parser/tests and Android export remain to be confirmed by GitHub Actions

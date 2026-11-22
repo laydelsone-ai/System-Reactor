@@ -65,3 +65,11 @@ La UI ofrece ejecución automática, pausa, paso manual, estímulos y guardado. 
 - Se aplicaron sobre la variante de renderizador con carga diferida las correcciones de firma `draw_texture_rect(..., false)` y anotaciones explícitas `Dictionary`. No se reintrodujo el preload tipado `AutonomyRuntime` de la variante anterior.
 - GitHub Actions conserva logs de importación, precarga, contratos, contenido, autonomía y arranque incluso cuando una prueba falla.
 - Pendiente de aceptación: ejecución real en Godot 4.7.2 y exportación Android Debug.
+
+
+## Paquete integrado 0.3.8 — corrección de intervención autónoma
+
+- GitHub Actions localizó un error GDScript en `AutonomyRuntime._apply_intervention_payload()`: el write-back de la cámara estaba indentado al nivel de las ramas de `match` y se interpretaba como una expresión de patrón.
+- La escritura se realiza ahora después del `match`, actualizando explícitamente `rooms`, `environment` y `_state`.
+- Se añade una prueba de regresión que confirma que una vibración del observador actualiza el ruido de la cámara, conserva su procedencia y se contabiliza aparte de las acciones autónomas.
+- Pendiente: parser, pruebas GDScript y exportación APK en Godot 4.7.2 mediante GitHub Actions.

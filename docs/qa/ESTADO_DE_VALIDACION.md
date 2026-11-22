@@ -1,4 +1,4 @@
-# Estado de validación — Paquete integrado WLA-0B Autonomy Trial 0.3.7
+# Estado de validación — Paquete integrado WLA-0B Autonomy Trial 0.3.8
 
 ## Validado durante el empaquetado
 
@@ -13,13 +13,14 @@
 - Inspección estática del renderizador: las llamadas `draw_texture_rect()` incluyen el argumento obligatorio `tile`; los resultados dinámicos del panel están tipados como `Dictionary`.
 - El test de precarga ya no hace trabajo pesado dentro de `SceneTree._initialize()`: difiere la ejecución, carga scripts uno a uno y comprueba `can_instantiate()`.
 - El workflow transmite la salida de cada chequeo en vivo, conserva el log y limita cada proceso Godot a 180 segundos.
+- La asignación `rooms[room_id]` se ha movido fuera del bloque `match` en `_apply_intervention_payload()`; el write-back de `environment` está tipado y la suite incluye una prueba de persistencia/procedencia de vibración.
 - Se ha comprobado el parseo YAML del workflow y la sintaxis Bash de su mecanismo de timeout/tee.
 
 ## Pruebas de motor incluidas, pendientes de ejecución en GitHub Actions
 
 `tests/test_script_preloads.gd` comprueba la carga y capacidad de instanciación de SystemCore, ApplicationShell, PixelObservatory y AutonomyRuntime.
 
-`tests/test_autonomy.gd` comprueba inicialización de los 180 modelos, límites epistémicos, motivaciones y tensiones importadas, cognición/memoria, límites sensoriales, decisiones ecológicas, scheduler, determinismo, snapshot y replay.
+`tests/test_autonomy.gd` comprueba inicialización de los 180 modelos, límites epistémicos, motivaciones y tensiones importadas, cognición/memoria, límites sensoriales, decisiones ecológicas, persistencia y procedencia de intervenciones del observador, scheduler, determinismo, snapshot y replay.
 
 También permanecen las pruebas de contratos del núcleo, contenido y arranque de escena.
 
