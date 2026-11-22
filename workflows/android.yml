@@ -1,0 +1,185 @@
+name: World Laboratory - Android Debug
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Godot 4.7.2 Standard and export templates
+        uses: chickensoft-games/setup-godot@v2
+        with:
+          version: 4.7.2
+          use-dotnet: false
+          include-templates: true
+
+      - name: Install Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Install Android SDK command-line tools
+        uses: android-actions/setup-android@v4
+
+      - name: Install Android export packages
+        run: |
+          sdkmanager --install \
+            "platform-tools" \
+            "cmdline-tools;latest" \
+            "platforms;android-35" \
+            "build-tools;35.0.1" \
+            "cmake;3.10.2.4988404" \
+            "ndk;28.1.13356709"
+
+      - name: Export Android SDK paths for Godot
+        run: |
+          SDK_ROOT="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-}}"
+          test -n "$SDK_ROOT"
+          test -x "$SDK_ROOT/platform-tools/adb"
+          {
+            echo "ANDROID_HOME=$SDK_ROOT"
+            echo "ANDROID_SDK_ROOT=$SDK_ROOT"
+          } >> "$GITHUB_ENV"
+
+      - name: Create disposable Android Debug keystore
+        run: |
+          mkdir -p "$HOME/.android"
+          keytool -genkeypair -v \
+            -keystore "$HOME/.android/wla-debug.keystore" \
+            -storetype JKS \
+            -storepass android \
+            -alias androiddebugkey \
+            -keypass android \
+            -keyalg RSA \
+            -keysize 2048 \
+            -validity 10000 \
+            -dname "CN=Android Debug,O=Android,C=US"
+          {
+            echo "GODOT_ANDROID_KEYSTORE_DEBUG_PATH=$HOME/.android/wla-debug.keystore"
+            echo "GODOT_ANDROID_KEYSTORE_DEBUG_USER=androiddebugkey"
+            echo "GODOT_ANDROID_KEYSTORE_DEBUG_PASSWORD=android"
+          } >> "$GITHUB_ENV"
+
+      - name: Validate source catalogues and project payload
+        run: |
+          python3 tests/python/validate_social_registry_v2.py data/social/social_registry_v0.2.json
+          python3 tests/python/validate_social_registry_source_v2.py data/social/social_registry_v0.2.json
+          python3 tests/python/test_social_registry_source_v2.py
+          python3 tests/python/validate_bestiary_data.py
+          python3 tests/python/validate_project_payload.py
+
+      - name: Run Godot diagnostics and all script tests
+        id: godot-diagnostics
+        shell: bash
+        run: |
+          set -u
+          mkdir -p build/diagnostics
+          rm -rf .godot
+          FAILURES=0
+
+          run_godot_check() {
+            local label="$1"
+            shift
+            local logfile="build/diagnostics/${label}.log"
+            local status=0
+            echo
+            echo "============================================================"
+            echo "GODOT CHECK: ${label}"
+            echo "COMMAND: $*"
+            echo "============================================================"
+            "$@" > "$logfile" 2>&1 || status=$?
+            if grep -Eq 'SCRIPT ERROR:|Parse Error:|ERROR: Failed to load script|ERROR: Cannot load' "$logfile"; then
+              echo "Detected a Godot script/load error in ${logfile}"
+              grep -n -C 4 -E 'SCRIPT ERROR:|Parse Error:|ERROR: Failed to load script|ERROR: Cannot load' "$logfile" || true
+              status=1
+            else
+              tail -n 60 "$logfile" || true
+            fi
+            echo "EXIT STATUS (${label}): ${status}"
+            if [ "$status" -ne 0 ]; then
+              FAILURES=$((FAILURES + 1))
+            fi
+          }
+
+          godot --version > build/diagnostics/godot-version.txt 2>&1 || FAILURES=$((FAILURES + 1))
+          cat build/diagnostics/godot-version.txt
+          sha256sum scripts/simulation/autonomy_runtime.gd | tee build/diagnostics/autonomy-runtime.sha256
+
+          run_godot_check "01-editor-import" godot --headless --editor --path . --quit --verbose
+          run_godot_check "02-script-preloads" godot --headless --verbose --path . -s tests/test_script_preloads.gd
+          run_godot_check "03-core-contracts" godot --headless --verbose --path . -s tests/test_contracts.gd
+          run_godot_check "04-content-data" godot --headless --verbose --path . -s tests/test_content_data.gd
+          run_godot_check "05-autonomy" godot --headless --verbose --path . -s tests/test_autonomy.gd
+          run_godot_check "06-app-boot" godot --headless --verbose --path . --quit-after 8
+
+          printf 'Godot diagnostic checks with failures: %s\n' "$FAILURES" | tee build/diagnostics/summary.txt
+          if [ "$FAILURES" -ne 0 ]; then
+            echo "At least one Godot check failed. Full logs are retained as a workflow artifact."
+            exit 1
+          fi
+
+      - name: Upload Godot diagnostic logs (also on failure)
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: WorldLaboratory-Godot-Diagnostics-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            build/diagnostics/**
+            build/godot-*.log
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Export Android Debug APK
+        run: |
+          mkdir -p build
+          godot --headless --path . --export-debug "Android Debug" build/WorldLaboratory-WLA0B-Autonomy-debug.apk
+
+      - name: Verify APK and generate SHA-256
+        run: |
+          test -s build/WorldLaboratory-WLA0B-Autonomy-debug.apk
+          sha256sum build/WorldLaboratory-WLA0B-Autonomy-debug.apk | tee build/WorldLaboratory-WLA0B-Autonomy-debug.apk.sha256
+
+      - name: Upload APK and verification hash
+        uses: actions/upload-artifact@v4
+        with:
+          name: WorldLaboratory-WLA0B-Autonomy-Android-Debug-${{ github.sha }}
+          path: |
+            build/WorldLaboratory-WLA0B-Autonomy-debug.apk
+            build/WorldLaboratory-WLA0B-Autonomy-debug.apk.sha256
+          if-no-files-found: error
+          retention-days: 30
+
+  publish-release:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: verify-and-build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Download verified APK artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: WorldLaboratory-WLA0B-Autonomy-Android-Debug-${{ github.sha }}
+          path: build
+
+      - name: Publish APK and SHA-256 as GitHub Release assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            build/WorldLaboratory-WLA0B-Autonomy-debug.apk
+            build/WorldLaboratory-WLA0B-Autonomy-debug.apk.sha256
+          generate_release_notes: true
