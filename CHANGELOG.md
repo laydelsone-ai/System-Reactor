@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.3.7 — Godot test runner hang repair (2026-11-22)
+
+- Reworked `tests/test_script_preloads.gd` to defer its checks until `SceneTree` initialization has completed.
+- Replaced top-level preload/constructor work in that test with sequential `ResourceLoader.load()` checks and explicit `can_instantiate()` validation.
+- Added per-script progress output so the exact resource under test is visible.
+- Changed GitHub Actions Godot checks to stream output live through `tee` while retaining full per-check logs.
+- Added a 180-second timeout to each Godot check so a stuck headless process cannot occupy the runner indefinitely.
+- Removed unnecessary `--verbose` output from the six checks; parser/load errors are still detected from saved logs.
+- The five Python source/catalogue/payload validators pass. Godot tests and Android export remain pending a real Actions run.
+
 ## 0.3.6 — Integrated Godot renderer and CI repair (2026-11-22)
 
 - Rebuilt the complete repository from the full 0.3.0 project, retaining all original game data, assets, normative references, autonomy runtime and Android export settings.

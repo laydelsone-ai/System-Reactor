@@ -1,29 +1,39 @@
 extends SceneTree
 
-# El orden reproduce el que usa la escena real: primero el núcleo y después
-# los recursos que dependen de su contrato.
-const SystemCoreScript = preload("res://scripts/core/system_core.gd")
-const ApplicationShellScript = preload("res://scripts/app/application_shell.gd")
-const PixelObservatoryScript = preload("res://scripts/app/pixel_observatory.gd")
+## Test de carga de scripts. Se ejecuta diferido para que SceneTree termine
+## su inicialización antes de cargar recursos y solicitar el cierre.
+
+var _failures: int = 0
 
 func _initialize() -> void:
-	var core_instance: RefCounted = SystemCoreScript.new()
-	_check(core_instance != null, "SystemCore can be instantiated")
-	var autonomy_script: Script = load("res://scripts/simulation/autonomy_runtime.gd") as Script
-	if autonomy_script == null:
-		push_error("AutonomyRuntime script failed to load; inspect the parser diagnostic immediately above this line.")
-		quit(1)
-		return
-	var autonomy_instance: RefCounted = autonomy_script.new()
-	_check(autonomy_instance != null, "Autonomy runtime can be instantiated without a global class_name")
-	_check(ApplicationShellScript is Script, "legacy application shell script parses")
-	_check(PixelObservatoryScript is Script, "Pixel Observatory scene script parses")
-	print("GDSCRIPT PRELOAD TESTS: passed")
-	quit(0)
+	print("[preloads] SceneTree initialized; scheduling checks")
+	call_deferred("_run_checks")
 
-func _check(condition: bool, message: String) -> void:
-	if condition:
-		print("PASS: " + message)
+func _run_checks() -> void:
+	_check_script("res://scripts/core/system_core.gd", "SystemCore")
+	_check_script("res://scripts/app/application_shell.gd", "ApplicationShell")
+	_check_script("res://scripts/app/pixel_observatory.gd", "PixelObservatory")
+	_check_script("res://scripts/simulation/autonomy_runtime.gd", "AutonomyRuntime")
+	if _failures == 0:
+		print("GDSCRIPT PRELOAD TESTS: passed")
 	else:
-		push_error("FAIL: " + message)
-		quit(1)
+		push_error("GDSCRIPT PRELOAD TESTS: %d failure(s)" % _failures)
+	quit(1 if _failures > 0 else 0)
+
+func _check_script(path: String, label: String) -> void:
+	print("[preloads] Loading %s: %s" % [label, path])
+	var resource: Resource = ResourceLoader.load(path)
+	if resource == null:
+		_failures += 1
+		push_error("FAIL: %s could not be loaded: %s" % [label, path])
+		return
+	if not resource is Script:
+		_failures += 1
+		push_error("FAIL: %s did not resolve to a Script resource" % label)
+		return
+	var script: Script = resource as Script
+	if not script.can_instantiate():
+		_failures += 1
+		push_error("FAIL: %s cannot be instantiated" % label)
+		return
+	print("PASS: %s loaded and parsed" % label)

@@ -1,4 +1,4 @@
-# Estado de validación — Paquete integrado WLA-0B Autonomy Trial 0.3.6
+# Estado de validación — Paquete integrado WLA-0B Autonomy Trial 0.3.7
 
 ## Validado durante el empaquetado
 
@@ -10,27 +10,23 @@
 - Las 12 plantillas de misión coinciden con su fuente.
 - PNG, recursos, atlas, iconos adaptativos y tamaños del export preset Android.
 - Preflight estructural de versión WLA-0B, presencia de runtime/pruebas y workflow de diagnóstico por etapas.
-- Inspección estática de todas las llamadas `draw_texture_rect()` del Observatorio: cada llamada incluye el argumento obligatorio `tile`; los report/state dinámicos del panel están tipados como `Dictionary`.
-- Comprobación de que la app mantiene carga diferida del runtime y no exige `class_name AutonomyRuntime` global.
+- Inspección estática del renderizador: las llamadas `draw_texture_rect()` incluyen el argumento obligatorio `tile`; los resultados dinámicos del panel están tipados como `Dictionary`.
+- El test de precarga ya no hace trabajo pesado dentro de `SceneTree._initialize()`: difiere la ejecución, carga scripts uno a uno y comprueba `can_instantiate()`.
+- El workflow transmite la salida de cada chequeo en vivo, conserva el log y limita cada proceso Godot a 180 segundos.
+- Se ha comprobado el parseo YAML del workflow y la sintaxis Bash de su mecanismo de timeout/tee.
 
 ## Pruebas de motor incluidas, pendientes de ejecución en GitHub Actions
 
-`tests/test_autonomy.gd` comprueba:
+`tests/test_script_preloads.gd` comprueba la carga y capacidad de instanciación de SystemCore, ApplicationShell, PixelObservatory y AutonomyRuntime.
 
-- Inicialización de los 180 modelos sin jugador.
-- Desconocidos fuente que permanecen desconocidos (perfil cognitivo, rasgos, household, identidad y ubicación).
-- Prohibición de convertir áreas laborales en coordenadas o co-presencia.
-- Aptitudes y rasgos conocidos que modifican utilidades; aptitudes desconocidas no reciben bonificación inventada.
-- Éxito/fracaso recordado que altera decisiones posteriores.
-- Límites sensoriales (la ecolocalización se degrada con ruido).
-- Decisiones específicas de especies, movimiento, búsqueda/consumo de recursos y respuesta fisiológica fúngica.
-- Cobertura del scheduler de toda la población y reproducibilidad con semilla fija.
-- Persistencia por snapshot y reconstrucción desde journal.
+`tests/test_autonomy.gd` comprueba inicialización de los 180 modelos, límites epistémicos, motivaciones y tensiones importadas, cognición/memoria, límites sensoriales, decisiones ecológicas, scheduler, determinismo, snapshot y replay.
+
+También permanecen las pruebas de contratos del núcleo, contenido y arranque de escena.
 
 ## No ejecutado en este entorno
 
 - Import/parsing GDScript con Godot 4.7.2.
-- Pruebas `test_contracts.gd`, `test_content_data.gd`, `test_autonomy.gd` dentro de Godot.
+- Pruebas `test_script_preloads.gd`, `test_contracts.gd`, `test_content_data.gd` y `test_autonomy.gd` dentro de Godot.
 - Smoke test de escena.
 - Exportación de Android Debug APK.
 - Instalación, rendimiento, ciclo de vida, force-stop y recuperación en Android físico.
@@ -39,4 +35,4 @@
 
 ## Verificación en GitHub Actions
 
-`.github/workflows/android.yml` instala Godot 4.7.2 Standard, Java 17 y los componentes Android fijados; ejecuta importación, precarga, contratos, contenido, autonomía y smoke test por separado; conserva logs como artefacto incluso en caso de fallo; exporta Android Debug y sube APK + SHA-256 solo si todas las etapas pasan. WLA-0B.2 solo debe considerarse validado por motor después de que esa ejecución termine correctamente.
+`.github/workflows/android.yml` instala Godot 4.7.2 Standard, Java 17 y los componentes Android fijados. Ejecuta importación, precarga, contratos, contenido, autonomía y smoke test por separado. La salida se transmite en vivo y se conserva en logs; cada proceso tiene un máximo de 180 segundos. Los diagnósticos se suben incluso en caso de fallo. La exportación Android Debug y la subida de APK + SHA-256 solo ocurren si todas las etapas pasan.
