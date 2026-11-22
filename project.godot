@@ -1,5 +1,6 @@
 ; WORLD LABORATORY / SISTEMA REACTOR
 ; WLA-0A core + WLA-0B.2 autonomy trial + experimental Pixel Observatory.
+; Godot 4.7 compatibility metadata retained from the compiling System Reactor 0.2.0 base.
 ; Normative baseline: SR-01..SR-15, with SR-15 v1.0 governing implementation.
 
 config_version=5
@@ -9,7 +10,8 @@ config_version=5
 config/name="World Laboratory — Sistema Reactor"
 config/description="World Laboratory — Sistema Reactor. Runtime experimental WLA-0B para simulación autónoma de agentes; observatorio pixel-art."
 config/icon="res://assets/icons/project_icon.png"
-config/version="0.3.0"
+config/version="0.3.1"
+config/features=PackedStringArray("4.7", "GL Compatibility")
 run/main_scene="res://scenes/main.tscn"
 
 [display]
@@ -29,6 +31,7 @@ renderer/rendering_method.mobile="gl_compatibility"
 textures/default_filters/use_nearest_mipmap_filter=false
 textures/canvas_textures/default_texture_filter=0
 textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0.035, 0.045, 0.065, 1.0)
 
 [physics]
 

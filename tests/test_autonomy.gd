@@ -1,7 +1,7 @@
 extends SceneTree
 
-const AutonomyRuntimeScript = preload("res://scripts/simulation/autonomy_runtime.gd")
 const SystemCoreScript = preload("res://scripts/core/system_core.gd")
+const AutonomyRuntimeScript = preload("res://scripts/simulation/autonomy_runtime.gd")
 
 var _passes := 0
 var _failures := 0
@@ -126,16 +126,16 @@ func _test_memory_and_individual_cognition(social: Dictionary, bestiary: Diction
 	runtime.initialize_experiment(social, bestiary, 481516)
 	var strong_reasoner := {"cognitive_profile":{"reasoning":90}}
 	var weak_reasoner := {"cognitive_profile":{"reasoning":10}}
-	var strong_bias := runtime._aptitude_bias(strong_reasoner, "reasoning", 0.10)
-	var weak_bias := runtime._aptitude_bias(weak_reasoner, "reasoning", 0.10)
+	var strong_bias: float = float(runtime._aptitude_bias(strong_reasoner, "reasoning", 0.10))
+	var weak_bias: float = float(runtime._aptitude_bias(weak_reasoner, "reasoning", 0.10))
 	_check(strong_bias > weak_bias, "declared cognitive aptitude changes utility weights")
-	var missing_aptitude := runtime._aptitude_bias({"cognitive_profile":{}}, "reasoning", 0.10)
+	var missing_aptitude: float = float(runtime._aptitude_bias({"cognitive_profile":{}}, "reasoning", 0.10))
 	_check(is_zero_approx(missing_aptitude), "unknown aptitude contributes no fabricated personal bonus")
 	_check(runtime._trait_bias(["disciplinado"], "routine") > runtime._trait_bias(["reservado"], "routine"), "declared personality traits alter relevant decision preferences")
 	var successful_memory := {"cognitive_profile":{"memory":90}, "memory":[{"type":"action_outcome", "action":"advance_motivation", "tick":8, "success":true, "confidence":0.9, "importance":0.6}]}
 	var failed_memory := {"cognitive_profile":{"memory":90}, "memory":[{"type":"action_outcome", "action":"advance_motivation", "tick":8, "success":false, "confidence":0.9, "importance":0.6}]}
-	var positive_memory_bias := runtime._memory_bias(successful_memory, "advance_motivation", 9)
-	var negative_memory_bias := runtime._memory_bias(failed_memory, "advance_motivation", 9)
+	var positive_memory_bias: float = float(runtime._memory_bias(successful_memory, "advance_motivation", 9))
+	var negative_memory_bias: float = float(runtime._memory_bias(failed_memory, "advance_motivation", 9))
 	_check(positive_memory_bias > 0.0, "remembered success slightly reinforces a future action")
 	_check(negative_memory_bias < 0.0, "remembered failure reduces the future utility of repeating an action")
 	var unknown_memory_profile := {"cognitive_profile":{}, "memory":[{"type":"action_outcome", "action":"advance_motivation", "tick":8, "success":true, "confidence":0.9, "importance":0.6}]}
@@ -240,7 +240,7 @@ func _test_durable_checkpoint_and_replay(social: Dictionary, bestiary: Dictionar
 	_check(saved.get("ok", false), "autonomy snapshot and core snapshot are committed")
 	var post_snapshot_step: Dictionary = runtime.step()
 	_check(post_snapshot_step.get("ok", false), "a later autonomous tick is appended after the saved snapshot")
-	var expected_tick := runtime.current_tick()
+	var expected_tick: int = int(runtime.current_tick())
 	var restored_core = SystemCoreScript.new(_test_root)
 	var restored_open: Dictionary = restored_core.open_last_or_create()
 	_check(restored_open.get("ok", false), "world core recovers after autonomous checkpoint")
