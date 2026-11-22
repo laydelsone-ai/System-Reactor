@@ -10,7 +10,7 @@ config_version=5
 config/name="World Laboratory — Sistema Reactor"
 config/description="World Laboratory — Sistema Reactor. Runtime experimental WLA-0B para simulación autónoma de agentes; observatorio pixel-art."
 config/icon="res://assets/icons/project_icon.png"
-config/version="0.3.2"
+config/version="0.3.6"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 run/main_scene="res://scenes/main.tscn"
 

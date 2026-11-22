@@ -57,3 +57,11 @@ La UI ofrece ejecución automática, pausa, paso manual, estímulos y guardado. 
 3. Ampliar memoria, aprendizaje y cognición con pruebas de causalidad, falsas creencias, percepción parcial y planificación a más pasos.
 4. Implementar niveles de simulación y catch-up offline con equivalencia temporal, límites y reproyección segura.
 5. Ampliar ecosistemas, reproducción, migración y constructos según contratos; combate solo con SR-09.
+
+
+## Paquete integrado 0.3.6 — corrección del build Android
+
+- Se integraron en una sola raíz todos los archivos del proyecto completo y las revisiones posteriores del runtime, pruebas y workflow.
+- Se aplicaron sobre la variante de renderizador con carga diferida las correcciones de firma `draw_texture_rect(..., false)` y anotaciones explícitas `Dictionary`. No se reintrodujo el preload tipado `AutonomyRuntime` de la variante anterior.
+- GitHub Actions conserva logs de importación, precarga, contratos, contenido, autonomía y arranque incluso cuando una prueba falla.
+- Pendiente de aceptación: ejecución real en Godot 4.7.2 y exportación Android Debug.

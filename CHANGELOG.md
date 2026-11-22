@@ -1,10 +1,15 @@
 # Changelog
 
-## 0.3.1 — Corrección de carga y tipos Godot 4.7.2
-- El test autónomo y el test de precarga cargan primero `SystemCore` y después `AutonomyRuntime`, respetando la dependencia tipada y el orden de la escena principal.
-- Tipos explícitos (`float`/`int`) para las expresiones del test que Godot no infería desde el objeto creado por `Script.new()`.
-- `project.godot` declara `config/features` para Godot 4.7 y recupera el color base del antiguo System Reactor.
-- Versión Android incrementada a 0.3.1 / versionCode 4.
+## 0.3.6 — Integrated Godot renderer and CI repair (2026-11-22)
+
+- Rebuilt the complete repository from the full 0.3.0 project, retaining all original game data, assets, normative references, autonomy runtime and Android export settings.
+- Integrated the diagnostic-safe WLA-0B runtime and headless preload test; the application loads the autonomy script dynamically instead of requiring a global `class_name` dependency.
+- Corrected every incomplete `draw_texture_rect()` call in `scripts/app/pixel_observatory.gd` with the required `tile` argument (`false` for single-sprite drawing).
+- Added explicit `Dictionary` annotations to the autonomy report/state values that Godot could not infer.
+- Integrated the GitHub Actions diagnostics workflow: separate editor import, preload, core, content, autonomy and app-boot checks; full logs are uploaded even when checks fail.
+- Updated project/app version and regenerated the full SHA-256 manifest.
+- Python source/catalogue/payload validation is run for this package. Godot 4.7.2 parsing, GDScript tests and Android APK export are **not claimed as passed** until GitHub Actions completes successfully.
+
 
 ## 0.3.0 — WLA-0B Autonomy Trial (2026-11-22)
 

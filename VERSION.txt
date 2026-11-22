@@ -1,12 +1,13 @@
 Project: World Laboratory / Sistema Reactor
 Milestone: WLA-0B.2 — Autonomy Trial
-Implementation: WLA-0A core + autonomous agent/creature runtime + Pixel Observatory
-App version: 0.3.0
+Integrated package: 0.3.6
+App version: 0.3.6
 Engine baseline: Godot 4.7.2 Standard
 Language: GDScript
 Target: Android arm64-v8a Debug APK
 Normative baseline: SR-01..SR-15, consolidated 2026-11-20; SR-15 v1.0
 Autonomy scope: 180 human agent models, utility arbitration, bounded scheduler, individual memory/experience, 4 isolated biological trial subjects, 1 non-cognitive fungal environmental process
+Integrated repairs: diagnostic-safe dynamic autonomy loading; Godot 4.7 renderer draw_texture_rect signatures; explicit Dictionary inference; CI diagnostic logs and retained artifacts
 Simulation limits: abstract NPC intent/routine progression; no validated physical NPC locations, full social graph execution, combat, canonical ecology, constructs, off-screen catch-up or calendar time scale
 Visual status: experimental pixel-art/isometric presentation; not a change to the approved SR-15 semi-realistic 3D/2.5D art direction
-Local validation: Python source/catalogue/payload checks passed; Godot parser/tests and Android export pending GitHub Actions
+Local validation: Python source/catalogue/payload checks run during packaging; Godot 4.7.2 engine parser/tests and Android export remain to be confirmed by GitHub Actions

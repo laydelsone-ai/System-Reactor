@@ -1,11 +1,13 @@
 # World Laboratory / Sistema Reactor
-## Entrega 0.3.0 — WLA-0B Autonomy Trial (Android / Godot)
+## Paquete integrado 0.3.6 — WLA-0B Autonomy Trial (Android / Godot)
+
+**Versión integrada 0.3.6:** incluye las correcciones del parser del renderizador (`draw_texture_rect` y tipos explícitos), carga diagnóstica segura del runtime y un workflow de CI que conserva registros completos por etapa. El ZIP contiene el proyecto completo, no un parche diferencial. La versión del motor sigue fijada en Godot 4.7.2. La corrección estática no equivale a una compilación aprobada: la confirmación de parser, pruebas GDScript y APK depende de que Actions termine en verde.
 
 Esta entrega cambia el foco de la anterior: el Observatorio ya no es únicamente una presentación de pixel-art. Incorpora un primer runtime experimental de autonomía que evalúa agentes sin órdenes del jugador, produce decisiones justificadas, ejecuta cambios de estado, guarda recuerdos individuales y persiste las consecuencias mediante eventos y snapshots.
 
 **No es todavía la simulación total del universo.** Es una primera vertical slice WLA-0B, deliberadamente acotada, para probar el ciclo cognitivo y un pequeño caso ecológico antes de ampliar población, geografía, economía, combate y simulación fuera de pantalla.
 
-## Qué funciona en WLA-0B.2
+## Qué incluye WLA-0B.2
 
 ### Agentes humanos
 
@@ -105,6 +107,8 @@ La simulación no necesita una partida ni un jugador para producir decisiones. L
 - Android arm64-v8a, Compatibility renderer, offline-first
 
 ### GitHub
+
+El workflow actual conserva `build/diagnostics/` como artefacto incluso en caso de fallo. Ejecuta cada comprobación por separado para identificar la etapa y el log exactos.
 
 1. Crea un repositorio vacío.
 2. Extrae el ZIP y sube su contenido completo a la raíz, incluyendo `.github/`.

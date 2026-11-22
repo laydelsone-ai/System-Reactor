@@ -16,7 +16,7 @@
 - `AutonomyRuntime` es un dominio de simulación que confirma ciclos como eventos; la presentación no escribe estado arbitrario.
 - `world_tick` y `event.sequence` son dimensiones distintas.
 
-## Entrega 0.3.0 — WLA-0B.2 Autonomy Trial
+## Paquete integrado 0.3.6 — WLA-0B.2 Autonomy Trial
 
 - Runtime autónomo sin jugador con scheduler acotado (24 agentes humanos por tick; 180 modelos en el registro).
 - Percepción humana limitada a co-presencia física validada; las etiquetas de área laboral no son ubicación.
@@ -25,6 +25,8 @@
 - Snapshot y journal replay para estado autónomo.
 - UI de Observatorio y pestaña AUTONOMIA, ejecución automática, pausa, paso y perturbaciones separadas del comportamiento espontáneo.
 - Pruebas `tests/test_autonomy.gd` añadidas a GitHub Actions.
+- El renderizador usa la firma Godot 4.7 de `draw_texture_rect(texture, rect, tile, ...)` y declara los resultados dinámicos como `Dictionary`.
+- El workflow separa importación, precarga, contratos, contenido, autonomía y arranque; conserva logs como artefactos aunque falle una etapa.
 
 ## Límites que no deben ocultarse
 
@@ -35,7 +37,7 @@
 - La rama ecológica y sus parámetros son fixtures de laboratorio, no spawns, mapa, densidad o fisiología canónicos.
 - No hay HP, daño, combate ni loot; respetar SR-09 y SR-10.
 - No se han implementado los 23 tipos biológicos, constructos, reproducción, migración, economía, Arcana o navegación completa.
-- No declarar parser, tests Godot ni APK verificados hasta que CI real termine satisfactoriamente.
+- No declarar parser, tests Godot ni APK verificados hasta que CI real termine satisfactoriamente. La versión 0.3.6 corrige los errores de firma de dibujo e inferencia que aparecieron en CI, pero debe ser validada por el motor 4.7.2.
 
 ## Reglas de datos
 
@@ -58,4 +60,4 @@
 
 ## CI y entrega
 
-El workflow debe ejecutar import headless, pruebas de contratos, contenido y `tests/test_autonomy.gd`, smoke test y exportación Android Debug. Ningún archivo se considera APK compilada hasta que se descargue del artefacto generado por una ejecución verde con SHA-256.
+El workflow ejecuta import headless, pruebas de precarga, contratos, contenido y `tests/test_autonomy.gd`, smoke test y exportación Android Debug. Los logs de Godot se conservan como artefacto incluso si falla una comprobación. Ningún archivo se considera APK compilada hasta que se descargue del artefacto generado por una ejecución verde con SHA-256.

@@ -1,6 +1,6 @@
-# Estado de validación — WLA-0B Autonomy Trial 0.3.0
+# Estado de validación — Paquete integrado WLA-0B Autonomy Trial 0.3.6
 
-## Validado en este entorno
+## Validado durante el empaquetado
 
 - Integridad estructural y preflight del proyecto empaquetado.
 - Los JSON incluidos parsean correctamente.
@@ -9,9 +9,11 @@
 - Bestiario Piso 1: cinco perfiles cotejados contra el CSV de estadísticas fuente.
 - Las 12 plantillas de misión coinciden con su fuente.
 - PNG, recursos, atlas, iconos adaptativos y tamaños del export preset Android.
-- Preflight de versión WLA-0B, presencia de runtime/pruebas y ejecución de `tests/test_autonomy.gd` en CI.
+- Preflight estructural de versión WLA-0B, presencia de runtime/pruebas y workflow de diagnóstico por etapas.
+- Inspección estática de todas las llamadas `draw_texture_rect()` del Observatorio: cada llamada incluye el argumento obligatorio `tile`; los report/state dinámicos del panel están tipados como `Dictionary`.
+- Comprobación de que la app mantiene carga diferida del runtime y no exige `class_name AutonomyRuntime` global.
 
-## Pruebas de motor incluidas, todavía no ejecutadas aquí
+## Pruebas de motor incluidas, pendientes de ejecución en GitHub Actions
 
 `tests/test_autonomy.gd` comprueba:
 
@@ -37,4 +39,4 @@
 
 ## Verificación en GitHub Actions
 
-`.github/workflows/android.yml` instala Godot 4.7.2 Standard, Java 17 y los componentes Android fijados; importa el proyecto; ejecuta contratos, contenido, autonomía y smoke test; exporta Android Debug y sube APK + SHA-256. WLA-0B.2 solo debe considerarse validado por motor después de que esa ejecución termine correctamente.
+`.github/workflows/android.yml` instala Godot 4.7.2 Standard, Java 17 y los componentes Android fijados; ejecuta importación, precarga, contratos, contenido, autonomía y smoke test por separado; conserva logs como artefacto incluso en caso de fallo; exporta Android Debug y sube APK + SHA-256 solo si todas las etapas pasan. WLA-0B.2 solo debe considerarse validado por motor después de que esa ejecución termine correctamente.
