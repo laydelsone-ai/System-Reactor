@@ -1,3 +1,14 @@
+# Changelog
+
+## 0.3.10 — JSON numeric semantics in snapshot recovery (2026-11-22)
+
+- Corrected the durable autonomy test comparison: JSON round-trips can decode integral JSON numbers as either integer or float Variants, so persistence equivalence is now checked recursively by numeric value rather than Variant subtype.
+- Added regression tests proving `2` and `2.0` are semantically equivalent while true numeric changes and array-shape changes remain detectable.
+- Added whole-runtime-state comparison after loading the autonomy snapshot and replaying later journal events.
+- Added isolated twin continuation checks so the pre-save and restored states must generate equivalent next-cycle outcomes and traces.
+- Updated project and Android version metadata to 0.3.10.
+- Godot 4.7.2 execution of the new tests remains pending GitHub Actions; no engine pass is claimed here.
+
 ## 0.3.9 — 22 de noviembre de 2026
 - Persistencia WLA-0B: eventos autónomos registran deltas explícitos por ID para NPC y criaturas.
 - Replay reconstruye entidades mediante copias profundas explícitas y conserva compatibilidad con eventos anteriores.

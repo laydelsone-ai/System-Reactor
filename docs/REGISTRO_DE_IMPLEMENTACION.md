@@ -73,3 +73,10 @@ La UI ofrece ejecución automática, pausa, paso manual, estímulos y guardado. 
 - La escritura se realiza ahora después del `match`, actualizando explícitamente `rooms`, `environment` y `_state`.
 - Se añade una prueba de regresión que confirma que una vibración del observador actualiza el ruido de la cámara, conserva su procedencia y se contabiliza aparte de las acciones autónomas.
 - Pendiente: parser, pruebas GDScript y exportación APK en Godot 4.7.2 mediante GitHub Actions.
+
+
+## Paquete integrado 0.3.10 — equivalencia semántica de persistencia
+
+El diagnóstico de GitHub Actions 45072906863 mostró que snapshot + replay recuperaban el estado y reproducían el evento posterior. Las dos aserciones fallaban por subtipo numérico: el valor `2` del estado en memoria se decodificaba como `2.0` tras JSON. La suite ya no exige igualdad de subtipo para números JSON; compara el valor numérico exacto y continúa exigiendo igualdad recursiva de claves, valores no numéricos, orden/longitud de arrays.
+
+La prueba compara ahora el estado total restaurado y ejecuta el siguiente ciclo sobre dos réplicas in-memory aisladas —pre-serialización y post-restauración— para comprobar que producen decisiones, consecuencias y trazas equivalentes. El runtime productivo y el formato de eventos no se modificaron por este diagnóstico. La nueva comprobación sigue pendiente de confirmación en Godot 4.7.2 Actions.

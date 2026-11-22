@@ -17,6 +17,7 @@ func _run() -> void:
 		push_error("WLA-0B: runtime no cargable: res://scripts/simulation/autonomy_runtime.gd. El mensaje previo de Godot debe indicar el error interno del parser.")
 		quit(1)
 		return
+	_test_json_numeric_equivalence()
 	var social := _load_json("res://data/social/social_registry_v0.2.json")
 	var bestiary := _load_json("res://data/bestiary/floor01_species.json")
 	_test_agent_and_ecology_initialization(social, bestiary)
@@ -282,20 +283,89 @@ func _test_durable_checkpoint_and_replay(social: Dictionary, bestiary: Dictionar
 	_check(restored_runtime.current_tick() == expected_tick, "autonomous snapshot and post-snapshot journal replay restore the latest tick")
 	var expected_creature: Dictionary = runtime.get_creature("trial_rat_01")
 	var actual_creature: Dictionary = restored_runtime.get_creature("trial_rat_01")
-	if actual_creature != expected_creature:
+	if not _state_values_equivalent(expected_creature, actual_creature):
 		_report_restore_diff("trial_rat_01", expected_creature, actual_creature)
-	_check(actual_creature == expected_creature, "creature state and decisions survive snapshot restoration")
+	_check(_state_values_equivalent(actual_creature, expected_creature), "creature state and decisions survive snapshot restoration")
 	var expected_agent: Dictionary = runtime.get_agent("npc_0001")
 	var actual_agent: Dictionary = restored_runtime.get_agent("npc_0001")
-	if actual_agent != expected_agent:
+	if not _state_values_equivalent(expected_agent, actual_agent):
 		_report_restore_diff("npc_0001", expected_agent, actual_agent)
-	_check(actual_agent == expected_agent, "NPC memory and individual progress survive snapshot restoration")
+	_check(_state_values_equivalent(actual_agent, expected_agent), "NPC memory and individual progress survive snapshot restoration")
+	var expected_full_state: Dictionary = runtime.get_state_copy()
+	var actual_full_state: Dictionary = restored_runtime.get_state_copy()
+	if not _state_values_equivalent(expected_full_state, actual_full_state):
+		_report_restore_diff("full_runtime_state", expected_full_state, actual_full_state)
+	_check(_state_values_equivalent(actual_full_state, expected_full_state), "complete autonomy state is semantically identical after snapshot and journal replay")
+	if _state_values_equivalent(actual_full_state, expected_full_state):
+		_test_restored_state_continuation(social, bestiary, expected_full_state, actual_full_state)
+
+func _test_json_numeric_equivalence() -> void:
+	var source_state := {
+		"tick": 2,
+		"experience": {"attempts": 2, "successes": 1, "rate": 0.5},
+		"memory": [{"tick": 1, "importance": 0.42}],
+		"nested": [{"progress": {"education": 1}}]
+	}
+	var decoded: Variant = JSON.parse_string(JSON.stringify(source_state))
+	_check(typeof(decoded) == TYPE_DICTIONARY, "JSON snapshot fixture decodes to a dictionary")
+	_check(_state_values_equivalent(source_state, decoded), "JSON integer/float decoding preserves numeric state semantics")
+	_check(not _state_values_equivalent({"tick": 2}, {"tick": 3.0}), "semantic restore comparison still detects actual numeric differences")
+	_check(not _state_values_equivalent({"memory": [1, 2]}, {"memory": [1, 2, 3]}), "semantic restore comparison still detects array-length differences")
+
+func _test_restored_state_continuation(social: Dictionary, bestiary: Dictionary, expected_state: Dictionary, restored_state: Dictionary) -> void:
+	## Continúa dos copias aisladas del mismo estado: una anterior a JSON y otra restaurada.
+	## Ambas se ejecutan sin núcleo conectado para no escribir dos veces en el mismo journal.
+	var seed_value := int(expected_state.get("seed", 20261120))
+	var expected_replica: Variant = _autonomy_runtime_script.new()
+	var restored_replica: Variant = _autonomy_runtime_script.new()
+	expected_replica.initialize_experiment(social, bestiary, seed_value)
+	restored_replica.initialize_experiment(social, bestiary, seed_value)
+	expected_replica._state = expected_state.duplicate(true)
+	restored_replica._state = restored_state.duplicate(true)
+	var expected_step: Dictionary = expected_replica.step()
+	var restored_step: Dictionary = restored_replica.step()
+	_check(expected_step.get("ok", false) and restored_step.get("ok", false), "pre-save and restored states both continue their next autonomous cycle")
+	_check(_state_values_equivalent(expected_replica.get_state_copy(), restored_replica.get_state_copy()), "snapshot restoration preserves the next autonomous decisions and consequences")
+	_check(_state_values_equivalent(expected_replica.get_recent_events(20), restored_replica.get_recent_events(20)), "snapshot restoration preserves the next decision trace")
+
+func _state_values_equivalent(expected: Variant, actual: Variant) -> bool:
+	## JSON representa los números como un único tipo numérico. Godot puede decodificar
+	## un entero escrito como 2 en una variante float 2.0; se compara el valor exacto, no el subtipo.
+	var expected_type := typeof(expected)
+	var actual_type := typeof(actual)
+	var expected_numeric := expected_type == TYPE_INT or expected_type == TYPE_FLOAT
+	var actual_numeric := actual_type == TYPE_INT or actual_type == TYPE_FLOAT
+	if expected_numeric or actual_numeric:
+		if not expected_numeric or not actual_numeric:
+			return false
+		return float(expected) == float(actual)
+	if expected_type != actual_type:
+		return false
+	if expected_type == TYPE_DICTIONARY:
+		var expected_dict: Dictionary = expected
+		var actual_dict: Dictionary = actual
+		if expected_dict.size() != actual_dict.size():
+			return false
+		for key in expected_dict.keys():
+			if not actual_dict.has(key) or not _state_values_equivalent(expected_dict[key], actual_dict[key]):
+				return false
+		return true
+	if expected_type == TYPE_ARRAY:
+		var expected_array: Array = expected
+		var actual_array: Array = actual
+		if expected_array.size() != actual_array.size():
+			return false
+		for index in range(expected_array.size()):
+			if not _state_values_equivalent(expected_array[index], actual_array[index]):
+				return false
+		return true
+	return expected == actual
 
 func _report_restore_diff(entity_id: String, expected: Dictionary, actual: Dictionary) -> void:
 	var differing: Array[String] = []
 	for key_value in expected.keys():
 		var key := String(key_value)
-		if not actual.has(key) or JSON.stringify(expected[key_value]) != JSON.stringify(actual.get(key, null)):
+		if not actual.has(key) or not _state_values_equivalent(expected[key_value], actual.get(key, null)):
 			differing.append(key)
 	for key_value in actual.keys():
 		var key := String(key_value)

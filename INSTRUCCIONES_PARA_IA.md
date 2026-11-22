@@ -16,18 +16,13 @@
 - `AutonomyRuntime` es un dominio de simulación que confirma ciclos como eventos; la presentación no escribe estado arbitrario.
 - `world_tick` y `event.sequence` son dimensiones distintas.
 
-## Paquete integrado 0.3.8 — WLA-0B.2 Autonomy Trial
+## Paquete integrado 0.3.10 — WLA-0B.2 Autonomy Trial
 
-- Runtime autónomo sin jugador con scheduler acotado (24 agentes humanos por tick; 180 modelos en el registro).
-- Percepción humana limitada a co-presencia física validada; las etiquetas de área laboral no son ubicación.
-- Motivación, tensión, rutina, fatiga operativa, rasgos/aptitudes si existen, utilidad, memoria, experiencia y aprendizaje elemental por resultado.
-- Cuatro criaturas de prueba aisladas (rata, escarabajo, murciélago y rastrero) con comportamiento condicionado a especie/sentidos/recursos; hongo como proceso ambiental no cognitivo.
-- Snapshot y journal replay para estado autónomo.
-- UI de Observatorio y pestaña AUTONOMIA, ejecución automática, pausa, paso y perturbaciones separadas del comportamiento espontáneo.
-- Pruebas `tests/test_autonomy.gd` añadidas a GitHub Actions.
-- El renderizador usa la firma Godot 4.7 de `draw_texture_rect(texture, rect, tile, ...)` y declara los resultados dinámicos como `Dictionary`.
-- El workflow separa importación, precarga, contratos, contenido, autonomía y arranque; conserva logs como artefactos aunque falle una etapa.
-- 0.3.8 corrige la indentación inválida en `_apply_intervention_payload()` y prueba la escritura persistente del ruido de una intervención del observador.
+La versión 0.3.10 corrige la suite de restauración autónoma: el round-trip JSON puede cambiar el subtipo GDScript de números enteros a float sin cambiar el valor. Las pruebas comparan estados JSON recursivamente por valor numérico exacto, conservando validación de claves, tipos no numéricos y longitudes/orden de arrays. Además cotejan el estado completo y la continuación del siguiente ciclo autónomo usando réplicas aisladas.
+
+- El diagnóstico 45072906863 confirma importación, precargas, contratos y contenido aprobados; en autonomía hubo 94 PASS y 2 FAIL por igualdad estricta int/float en los estados restaurados.
+- No se alteró la lógica del runtime ni se convirtieron contadores indiscriminadamente: el cambio está en el contrato de comparación de snapshots JSON.
+- Godot 4.7.2 debe volver a ejecutar la suite 0.3.10; no declarar la reparación como aprobada hasta ver Actions verde.
 
 ## Límites que no deben ocultarse
 

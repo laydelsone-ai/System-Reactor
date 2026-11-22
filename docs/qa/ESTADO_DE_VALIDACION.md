@@ -1,4 +1,4 @@
-# Estado de validación — Paquete integrado WLA-0B Autonomy Trial 0.3.8
+# Estado de validación — Paquete integrado WLA-0B Autonomy Trial 0.3.10
 
 ## Validado durante el empaquetado
 
@@ -16,13 +16,25 @@
 - La asignación `rooms[room_id]` se ha movido fuera del bloque `match` en `_apply_intervention_payload()`; el write-back de `environment` está tipado y la suite incluye una prueba de persistencia/procedencia de vibración.
 - Se ha comprobado el parseo YAML del workflow y la sintaxis Bash de su mecanismo de timeout/tee.
 
-## Pruebas de motor incluidas, pendientes de ejecución en GitHub Actions
+## Pruebas de motor incluidas, con diagnóstico de Actions del 22-11-2026
 
 `tests/test_script_preloads.gd` comprueba la carga y capacidad de instanciación de SystemCore, ApplicationShell, PixelObservatory y AutonomyRuntime.
 
 `tests/test_autonomy.gd` comprueba inicialización de los 180 modelos, límites epistémicos, motivaciones y tensiones importadas, cognición/memoria, límites sensoriales, decisiones ecológicas, persistencia y procedencia de intervenciones del observador, scheduler, determinismo, snapshot y replay.
 
 También permanecen las pruebas de contratos del núcleo, contenido y arranque de escena.
+
+### Resultado del diagnóstico WLA-0B 0.3.9
+
+- Editor/importación: PASS.
+- Precarga de scripts: PASS.
+- Contratos WLA-0A: 33 PASS, 0 FAIL.
+- Contenido: 56 PASS, 0 FAIL.
+- Autonomía: 94 PASS, 2 FAIL inicialmente.
+- Los dos fallos se debían a comparar snapshots mediante igualdad estricta de `Variant`: después del round-trip JSON, valores numéricos enteros (por ejemplo `2`) se decodifican como floats (`2.0`). El valor persistido era igual; el subtipo numérico de GDScript no.
+- La versión 0.3.10 compara recursivamente el valor numérico y conserva la detección de diferencias reales. Añade una prueba de ida/vuelta JSON, comparación del estado completo y continuación determinista del ciclo siguiente desde copias aisladas.
+
+La nueva comparación semántica y la continuación deben confirmarse en la siguiente ejecución de Godot 4.7.2. No se declara esta nueva prueba como aprobada antes de Actions.
 
 ## No ejecutado en este entorno
 
