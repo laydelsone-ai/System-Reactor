@@ -62,3 +62,8 @@
 ## CI y entrega
 
 El workflow ejecuta import headless, pruebas de precarga, contratos, contenido y `tests/test_autonomy.gd`, smoke test y exportación Android Debug. Los logs de Godot se conservan como artefacto incluso si falla una comprobación. Ningún archivo se considera APK compilada hasta que se descargue del artefacto generado por una ejecución verde con SHA-256.
+
+
+## WLA-0B.3.9 — Persistencia autónoma
+
+Los eventos SimulationStepCommitted llevan agent_updates y creature_updates como mapas separados por ID. El replay aplica esos deltas con copias profundas. La prueba de restauración exige confirmar snapshot y replay del evento posterior, y detalla campos discrepantes si el estado no coincide.

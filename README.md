@@ -134,3 +134,8 @@ godot --headless --path . --export-debug "Android Debug" build/WorldLaboratory-W
 ```
 
 **Criterio de aceptación:** no declarar WLA-0B validado hasta que `tests/test_autonomy.gd` pase dentro de Godot 4.7.2 y el workflow produzca un APK no vacío con hash. Instalar y probar el ciclo de vida y el rendimiento en un Android físico sigue pendiente.
+
+
+## WLA-0B.3.9 — Persistencia autónoma
+
+Los eventos SimulationStepCommitted llevan agent_updates y creature_updates como mapas separados por ID. El replay aplica esos deltas con copias profundas. La prueba de restauración exige confirmar snapshot y replay del evento posterior, y detalla campos discrepantes si el estado no coincide.

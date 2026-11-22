@@ -275,10 +275,36 @@ func _test_durable_checkpoint_and_replay(social: Dictionary, bestiary: Dictionar
 	_check(restored_open.get("ok", false), "world core recovers after autonomous checkpoint")
 	var restored_runtime: Variant = _autonomy_runtime_script.new()
 	var restored_runtime_open: Dictionary = restored_runtime.open(restored_core, social, bestiary)
-	_check(restored_runtime_open.get("ok", false), "autonomous domain restores its snapshot")
+	print("RESTORE SUMMARY: restored=%s replayed_steps=%d snapshot_cursor=%d final_cursor=%d core_last_sequence=%d" % [str(restored_runtime_open.get("restored", false)), int(restored_runtime_open.get("replayed_steps", 0)), int(restored_runtime_open.get("snapshot_cursor", -1)), int(restored_runtime_open.get("final_cursor", -1)), int(restored_runtime_open.get("core_last_sequence", -1))])
+	_check(restored_runtime_open.get("ok", false), "autonomy domain restores its snapshot")
+	_check(bool(restored_runtime_open.get("restored", false)), "autonomy snapshot itself was loaded")
+	_check(int(restored_runtime_open.get("replayed_steps", 0)) >= 1, "at least one post-snapshot simulation event was replayed")
 	_check(restored_runtime.current_tick() == expected_tick, "autonomous snapshot and post-snapshot journal replay restore the latest tick")
-	_check(restored_runtime.get_creature("trial_rat_01") == runtime.get_creature("trial_rat_01"), "creature state and decisions survive snapshot restoration")
-	_check(restored_runtime.get_agent("npc_0001") == runtime.get_agent("npc_0001"), "NPC memory and individual progress survive snapshot restoration")
+	var expected_creature: Dictionary = runtime.get_creature("trial_rat_01")
+	var actual_creature: Dictionary = restored_runtime.get_creature("trial_rat_01")
+	if actual_creature != expected_creature:
+		_report_restore_diff("trial_rat_01", expected_creature, actual_creature)
+	_check(actual_creature == expected_creature, "creature state and decisions survive snapshot restoration")
+	var expected_agent: Dictionary = runtime.get_agent("npc_0001")
+	var actual_agent: Dictionary = restored_runtime.get_agent("npc_0001")
+	if actual_agent != expected_agent:
+		_report_restore_diff("npc_0001", expected_agent, actual_agent)
+	_check(actual_agent == expected_agent, "NPC memory and individual progress survive snapshot restoration")
+
+func _report_restore_diff(entity_id: String, expected: Dictionary, actual: Dictionary) -> void:
+	var differing: Array[String] = []
+	for key_value in expected.keys():
+		var key := String(key_value)
+		if not actual.has(key) or JSON.stringify(expected[key_value]) != JSON.stringify(actual.get(key, null)):
+			differing.append(key)
+	for key_value in actual.keys():
+		var key := String(key_value)
+		if not expected.has(key_value) and not differing.has(key):
+			differing.append(key)
+	differing.sort()
+	print("RESTORE DIFF %s: %s" % [entity_id, ", ".join(differing)])
+	for key in differing.slice(0, 8):
+		print("RESTORE FIELD %s.%s expected=%s actual=%s" % [entity_id, key, JSON.stringify(expected.get(key, null)), JSON.stringify(actual.get(key, null))])
 
 func _load_json(path: String) -> Dictionary:
 	var file := FileAccess.open(path, FileAccess.READ)

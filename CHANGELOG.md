@@ -1,3 +1,8 @@
+## 0.3.9 — 22 de noviembre de 2026
+- Persistencia WLA-0B: eventos autónomos registran deltas explícitos por ID para NPC y criaturas.
+- Replay reconstruye entidades mediante copias profundas explícitas y conserva compatibilidad con eventos anteriores.
+- La prueba exige cargar el snapshot y reproducir al menos un evento posterior; si hay divergencia, imprime campos distintos.
+
 # Changelog
 
 ## 0.3.8 — Autonomy intervention parser fix (2026-11-22)

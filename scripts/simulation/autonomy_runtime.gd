@@ -166,6 +166,8 @@ func step() -> Dictionary:
 	var next_tick := int(next_state.get("tick", 0)) + 1
 	var decisions: Array = []
 	var updates: Array = []
+	var agent_updates: Dictionary = {}
+	var creature_updates: Dictionary = {}
 	var changed_agent_ids: Dictionary = {}
 	var agents: Dictionary = next_state.get("agents", {})
 	var batch_ids: Array = _select_human_batch(next_state, HUMAN_DECISION_BUDGET)
@@ -198,9 +200,13 @@ func step() -> Dictionary:
 			changed_agent_ids[modified_target] = true
 		_append_recent_event(next_state, trace)
 
-	for changed_id_value in changed_agent_ids.keys():
+	var changed_ids: Array = changed_agent_ids.keys()
+	changed_ids.sort()
+	for changed_id_value in changed_ids:
 		var changed_id := String(changed_id_value)
-		updates.append({"kind": "npc", "id": changed_id, "state": agents[changed_id].duplicate(true)})
+		var changed_state: Dictionary = agents[changed_id].duplicate(true)
+		agent_updates[changed_id] = changed_state
+		updates.append({"kind": "npc", "id": changed_id, "state": changed_state.duplicate(true)})
 
 	# Las criaturas del escenario ecológico se evalúan en cada ciclo de prueba:
 	# la proximidad y el riesgo inmediato tienen prioridad sobre población lejana.
@@ -221,7 +227,9 @@ func step() -> Dictionary:
 		next_state.trial_creatures[creature_id] = creature
 		var creature_trace := _make_trace(creature_id, creature, creature_perception, creature_decision, creature_result, next_tick)
 		decisions.append(creature_trace)
-		updates.append({"kind": "creature", "id": creature_id, "state": creature.duplicate(true)})
+		var creature_state: Dictionary = creature.duplicate(true)
+		creature_updates[creature_id] = creature_state
+		updates.append({"kind": "creature", "id": creature_id, "state": creature_state.duplicate(true)})
 		_append_recent_event(next_state, creature_trace)
 
 	_process_environmental_organisms(next_state, next_tick, decisions)
@@ -254,6 +262,8 @@ func step() -> Dictionary:
 		"tick": next_tick,
 		"decisions": decisions,
 		"updates": updates,
+		"agent_updates": agent_updates.duplicate(true),
+		"creature_updates": creature_updates.duplicate(true),
 		"trial_creatures": next_state.trial_creatures.duplicate(true),
 		"environment": next_state.environment.duplicate(true),
 		"ecological_processes": next_state.ecological_processes.duplicate(true),
@@ -579,6 +589,7 @@ func _restore_snapshot_and_replay() -> Dictionary:
 	var base_path := "%s/worlds/%s/autonomy_snapshot.json" % [_core.persistence.storage_root, _core.world_id]
 	var backup_path := "%s.bak" % base_path
 	var cursor := 0
+	var snapshot_cursor := -1
 	var restored := false
 	for candidate_path in [base_path, backup_path]:
 		if not FileAccess.file_exists(candidate_path):
@@ -591,8 +602,9 @@ func _restore_snapshot_and_replay() -> Dictionary:
 			var loaded_state: Variant = snapshot_payload.get("state", null)
 			if typeof(loaded_state) != TYPE_DICTIONARY:
 				continue
-			_state = loaded_state
+			_state = loaded_state.duplicate(true)
 			cursor = int(snapshot_payload.get("last_core_event_sequence", 0))
+			snapshot_cursor = cursor
 			restored = true
 			break
 	var journal_result: Dictionary = _core.persistence.read_journal(_core.world_id)
@@ -616,7 +628,14 @@ func _restore_snapshot_and_replay() -> Dictionary:
 		cursor = int(event.get("sequence", cursor))
 	_state["last_core_event_sequence"] = _core.last_event_sequence
 	_state["tick"] = maxi(int(_state.get("tick", 0)), _core.clock.world_tick)
-	return {"ok": true, "restored": restored, "replayed_steps": replayed_steps, "cursor": cursor}
+	return {
+		"ok": true,
+		"restored": restored,
+		"replayed_steps": replayed_steps,
+		"snapshot_cursor": snapshot_cursor,
+		"final_cursor": cursor,
+		"core_last_sequence": _core.last_event_sequence
+	}
 
 func _read_autonomy_snapshot(path: String) -> Dictionary:
 	var file := FileAccess.open(path, FileAccess.READ)
@@ -635,6 +654,30 @@ func _read_autonomy_snapshot(path: String) -> Dictionary:
 	return {"ok": true, "payload": payload}
 
 func _apply_step_payload(payload: Dictionary) -> void:
+	## Reproduce el delta del dominio mediante copias explícitas, no referencias compartidas.
+	## agent_updates / creature_updates son mapas por ID; updates mantiene compatibilidad.
+	var restored_agents: Dictionary = _state.get("agents", {}).duplicate(true)
+	var restored_creatures: Dictionary = _state.get("trial_creatures", {}).duplicate(true)
+
+	var agent_updates_value: Variant = payload.get("agent_updates", null)
+	if typeof(agent_updates_value) == TYPE_DICTIONARY:
+		var agent_updates_map: Dictionary = agent_updates_value
+		for agent_id_value in agent_updates_map.keys():
+			var agent_id := String(agent_id_value)
+			var agent_state: Variant = agent_updates_map[agent_id_value]
+			if not agent_id.is_empty() and typeof(agent_state) == TYPE_DICTIONARY:
+				restored_agents[agent_id] = agent_state.duplicate(true)
+
+	var creature_updates_value: Variant = payload.get("creature_updates", null)
+	if typeof(creature_updates_value) == TYPE_DICTIONARY:
+		var creature_updates_map: Dictionary = creature_updates_value
+		for creature_id_value in creature_updates_map.keys():
+			var creature_id := String(creature_id_value)
+			var creature_state: Variant = creature_updates_map[creature_id_value]
+			if not creature_id.is_empty() and typeof(creature_state) == TYPE_DICTIONARY:
+				restored_creatures[creature_id] = creature_state.duplicate(true)
+
+	# Compatibilidad con eventos WLA-0B anteriores que solo guardaban una lista mixta.
 	for update_value in payload.get("updates", []):
 		if typeof(update_value) != TYPE_DICTIONARY:
 			continue
@@ -643,12 +686,28 @@ func _apply_step_payload(payload: Dictionary) -> void:
 		var entity_state: Variant = update.get("state", null)
 		if entity_id.is_empty() or typeof(entity_state) != TYPE_DICTIONARY:
 			continue
-		var kind := String(update.get("kind", ""))
-		if kind == "npc":
-			_state.agents[entity_id] = entity_state.duplicate(true)
-	for key in ["trial_creatures", "environment", "ecological_processes", "scheduler", "metrics", "recent_events"]:
+		match String(update.get("kind", "")):
+			"npc":
+				if typeof(agent_updates_value) != TYPE_DICTIONARY:
+					restored_agents[entity_id] = entity_state.duplicate(true)
+			"creature":
+				if typeof(creature_updates_value) != TYPE_DICTIONARY:
+					restored_creatures[entity_id] = entity_state.duplicate(true)
+
+	# El mapa completo incluye metabolismo y procesos posteriores a las decisiones;
+	# por eso es autoritativo para criaturas cuando está presente. El delta ID-indexado
+	# se usa como fallback para eventos que no incluyen el mapa completo.
+	var full_creatures_value: Variant = payload.get("trial_creatures", null)
+	if typeof(full_creatures_value) == TYPE_DICTIONARY:
+		restored_creatures = full_creatures_value.duplicate(true)
+
+	_state["agents"] = restored_agents
+	_state["trial_creatures"] = restored_creatures
+	for key in ["environment", "ecological_processes", "scheduler", "metrics", "recent_events"]:
 		if payload.has(key):
-			_state[key] = payload[key].duplicate(true)
+			var value: Variant = payload[key]
+			if typeof(value) == TYPE_DICTIONARY or typeof(value) == TYPE_ARRAY:
+				_state[key] = value.duplicate(true)
 	_state["tick"] = int(payload.get("tick", _state.get("tick", 0)))
 
 func _commit_intervention(kind: String, room_id: String, value: float, source: String) -> Dictionary:
