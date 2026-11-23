@@ -328,7 +328,7 @@ func save_checkpoint() -> Dictionary:
 	var file := FileAccess.open(temp_path, FileAccess.WRITE)
 	if file == null:
 		return {"ok": false, "message": "No se pudo crear el snapshot autónomo temporal."}
-	file.store_string(JSON.stringify(wrapper))
+	file.store_string(JSON.stringify(wrapper, "", true, true))
 	file.flush()
 	var write_error := file.get_error()
 	file.close()
