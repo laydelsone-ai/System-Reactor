@@ -45,7 +45,7 @@ func save_snapshot(snapshot: Dictionary) -> Dictionary:
 	if ensure_error != OK:
 		return {"ok": false, "error": ensure_error, "message": "world_id o directorio inválido."}
 
-	var payload_text := JSON.stringify(snapshot)
+	var payload_text := JSON.stringify(snapshot, "", true, true)
 	var wrapper := {
 		"envelope_version": 1,
 		"payload_json": payload_text,
