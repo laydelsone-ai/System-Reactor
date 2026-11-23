@@ -394,7 +394,7 @@ func _report_nested_variant_diff(path: String, expected: Variant, actual: Varian
 	var actual_numeric := actual_type == TYPE_INT or actual_type == TYPE_FLOAT
 	if expected_numeric and actual_numeric:
 		if float(expected) != float(actual):
-			print("RESTORE NUMERIC DIFF %s expected_type=%s actual_type=%s expected=%.17g actual=%.17g delta=%.17g" % [path, type_string(expected_type), type_string(actual_type), float(expected), float(actual), float(expected) - float(actual)])
+			print("RESTORE NUMERIC DIFF %s expected_type=%s actual_type=%s expected=%.17f actual=%.17f delta=%.17f" % [path, type_string(expected_type), type_string(actual_type), float(expected), float(actual), float(expected) - float(actual)])
 		return
 	if expected_type != actual_type:
 		print("RESTORE VARIANT TYPE DIFF %s expected_type=%s actual_type=%s expected=%s actual=%s" % [path, type_string(expected_type), type_string(actual_type), str(expected), str(actual)])
