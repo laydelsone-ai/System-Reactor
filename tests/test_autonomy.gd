@@ -1,6 +1,7 @@
 extends SceneTree
 
 const SystemCoreScript = preload("res://scripts/core/system_core.gd")
+const EventJournalScript = preload("res://scripts/events/event_journal.gd")
 
 var _passes := 0
 var _failures := 0
@@ -319,6 +320,33 @@ func _test_json_numeric_equivalence() -> void:
 	var precision_json := JSON.stringify(precision_fixture, "", true, true)
 	var precision_restored: Variant = JSON.parse_string(precision_json)
 	_check(_state_values_equivalent(precision_fixture, precision_restored), "full-precision JSON preserves exact nested float values across autonomy state")
+	var exact_variant_fixture := {
+		"environment": {"insects": 0.10800000000000001},
+		"recent_events": [{"candidate_scores": [{"score": 1.15000000000000013}]}]
+	}
+	var exact_variant_bytes := var_to_bytes(exact_variant_fixture)
+	var exact_variant_restored: Variant = bytes_to_var(exact_variant_bytes)
+	_check(_state_values_equivalent(exact_variant_fixture, exact_variant_restored), "binary Variant encoding preserves exact float bit patterns")
+	var journal_path := "%s/precision-events.ndjson" % _test_root
+	var journal := EventJournalScript.new()
+	var journal_event := {
+		"event_id": "evt_precision_roundtrip",
+		"schema_version": 1,
+		"world_id": "wld_precision_roundtrip",
+		"event_type": "SimulationStepCommitted",
+		"sequence": 1,
+		"world_tick": 1,
+		"confirmation_status": "confirmed",
+		"authority": "SimulationKernel",
+		"origin": "autonomy_precision_test",
+		"payload": exact_variant_fixture
+	}
+	var journal_write: Dictionary = journal.append_event(journal_path, journal_event)
+	_check(journal_write.get("ok", false), "journal accepts an exact-float persistence fixture")
+	var journal_read: Dictionary = journal.read_all(journal_path)
+	_check(journal_read.get("ok", false), "journal reopens an exact-float persistence fixture")
+	if journal_read.get("ok", false) and not journal_read.get("events", []).is_empty():
+		_check(_state_values_equivalent(journal_read.events[0].payload, exact_variant_fixture), "journal replay preserves exact float values and Variant semantics")
 
 func _test_restored_state_continuation(social: Dictionary, bestiary: Dictionary, expected_state: Dictionary, restored_state: Dictionary) -> void:
 	## Continúa dos copias aisladas del mismo estado: una anterior a JSON y otra restaurada.
