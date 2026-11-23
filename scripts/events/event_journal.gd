@@ -16,7 +16,13 @@ func append_event(path: String, event: Dictionary) -> Dictionary:
 		return {"ok": false, "error": FileAccess.get_open_error(), "message": "No se pudo abrir el journal."}
 
 	file.seek_end()
-	file.store_line(JSON.stringify(event, "", true, true))
+	# JSON remains human-readable, while the binary Variant sidecar preserves every
+	# numeric bit pattern and the original Variant types for deterministic replay.
+	var stored_event := event.duplicate(true)
+	var payload_value: Variant = stored_event.get("payload", {})
+	stored_event["payload_variant_encoding"] = "godot_variant_base64_v1"
+	stored_event["payload_variant_base64"] = Marshalls.raw_to_base64(var_to_bytes(payload_value))
+	file.store_line(JSON.stringify(stored_event, "", true, true))
 	file.flush()
 	var write_error := file.get_error()
 	file.close()
@@ -70,6 +76,35 @@ func read_all(path: String) -> Dictionary:
 			}
 
 		var event: Dictionary = parsed
+		var payload_encoding := String(event.get("payload_variant_encoding", ""))
+		if not payload_encoding.is_empty():
+			if payload_encoding != "godot_variant_base64_v1":
+				return {
+					"ok": false,
+					"events": events,
+					"diagnostics": diagnostics + ["Codificación binaria de payload desconocida en el journal."],
+					"error": ERR_INVALID_DATA,
+					"last_sequence": previous_sequence
+				}
+			var payload_bytes := Marshalls.base64_to_raw(String(event.get("payload_variant_base64", "")))
+			if payload_bytes.is_empty():
+				return {
+					"ok": false,
+					"events": events,
+					"diagnostics": diagnostics + ["Payload binario ausente o inválido en el journal."],
+					"error": ERR_FILE_CORRUPT,
+					"last_sequence": previous_sequence
+				}
+			var exact_payload: Variant = bytes_to_var(payload_bytes)
+			if typeof(exact_payload) != TYPE_DICTIONARY:
+				return {
+					"ok": false,
+					"events": events,
+					"diagnostics": diagnostics + ["Payload binario no contiene un Dictionary válido."],
+					"error": ERR_FILE_CORRUPT,
+					"last_sequence": previous_sequence
+				}
+			event["payload"] = exact_payload
 		var event_id := String(event.get("event_id", ""))
 		var sequence := int(event.get("sequence", -1))
 		var world_tick := int(event.get("world_tick", -1))
