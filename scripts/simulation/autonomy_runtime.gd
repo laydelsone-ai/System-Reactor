@@ -320,7 +320,7 @@ func save_checkpoint() -> Dictionary:
 		"last_core_event_sequence": _core.last_event_sequence,
 		"state": _state.duplicate(true)
 	}
-	var payload_text := JSON.stringify(payload)
+	var payload_text := JSON.stringify(payload, "", true, true)
 	var wrapper := {"envelope_version": 1, "payload_json": payload_text, "sha256": payload_text.sha256_text()}
 	var final_path := "%s/autonomy_snapshot.json" % world_dir
 	var temp_path := "%s.tmp" % final_path
