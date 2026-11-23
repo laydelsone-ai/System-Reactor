@@ -318,7 +318,9 @@ func save_checkpoint() -> Dictionary:
 		"runtime_version": RUNTIME_VERSION,
 		"world_id": _core.world_id,
 		"last_core_event_sequence": _core.last_event_sequence,
-		"state": _state.duplicate(true)
+		"state": _state.duplicate(true),
+		"state_variant_encoding": "godot_variant_base64_v1",
+		"state_variant_base64": Marshalls.raw_to_base64(var_to_bytes(_state))
 	}
 	var payload_text := JSON.stringify(payload, "", true, true)
 	var wrapper := {"envelope_version": 1, "payload_json": payload_text, "sha256": payload_text.sha256_text()}
@@ -651,6 +653,17 @@ func _read_autonomy_snapshot(path: String) -> Dictionary:
 	var payload: Variant = JSON.parse_string(payload_text)
 	if typeof(payload) != TYPE_DICTIONARY or int(payload.get("snapshot_schema", -1)) != SNAPSHOT_SCHEMA:
 		return {"ok": false}
+	var state_encoding := String(payload.get("state_variant_encoding", ""))
+	if not state_encoding.is_empty():
+		if state_encoding != "godot_variant_base64_v1":
+			return {"ok": false}
+		var state_bytes := Marshalls.base64_to_raw(String(payload.get("state_variant_base64", "")))
+		if state_bytes.is_empty():
+			return {"ok": false}
+		var exact_state: Variant = bytes_to_var(state_bytes)
+		if typeof(exact_state) != TYPE_DICTIONARY:
+			return {"ok": false}
+		payload["state"] = exact_state
 	return {"ok": true, "payload": payload}
 
 func _apply_step_payload(payload: Dictionary) -> void:
