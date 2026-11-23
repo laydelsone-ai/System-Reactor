@@ -311,6 +311,14 @@ func _test_json_numeric_equivalence() -> void:
 	_check(_state_values_equivalent(source_state, decoded), "JSON integer/float decoding preserves numeric state semantics")
 	_check(not _state_values_equivalent({"tick": 2}, {"tick": 3.0}), "semantic restore comparison still detects actual numeric differences")
 	_check(not _state_values_equivalent({"memory": [1, 2]}, {"memory": [1, 2, 3]}), "semantic restore comparison still detects array-length differences")
+	var precision_fixture := {
+		"environment": {"fraction": 1.0 / 7.0},
+		"recent_events": [{"score": 0.12345678901234567}],
+		"trial_creatures": {"trial_rat_01": {"hunger": 0.3141592653589793}}
+	}
+	var precision_json := JSON.stringify(precision_fixture, "", true, true)
+	var precision_restored: Variant = JSON.parse_string(precision_json)
+	_check(_state_values_equivalent(precision_fixture, precision_restored), "full-precision JSON preserves exact nested float values across autonomy state")
 
 func _test_restored_state_continuation(social: Dictionary, bestiary: Dictionary, expected_state: Dictionary, restored_state: Dictionary) -> void:
 	## Continúa dos copias aisladas del mismo estado: una anterior a JSON y otra restaurada.
@@ -374,7 +382,51 @@ func _report_restore_diff(entity_id: String, expected: Dictionary, actual: Dicti
 	differing.sort()
 	print("RESTORE DIFF %s: %s" % [entity_id, ", ".join(differing)])
 	for key in differing.slice(0, 8):
-		print("RESTORE FIELD %s.%s expected=%s actual=%s" % [entity_id, key, JSON.stringify(expected.get(key, null)), JSON.stringify(actual.get(key, null))])
+		var expected_value: Variant = expected.get(key, null)
+		var actual_value: Variant = actual.get(key, null)
+		print("RESTORE FIELD %s.%s expected=%s actual=%s" % [entity_id, key, JSON.stringify(expected_value), JSON.stringify(actual_value)])
+		_report_nested_variant_diff("%s.%s" % [entity_id, key], expected_value, actual_value)
+
+func _report_nested_variant_diff(path: String, expected: Variant, actual: Variant) -> void:
+	var expected_type := typeof(expected)
+	var actual_type := typeof(actual)
+	var expected_numeric := expected_type == TYPE_INT or expected_type == TYPE_FLOAT
+	var actual_numeric := actual_type == TYPE_INT or actual_type == TYPE_FLOAT
+	if expected_numeric and actual_numeric:
+		if float(expected) != float(actual):
+			print("RESTORE NUMERIC DIFF %s expected_type=%s actual_type=%s expected=%.17g actual=%.17g delta=%.17g" % [path, type_string(expected_type), type_string(actual_type), float(expected), float(actual), float(expected) - float(actual)])
+		return
+	if expected_type != actual_type:
+		print("RESTORE VARIANT TYPE DIFF %s expected_type=%s actual_type=%s expected=%s actual=%s" % [path, type_string(expected_type), type_string(actual_type), str(expected), str(actual)])
+		return
+	if expected_type == TYPE_DICTIONARY:
+		var expected_dict: Dictionary = expected
+		var actual_dict: Dictionary = actual
+		for key in expected_dict.keys():
+			if not actual_dict.has(key):
+				print("RESTORE KEY MISSING %s.%s actual_dictionary" % [path, String(key)])
+				return
+			if not _state_values_equivalent(expected_dict[key], actual_dict[key]):
+				_report_nested_variant_diff("%s.%s" % [path, String(key)], expected_dict[key], actual_dict[key])
+				return
+		for key in actual_dict.keys():
+			if not expected_dict.has(key):
+				print("RESTORE KEY EXTRA %s.%s actual_dictionary" % [path, String(key)])
+				return
+		return
+	if expected_type == TYPE_ARRAY:
+		var expected_array: Array = expected
+		var actual_array: Array = actual
+		if expected_array.size() != actual_array.size():
+			print("RESTORE ARRAY SIZE DIFF %s expected=%d actual=%d" % [path, expected_array.size(), actual_array.size()])
+			return
+		for index in range(expected_array.size()):
+			if not _state_values_equivalent(expected_array[index], actual_array[index]):
+				_report_nested_variant_diff("%s[%d]" % [path, index], expected_array[index], actual_array[index])
+				return
+		return
+	if expected != actual:
+		print("RESTORE VALUE DIFF %s type=%s expected=%s actual=%s" % [path, type_string(expected_type), str(expected), str(actual)])
 
 func _load_json(path: String) -> Dictionary:
 	var file := FileAccess.open(path, FileAccess.READ)
