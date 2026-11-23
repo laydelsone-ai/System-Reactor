@@ -16,7 +16,7 @@ func append_event(path: String, event: Dictionary) -> Dictionary:
 		return {"ok": false, "error": FileAccess.get_open_error(), "message": "No se pudo abrir el journal."}
 
 	file.seek_end()
-	file.store_line(JSON.stringify(event))
+	file.store_line(JSON.stringify(event, "", true, true))
 	file.flush()
 	var write_error := file.get_error()
 	file.close()
